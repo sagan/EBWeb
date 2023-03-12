@@ -1,0 +1,7 @@
+@media print {
+  #words-navi,
+  header,
+  *[role="button"] {
+    display: none;
+  }
+}

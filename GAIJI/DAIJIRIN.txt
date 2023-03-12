@@ -1,0 +1,1820 @@
+# 大辞林第二版 EPWING (EBWin用Large版)
+#	Author	:	hishida
+#	Date	:	Ver.2.0	2007.9.27	全漢字対応版
+#
+#	※当ファイルはDAIJIRIN.mapのUTF-8テキスト版です。
+#
+#	◎このファイルの見方
+#		GAIJI	EPWINGの外字(書籍定義文字)です。hXXXXは半角、zXXXXは全角を表します。
+#		unicode	対応するUnicodeです。uXXXX(16進数)で表記します。
+#			2文字以上の合字の場合、uXXXX,uXXXXのようにカンマ区切りで続けて記述します。
+#		ascii	Unicodeが定義されない場合の代替文字です。EBWinではクリップボードコピーで使用します。
+#		#で始まる行はコメントです。行内の # から末尾まではコメントです。
+#		(未使用)	『大辞林』本文中で出現しない未使用の外字です。
+#
+#	◎外字調査について
+#		使用したCD-ROMは、『三省堂 スーパー大辞林 CD-ROM』です。
+#		全角外字1499文字中、『大辞林』本文に現れる1369文字を調査しました。
+#
+#		Unicodeが見つけられなかった漢字は × を付記しています。
+#		CJK漢字拡張-Aの文字は (Ext-A)、CJK漢字拡張-Bの文字は (Ext-B)とコメントしています。
+#		(Ext-A)*、(Ext-B)* のように*のついた文字は、JIS2004に収録されているため、
+#		MSゴシック・明朝ver5.0やメイリオフォント環境なら表示することができます。
+#		CJK漢字拡張-A,Bの全ての文字を表示するには、MingLiU-ExtBなどのフォントが必要です。
+#
+#	◎二次使用について
+#		このファイルの一部、または全部を、自由に改変、再利用、再配布することを許可します。
+#
+#	◎使用上の注意
+#		WindowsXP SP2のMS UI Gothicでの使用を想定しています。
+#		MS UI Gothicに収録されていない文字はコメントにしています。
+
+
+
+#ebcode	unicode	ascii	#	char	comment
+hC121	u00E1	a	#	á	
+hC122	u00E0	a	#	à	
+hC123	u00E2	a	#	â	
+hC124	u00E4	a	#	ä	
+hC125	u00E3	a	#	ã	
+hC126	u0101	a	#	ā	
+hC127	u00E9	e	#	é	
+hC128	u00E8	e	#	è	
+hC129	u00EA	e	#	ê	
+hC12A	u00EB	e	#	ë	
+hC12B	u0113	e	#	ē	
+hC12C	u00ED	i	#	í	
+hC12D	u00EE	i	#	î	
+hC12E	u00EF	i	#	ï	
+hC12F	u00F1	n	#	ñ	
+hC130	u00F3	o	#	ó	
+hC131	u00F2	o	#	ò	
+hC132	u00F4	o	#	ô	
+hC133	u00F6	o	#	ö	
+hC134	u0159	r	#	ř	
+hC135	u00FA	u	#	ú	
+hC136	u00FC	u	#	ü	
+hC137	u007E		#	~	
+hC138	u00E7	c	#	ç	
+hC139	u02C7		#	ˇ	
+hC13A	u0261		#	ɡ	
+hC13B	u014B		#	ŋ	
+hC13C	u0292		#	ʒ	
+hC13D	u0283		#	ʃ	
+hC13E	u0254		#	ɔ	
+hC13F	u00F0		#	ð	
+hC140	u00C1	A	#	Á	
+hC141	u00CD	I	#	Í	
+hC142	u00DA	U	#	Ú	
+hC143	u00C9	E	#	É	
+hC144	u00D3	O	#	Ó	
+hC145	u00C0	A	#	À	
+hC146	u00C8	E	#	È	
+hC147	u00D2	O	#	Ò	
+hC148	u00EC	i	#	ì	
+hC149	u00F9	u	#	ù	
+hC14A	u00FD	y	#	ý	
+hC14B	u0079,u0300	y	#	y`	
+hC14C	u0251		#	ɑ	
+hC14D	u0259		#	ə	
+hC14E	-		#	əイタリック	
+hC14F	u025B		#	ɛ	
+hC150	u03B8		#	θ	
+hC151	u028C		#	ʌ	
+hC152	u0251,u0301		#	ɑ´	
+hC153	u0259,u0301		#	ə´	
+hC154	u0254,u0301		#	ɔ´	
+hC155	u025B,u0301		#	ɛ´	
+hC156	u028C,u0301		#	ʌ´	
+hC157	u0251,u0300		#	ɑ`	
+hC158	u0259,u0300		#	ə`	
+hC159	u0254,u0300		#	ɔ`	
+hC15A	u025B,u0300		#	ɛ`	
+hC15B	u028C,u0300		#	ʌ`	
+hC15C	u00E6	ae	#	æ	
+hC15D	u01FD	ae	#	ǽ	
+hC15E	u00E6,u0300	ae	#	æ`	
+hC15F	u00C6	AE	#	Æ	
+hC160	u0251,u0303		#	ɑ~	
+hC161	u00E5	a	#	å	
+hC162	u02D8		#	˘	
+hC163	u0103	a	#	ă	
+hC164	u014F	o	#	ŏ	
+hC165	u012D	i	#	ĭ	
+hC166	u0056,u0301	V	#	V´	
+hC167	u0054,u0301	T	#	T´	
+hC168	-		#	ɡイタリック	
+hC169	u0254,u0303		#	ɔ~	
+hC16B	-		#	ɚイタリック	
+hC16C	-	-	#	-´	
+hC16D	-	-	#	-`	
+hC16E	-	a	#	a~´	
+hC16F	-		#	ŋイタリック	
+hC170	-	m	#	m。	
+hC171	-	m	#	m´。	
+hC172	-		#		
+hC173	-		#	~´	
+hC174	-		#	ɑ~´	
+hC175	-	ae	#	ae~´	
+hC176	-		#	ɔ~´	
+hC177	u0107		#	ć	
+hC178	-		#	ɑ~`	
+hC179	-		#	ɛ~`	
+hC17A	-	ae	#	ae~`	
+hC17B	u0075,u0302	u	#	u^	
+hC17C	u00DD	Y	#	Ý	
+hC17D	-		#	ɔ~`	
+hC17E	u004D,u0301	M	#	M´	
+hC221	-		#	ɛ~	
+hC222	-	+	#		
+hC223	-	X	#		
+hC224	u014D	o	#	ō	
+hC225	u0067,u0306	g	#	g˘	
+hC226	-	A	#	イタリック	
+hC227	-	B	#	イタリック	
+hC228	-	D	#	イタリック	
+hC229	u0044,u0323	D	#	D.	
+hC22A	-	E	#	イタリック	
+hC22B	-	F	#	イタリック	
+hC22C	-	G	#	イタリック	
+hC22D	-	H	#	イタリック	
+hC22E	u0048,u0323	H	#	H.	
+hC22F	-	L	#	イタリック	
+hC230	-	M	#	イタリック	
+hC231	-	N	#	イタリック	
+hC232	-	P	#	イタリック	
+hC233	-	Q	#	イタリック	
+hC234	-	R	#	イタリック	
+hC235	u0052,u0323	R	#	R.	
+hC236	-	S	#	イタリック	
+hC237	u0053,u0323	S	#	S.	
+hC238	-	T	#	イタリック	
+hC239	-	V	#	イタリック	
+hC23A	u005A,u0323	Z	#	Z.	
+hC23B	-	a	#	イタリック	
+hC23C	u0061,u0328	a	#	a˛	
+hC23D	-	b	#	イタリック	
+hC23E	-	c	#	イタリック	
+hC23F	-	d	#	イタリック	
+hC240	u0064,u0323	d	#	d.	
+hC241	-	e	#	イタリック	
+hC242	u0065,u0328	e	#	e˛	
+hC243	-	f	#	イタリック	
+hC244	-	g	#	イタリック	
+hC245	-	h	#	イタリック	
+hC246	u0068,u0323	h	#	h.	
+hC247	-	i	#	イタリック	
+hC248	u0069,u0323	i	#	i.	
+hC249	-	k	#	イタリック	
+hC24A	-	l	#	イタリック	
+hC24B	-	m	#		
+hC24C	u006D,u0323	m	#	m.	
+hC24D	-	n	#	イタリック	
+hC24E	u006E,u0323	n	#	n.	
+hC24F	-	o	#	イタリック	
+hC250	-	p	#	イタリック	
+hC251	-	q	#	イタリック	
+hC252	-	r	#	イタリック	
+hC253	u0072,u0323	r	#	r.	
+hC254	-	s	#	イタリック	
+hC255	u0073,u0327	s	#	s¸	
+hC256	u0073,u0323	s	#	s.	
+hC257	-	t	#	イタリック	
+hC258	u0074,u0323	t	#	t.	
+hC259	-	v	#	イタリック	
+hC25A	-	x	#	イタリック	
+hC25B	-	y	#	イタリック	
+hC25C	-	z	#	イタリック	
+hC25D	u007A,u0323	z	#	z.	
+hC25E	u0130	I	#	İ	
+hC25F	u006D,u0307	m	#	m˙	
+hC260	u006E,u0307	n	#	n˙	
+hC261	u017C	z	#	ż	
+hC262	u015A	S	#	Ś	
+hC263	u0107	c	#	ć	
+hC264	u0144	n	#	ń	
+hC265	u015B	s	#	ś	
+hC266	u00FD	y	#	ý	
+hC267	u017A	z	#	ź	
+hC268	u00EC	i	#	ì	
+hC269	u00C4	A	#	Ä	
+hC26A	u00D6	O	#	Ö	
+hC26B	u00DC	U	#	Ü	
+hC26C	u00FF	y	#	ÿ	
+hC26D	u00C2	A	#	Â	
+hC26E	-	o	#	o^.	
+hC26F	u00FB	u	#	û	
+hC270	u0100	A	#	Ā	
+hC271	u0112	E	#	Ē	
+hC272	u012A	I	#	Ī	
+hC273	u014C	O	#	Ō	
+hC274	u016A	U	#	Ū	
+hC275	u012B	i	#	ī	
+hC276	u006E,u0304	n	#	nˉ	
+hC277	u0070,u0304	p	#	pˉ	
+hC278	u016B	u	#	ū	
+hC279	u0079,u0304	y	#	yˉ	
+hC27A	u0141	L	#	Ł	
+hC27B	u0142	l	#	ł	
+hC27C	u00F8	o	#	ø	
+hC27D	u0129	i	#	ĩ	
+hC27E	u00F5	o	#	õ	
+hC322	-	R	#	R°	
+hC323	u00BA	0	#	º	
+hC324	u00BD	1/2	#	½	
+hC325	-	1/3	#		
+hC326	u00B9	1	#	¹	
+hC327	u00B2	2	#	²	
+hC328	u00BE	3/4	#	¾	
+hC329	u00B3	3	#	³	
+hC32A	-	4	#	上付	
+hC32B	-	5	#	上付	
+hC32C	-	6	#	上付	
+hC32D	-	7	#	上付	
+hC32E	-	8	#	上付	
+hC32F	-	9	#	上付	
+hC330	-	M	#	上付	
+hC331	-	a/b	#		
+hC332	-	b	#	上付	
+hC333	-		#		
+hC334	u025F		#	ɟ	
+hC335	-	i	#	上付	
+hC336	-	m	#	上付	
+hC337	-	n	#	上付	
+hC338	-	r	#	上付	
+hC339	-	t	#	上付	
+hC33A	-	x	#	上付	
+hC33B	-		#		
+hC33C	-	y	#	上付	
+hC33D	-	+	#	上付	
+hC33E	-	-	#	上付	
+hC33F	-	+-	#	±	
+hC340	-		#		
+hC341	-	0	#	下付	
+hC342	-	1	#	下付	
+hC343	-	2	#	下付	
+hC344	-	3	#	下付	
+hC345	-	4	#	下付	
+hC346	-	5	#	下付	
+hC347	-	6	#	下付	
+hC348	-	7	#	下付	
+hC349	-	8	#	下付	
+hC34A	-	9	#	下付	
+hC34B	-	A	#	下付	
+hC34C	-	a	#	下付(α?)	
+hC34D	-	b	#	下付	
+hC34E	-	i	#	下付	
+hC34F	-	k	#	下付	
+hC350	-	m	#	下付	
+hC351	-	n	#	下付	
+hC352	-	r	#	下付	
+hC353	-	x	#	下付	
+hC354	-	一レ	#		
+hC355	-	+	#		
+hC356	-	-	#		
+hC357	-	I	#		
+hC358	-	W	#		
+hC359	-	Z	#		
+hC35A	u0067,u0300	g	#	g`	
+hC35C	-	$	#		
+hC35D	-	C	#		
+hC360	-	レ	#		
+hC364	-	一	#		
+hC365	-	下	#		
+hC366	-	三	#		
+hC367	-	上	#		
+hC368	-	上レ	#		
+hC369	-	中	#		
+hC36A	-	ニ	#		
+hC36B	u0115	e	#	ĕ	
+hC36C	u010C	C	#	Č	
+hC36D	u0160	S	#	Š	
+hC36E	u01CE	a	#	ǎ	
+hC36F	u010D	c	#	č	
+hC370	u011B	e	#	ě	
+hC371	u0148	n	#	ň	
+hC372	u0159	r	#	ř	
+hC373	u0161	s	#	š	
+hC374	u017E	z	#	ž	
+hC375	u30F0		#	ヰ	
+hC376	u30F1		#	ヱ	
+hC377	u026F,u0308		#	ɯ¨	
+hC378	u0270		#	ɰ	
+hC379	-	u	#	u~'	
+hC37A	u0294		#	ʔ	
+hC37B	u0266		#	ɦ	
+hC37C	u00DF	ss	#	ß	
+hC37D	-	I	#		
+hC37E	-	N	#		
+hC421	u0272		#	ɲ	
+hC422	u02D0		#	ː	
+hC423	-		#		
+
+#ebcode	unicode	ascii	#	char	comment
+zA121	u4EFF		#	仿	
+zA122	u4F49		#	佉	
+zA123	u4F97		#	侗	
+zA124	u5018		#	倘	
+zA125	u5053		#	偓	
+zA126	u5094		#	傔	
+zA127	u5096		#	傖	
+zA128	u50C4		#	僄	
+zA129	u50E6		#	僦	
+zA12A	u5155		#	兕	
+zA12B	u51F4		#	凴	
+zA12C	u5201		#	刁	
+zA12D	u5249		#	剉	
+zA12E	u5257		#	剗	
+zA12F	u5282		#	劂	
+zA130	u5293		#	劓	
+zA131	u52D6		#	勖	
+zA132	u536C		#	卬	
+zA133	u5393		#	厓	
+zA134	u53B2		#	厲	
+zA135	u544D		#	呍	
+zA136	u5427		#	吧	
+zA137	u549C		#	咜	
+zA138	u546B		#	呫	
+zA139	u5466		#	呦	
+zA13A	u54BF		#	咿	
+zA13B	u54A9		#	咩	
+zA13C	u54FF		#	哿	
+zA13D	u552B		#	唫	
+zA13E	u5608		#	嘈	
+zA13F	u563B		#	嘻	
+zA140	u566F		#	噯	
+zA141	u5672		#	噲	
+zA142	u569A		#	嚚	
+zA143	u56AC		#	嚬	
+zA144	u570A		#	圊	
+zA145	u572F		#	圯	
+zA146	u574C		#	坌	
+zA147	u57F8		#	埸	
+zA148	u57F6		#	埶	
+zA149	u57E4		#	埤	
+zA14A	u58D4		#	壔	
+zA14B	u58E0		#	壠	
+zA14C	u58DA		#	壚	
+zA14D	u8641		#	虁	
+zA14E	u595D		#	奝	
+zA14F	u596D		#	奭	
+zA150	u59D2		#	姒	
+zA151	u5A65		#	婥	
+zA152	u5A55		#	婕	
+zA153	u5B7C		#	孼	
+zA154	u5C2B		#	尫	
+zA155	u5C69		#	屩	
+zA156	u5D27		#	崧	
+zA157	u5D46		#	嵆	
+zA158	u5DA0		#	嶠	
+zA159	u5DB8		#	嶸	
+zA15A	u5E58		#	幘	
+zA15B	u5EBE		#	庾	
+zA15C	u9F90		#	龐	
+zA15D	u5F07		#	弇	
+zA15E	u5F40		#	彀	
+zA15F	u5F50		#	彐	
+zA160	u5F64		#	彤	
+zA161	u5F89		#	徉	
+zA162	u5F9C		#	徜	
+zA163	u5FA7		#	徧	
+zA164	u5FC9		#	忉	
+zA165	u5FFC		#	忼	
+zA166	u5FE1		#	忡	
+zA167	u6035		#	怵	
+zA168	u609D		#	悝	
+zA169	u60DB		#	惛	
+zA16A	u60D5		#	惕	
+zA16B	u60D9		#	惙	
+zA16C	u60F2		#	惲	
+zA16D	u6137		#	愷	
+zA16E	u6215		#	戕	
+zA16F	u6243		#	扃	
+zA170	u6251		#	扑	
+zA171	u62D6		#	拖	
+zA172	u62C4		#	拄	
+zA173	u6343		#	捃	
+zA174	u6339		#	挹	
+zA175	u6479		#	摹	
+zA176	u649D		#	撝	
+zA177	u64BF		#	撿	
+zA178	u6631		#	昱	
+zA179	u6661		#	晡	
+zA17A	u7699		#	皙	
+zA17B	u814A		#	腊	
+zA17C	u81CF		#	臏	
+zA17D	u6747		#	杇	
+zA17E	u6798		#	枘	
+zA221	u677B		#	杻	
+zA222	u68F0		#	棰	
+zA223	u68D6		#	棖	
+zA224	u6968		#	楨	
+zA225	u6963		#	楣	
+zA226	u6A5B		#	橛	
+zA227	u6AEC		#	櫬	
+zA228	u6B1B		#	欛	
+zA229	u6B46		#	歆	
+zA22A	u6B82		#	殂	
+zA22B	u6BAD		#	殭	
+zA22C	u6BF1		#	毱	
+zA22D	u6C05		#	氅	
+zA22E	u6C10		#	氐	
+zA22F	u6C33		#	氳	
+zA230	u6DFC		#	淼	
+zA231	u6C85		#	沅	
+zA232	u6C86		#	沆	
+zA233	u6C74		#	汴	
+zA234	u6C94		#	沔	
+zA235	u6CEB		#	泫	
+zA236	u6CEE		#	泮	
+zA237	u6D04		#	洄	
+zA238	u6D0E		#	洎	
+zA239	u6D2E		#	洮	
+zA23A	u6D65		#	浥	
+zA23B	u6DC4		#	淄	
+zA23C	u6DBF		#	涿	
+zA23D	u6DDD		#	淝	
+zA23E	u6E5C		#	湜	
+zA23F	u6E27		#	渧	
+zA240	u6EC3		#	滃	
+zA241	u6F2A		#	漪	
+zA242	u6F1A		#	漚	
+zA243	u6F33		#	漳	
+zA244	u6F8C		#	澌	
+zA245	u7006		#	瀆	
+zA246	u705D		#	灝	
+zA247	u7064		#	灤	
+zA248	u704E		#	灎	
+zA249	u70AB		#	炫	
+zA24A	u70B7		#	炷	
+zA24B	u712E		#	焮	
+zA24C	u7120		#	焠	
+zA24D	u715C		#	煜	
+zA24E	u7147		#	煇	
+zA24F	u7146		#	煆	
+zA250	u7168		#	煨	
+zA251	u7185		#	熅	
+zA252	u7192		#	熒	
+zA253	u7187		#	熇	
+zA254	u71B3		#	熳	
+zA255	u71CB		#	燋	
+zA256	u71C1		#	燁	
+zA257	u71FE		#	燾	
+zA258	u51DE		#	凞	
+zA259	u7253		#	牓	
+zA25A	u7255		#	牕	
+zA25B	u7256		#	牖	
+zA25C	u728D		#	犍	
+zA25D	u729B		#	犛	
+zA25E	u7328		#	猨	
+zA25F	u7350		#	獐	
+zA260	u7377		#	獷	
+zA261	u737C		#	獼	
+zA262	u7395		#	玕	
+zA263	u73C9		#	珉	
+zA264	u7426		#	琦	
+zA265	u741A		#	琚	
+zA266	u7428		#	琨	
+zA267	u7486		#	璆	
+zA268	u7489		#	璉	
+zA269	u749F		#	璟	
+zA26A	u74A3		#	璣	
+zA26B	u7498		#	璘	
+zA26C	u74A8		#	璨	
+zA26D	u74BF		#	璿	
+zA26E	u74DA		#	瓚	
+zA26F	u754E		#	畎	
+zA270	u75C0		#	痀	
+zA271	u75E4		#	痤	
+zA272	u7616		#	瘖	
+zA273	u762D		#	瘭	
+zA274	u769E		#	皞	
+zA275	u76CE		#	盎	
+zA276	u76CC		#	盌	
+zA277	u76EC		#	盬	
+zA278	u76FC		#	盼	
+zA279	u771A		#	眚	
+zA27A	u7719		#	眙	
+zA27B	u7762		#	睢	
+zA27C	u775F		#	睟	
+zA27D	u775C		#	睜	
+zA27E	u777D		#	睽	
+zA321	u77F0		#	矰	
+zA322	u77FB		#	矻	
+zA323	u782D		#	砭	
+zA324	u786E		#	确	
+zA325	u78C8		#	磈	
+zA326	u78F7		#	磷	
+zA327	u7998		#	禘	
+zA328	u79D4		#	秔	
+zA329	u7A85		#	窅	
+zA32A	u7AA0		#	窠	
+zA32B	u7AAC		#	窬	
+zA32C	u7AB3		#	窳	
+zA32D	u7AFD		#	竽	
+zA32E	u7B60		#	筠	
+zA32F	u7C0B		#	簋	
+zA330	u7C20		#	簠	
+zA331	u7C6E		#	籮	
+zA332	u7CD7		#	糗	
+zA333	u7CD5		#	糕	
+zA334	u7CDD		#	糝	
+zA335	u7D08		#	紈	
+zA336	u7D13		#	紓	
+zA337	u7D47		#	絇	
+zA338	u7D53		#	絓	
+zA339	u7D5C		#	絜	
+zA33A	u7D7A		#	絺	
+zA33B	u7D88		#	綈	
+zA33C	u7DC2		#	緂	
+zA33D	u7E08		#	縈	
+zA33E	u7E15		#	縕	
+zA33F	u7E11		#	縑	
+zA340	u7E20		#	縠	
+zA341	u7E1D		#	縝	
+zA342	u7E47		#	繇	
+zA343	u7E52		#	繒	
+zA344	u7E73		#	繳	
+zA345	u7F7D		#	罽	
+zA346	u7F7E		#	罾	
+zA347	u7FDF		#	翟	
+zA348	u7FEC		#	翬	
+zA349	u8026		#	耦	
+zA34A	u8071		#	聱	
+zA34B	u8274		#	艴	
+zA34C	u828E		#	芎	
+zA34D	u82B7		#	芷	
+zA34E	u82AE		#	芮	
+zA34F	u82FE		#	苾	
+zA350	u8300		#	茀	
+zA351	u8347		#	荇	
+zA352	u8343		#	荃	
+zA353	u8398		#	莘	
+zA354	u84AF		#	蒯	
+zA355	u84F0		#	蓰	
+zA356	u8553		#	蕓	
+zA357	u8559		#	蕙	
+zA358	u855E		#	蕞	
+zA359	u8564		#	蕤	
+zA35A	u858F		#	薏	
+zA35B	u85FF		#	藿	
+zA35C	u8610		#	蘐	
+zA35D	u8657		#	虗	
+zA35E	u8662		#	虢	
+zA35F	u866C		#	虬	
+zA360	u866F		#	虯	
+zA361	u867A		#	虺	
+zA362	u8691		#	蚑	
+zA363	u86B1		#	蚱	
+zA364	u870B		#	蜋	
+zA365	u8758		#	蝘	
+zA366	u8765		#	蝥	
+zA367	u8788		#	螈	
+zA368	u87AD		#	螭	
+zA369	u8832		#	蠲	
+zA36A	u88CA		#	裊	
+zA36B	u88DB		#	裛	
+zA36C	u8930		#	褰	
+zA36D	u88AA		#	袪	
+zA36E	u88CE		#	裎	
+zA36F	u88F1		#	裱	
+zA370	u891A		#	褚	
+zA371	u89D4		#	觔	
+zA372	u89D6		#	觖	
+zA373	u89F3		#	觳	
+zA374	u8A15		#	訕	
+zA375	u8A22		#	訢	
+zA376	u8A58		#	詘	
+zA377	u8A61		#	詡	
+zA378	u8A79		#	詹	
+zA379	u8ABE		#	誾	
+zA37A	u8C68		#	豨	
+zA37B	u8C73		#	豳	
+zA37C	u8C92		#	貒	
+zA37D	u8CD9		#	賙	
+zA37E	u8D1B		#	贛	
+zA421	u8DCE		#	跎	
+zA422	u8DD7		#	跗	
+zA423	u8E20		#	踠	
+zA424	u8E14		#	踔	
+zA425	u8E3D		#	踽	
+zA426	u8E62		#	蹢	
+zA427	u8F1E		#	輞	
+zA428	u8F2D		#	輭	
+zA429	u8F36		#	輶	
+zA42A	u8F54		#	轔	
+zA42B	u8FA7		#	辧	
+zA42C	u8FB5		#	辵	
+zA42D	uFA66		#	辶	一点しんにょう
+zA42E	u8FB6		#	辶	二点しんにょう
+zA42F	u8FE4		#	迤	
+zA430	u9085		#	邅	
+zA431	u9088		#	邈	
+zA432	u909B		#	邛	
+zA433	u90A2		#	邢	
+zA434	u90B3		#	邳	
+zA435	u90C5		#	郅	
+zA436	u9127		#	鄧	
+zA437	u9131		#	鄱	
+zA438	u9134		#	鄴	
+zA439	u9148		#	酈	
+zA43A	u915B		#	酛	
+zA43B	u9164		#	酤	
+zA43C	u9174		#	酴	
+zA43D	u9183		#	醃	
+zA43E	u919E		#	醞	
+zA43F	u91AE		#	醮	
+zA440	u91C3		#	釃	
+zA441	u91D7		#	釗	
+zA442	u9210		#	鈐	
+zA443	u9207		#	鈇	
+zA444	u924F		#	鉏	
+zA445	u9278		#	鉸	
+zA446	u9288		#	銈	
+zA447	u9348		#	鍈	
+zA448	u93DC		#	鏜	
+zA449	u9432		#	鐲	
+zA44A	u944A		#	鑊	
+zA44B	u9463		#	鑣	
+zA44C	u9592		#	閒	
+zA44D	u959F		#	閟	
+zA44E	u95A9		#	閩	
+zA44F	u95BD		#	閽	
+zA450	u95D3		#	闓	
+zA451	u95D0		#	闐	
+zA452	u95DA		#	闚	
+zA453	u95DE		#	闞	
+zA454	u963C		#	阼	
+zA455	u9658		#	陘	
+zA456	u9684		#	隄	
+zA457	u96D2		#	雒	
+zA458	u96DE		#	雞	
+zA459	u96E9		#	雩	
+zA45A	u975B		#	靛	
+zA45B	u9773		#	靳	
+zA45C	u97BA		#	鞺	
+zA45D	u97DE		#	韞	
+zA45E	u97DB		#	韛	
+zA45F	u97E1		#	韡	
+zA460	u982B		#	頫	
+zA461	u9852		#	顒	
+zA462	u9853		#	顓	
+zA463	u9857		#	顗	
+zA464	u9865		#	顥	
+zA465	u98BA		#	颺	
+zA466	u98E5		#	飥	
+zA467	u9916		#	餖	
+zA468	u993C		#	餼	
+zA469	u993B		#	餻	
+zA46A	u9958		#	饘	
+zA46B	u99D4		#	駔	
+zA46C	u99D9		#	駙	
+zA46D	u9A03		#	騃	
+zA46E	u9A36		#	騶	
+zA46F	u9A38		#	騸	
+zA470	u9B5E		#	魞	
+zA471	u9B8F		#	鮏	
+zA472	u9BC1		#	鯁	
+zA473	u9C36		#	鰶	
+zA474	u9D1E		#	鴞	
+zA475	u9D77		#	鵷	
+zA476	u9D70		#	鵰	
+zA477	u9DC3		#	鷃	
+zA478	u9EA8		#	麨	
+zA479	u9EBC		#	麼	
+zA47A	u9EE7		#	黧	
+zA47B	u9F02		#	鼂	
+zA47C	u9F2F		#	鼯	
+zA47D	u9F41		#	齁	
+zA47E	u9F57		#	齗	
+zA521	u9F94		#	龔	
+zA522	u6365		#	捥	
+zA523	u6964		#	楤	
+zA524	u4E30		#	丰	異体字?
+zA525	-		#		(未使用)
+zA526	u630A		#	挊	
+zA527	u825C		#	艜	
+zA528	u6852		#	桒	
+zA529	-		#		草書
+zA52A	-		#		草書
+zA52B	u4E8D		#	亍	
+zA52C	u4EB9		#	亹	
+zA52D	u511E		#	儞	
+zA52E	u5041		#	偁	
+zA52F	u5103		#	儃	
+zA530	u4F6A		#	佪	
+zA531	u510B		#	儋	
+zA532	u5108		#	儈	
+zA533	u4F92		#	侒	
+zA534	u4F77		#	佷	
+zA535	u4F0B		#	伋	
+zA536	u509C		#	傜	
+zA537	u6DF8		#	淸	
+zA538	u537A		#	卺	
+zA539	u5212		#	划	
+zA53A	u52D1		#	勑	
+zA53B	u5307		#	匇	
+zA53C	u5303		#	匃	
+zA53D	u531C		#	匜	
+zA53E	-		#		「世」の異体字 
+zA53F	u55E2		#	嗢	
+zA540	u56C9		#	囉	
+zA541	u553D		#	唽	
+zA542	u5695		#	嚕	
+zA543	u5671		#	噱	
+zA544	u563D		#	嘽	
+zA545	u569E		#	嚞	
+zA546	u5581		#	喁	
+zA547	u565E		#	噞	
+zA549	u54EF		#	哯	
+zA54A	u56A9		#	嚩	
+zA54B	u5588		#	喈	
+zA54D	u6677		#	晷	
+zA54E	u53F5		#	叵	
+zA54F	u55E9		#	嗩	
+zA550	u598B		#	妋	
+zA551	u5A2D		#	娭	
+zA552	u5ADA		#	嫚	
+zA553	u5B17		#	嬗	
+zA555	u5A13		#	娓	
+zA556	u59DE		#	姞	
+zA558	u5B41		#	孁	
+zA559	u5804		#	堄	
+zA55A	u57FF		#	埿	
+zA55C	u574D		#	坍	
+zA55D	u57B8		#	垸	
+zA55E	u5745		#	坅	
+zA55F	u5777		#	坷	
+zA560	u58CE		#	壎	
+zA561	u5864		#	塤	
+zA562	u5820		#	堠	
+zA563	u58AA		#	墪	
+zA564	u57CF		#	埏	
+zA565	u5AB3		#	媳	
+zA566	u5889		#	墉	
+zA567	u5768		#	坨	
+zA568	u5729		#	圩	
+zA569	u5C30		#	尰	
+zA56A	u5C5F		#	屟	
+zA56B	u5C63		#	屣	
+zA56D	u5F02		#	异	異体字? 已/廾
+zA56F	u5CBA		#	岺	
+zA570	u5C8F		#	岏	
+zA571	u5DCB		#	巋	
+zA572	u5DD1		#	巑	
+zA573	u5E14		#	帔	
+zA574	u5E49		#	幉	
+zA575	u5E12		#	帒	
+zA576	u5E5E		#	幞	
+zA578	u5F47		#	彇	
+zA579	u5F23		#	弣	
+zA57A	u5F36		#	弶	
+zA57B	u5F3D		#	弽	
+zA57C	u5EAA		#	庪	
+zA57D	u64CC		#	擌	
+zA621	u64CE		#	擎	
+zA622	u6317		#	挗	
+zA623	u64D0		#	擐	
+zA624	u630D		#	挍	
+zA625	u642F		#	搯	
+zA626	u64F7		#	擷	
+zA627	u6399		#	掙	
+zA628	u62B3		#	抳	
+zA629	u651E		#	攞	
+zA62A	u6303		#	挃	
+zA62B	u64BE		#	撾	
+zA62C	u646D		#	摭	
+zA62D	u71AE		#	熮	
+zA62F	u70D1		#	烑	
+zA630	u7075		#	灵	
+zA631	u7151		#	煑	
+zA632	u7215		#	爕	
+zA633	u7104		#	焄	
+zA634	u7366		#	獦	
+zA635	u7327		#	猧	
+zA636	u733D		#	猽	
+zA637	u7352		#	獒	
+zA638	u736F		#	獯	
+zA639	u736B		#	獫	
+zA63A	u7381		#	玁	
+zA63B	u72C1		#	狁	
+zA63C	u72FB		#	狻	
+zA63D	u703C		#	瀼	
+zA63E	u7023		#	瀣	
+zA63F	u6D3F		#	洿	
+zA640	u6FCA		#	濊	
+zA641	u6FA0		#	澠	
+zA642	u6F62		#	潢	
+zA643	u704A		#	灊	
+zA644	u6DDB		#	淛	
+zA645	u6D98		#	涘	
+zA646	u6E4C		#	湌	
+zA647	u7054		#	灔	
+zA649	u6D94		#	涔	
+zA64A	u6DAC		#	涬	
+zA64B	u90BE		#	邾	
+zA64C	u9118		#	鄘	
+zA64D	u90B6		#	邶	
+zA64E	u9100		#	鄀	
+zA64F	u913D		#	鄽	
+zA650	u83C7		#	菇	
+zA651	u83C6		#	菆	
+zA652	u84C0		#	蓀	
+zA653	u85CA		#	藊	
+zA654	u8605		#	蘅	
+zA655	u82BA		#	芺	
+zA656	u84BA		#	蒺	
+zA657	u853E		#	蔾	
+zA658	u863C		#	蘼	
+zA659	u8581		#	薁	
+zA65A	u8452		#	葒	
+zA65B	u84EF		#	蓯	
+zA65C	u84BE		#	蒾	
+zA65D	u8629		#	蘩	
+zA65E	u850C		#	蔌	
+zA65F	u851E		#	蔞	
+zA660	u83DD		#	菝	
+zA661	u857D		#	蕽	
+zA662	u8621		#	蘡	
+zA663	u831B		#	茛	
+zA664	u837D		#	荽	
+zA665	u5B7D		#	孽	
+zA666	u845C		#	葜	
+zA667	u83C0		#	菀	
+zA668	u859F		#	薟	
+zA669	u82BE		#	芾	
+zA66A	u8618		#	蘘	
+zA66B	u8532		#	蔲	
+zA66C	u852F		#	蔯	
+zA66D	u8357		#	荗	
+zA66E	u8394		#	莔	
+zA66F	u5676		#	噶	
+zA670	u85CB		#	藋	
+zA671	u83A7		#	莧	
+zA672	u82C6		#	苆	
+zA673	u84EA		#	蓪	
+zA674	u8401		#	萁	
+zA675	u85E6		#	藦	
+zA676	u85B7		#	薷	
+zA677	u861E		#	蘞	
+zA678	u8395		#	莕	
+zA679	u8485		#	蒅	
+zA67B	u82BF		#	芿	
+zA67C	u6086		#	悆	
+zA67D	u5FDE		#	忞	
+zA67E	u60F8		#	惸	
+zA721	u60DD		#	惝	
+zA722	u6033		#	怳	
+zA723	u60D4		#	惔	
+zA724	u600D		#	怍	
+zA725	u60CB		#	惋	
+zA726	u6246		#	扆	
+zA727	u66DB		#	曛	
+zA728	u6600		#	昀	
+zA729	u662A		#	昪	
+zA72A	u668D		#	暍	
+zA72B	u81D7		#	臗	
+zA72C	u81DB		#	臛	
+zA72D	u8198		#	膘	
+zA72E	u69BA		#	榺	
+zA72F	u6A3E		#	樾	
+zA730	u6AC6		#	櫆	
+zA731	u67C0		#	柀	
+zA732	u68F1		#	棱	
+zA733	u6A52		#	橒	
+zA734	u6A9E		#	檞	
+zA735	u6AA8		#	檨	
+zA736	u676E		#	杮	
+zA737	u6949		#	楉	
+zA738	u6A3B		#	樻	
+zA73A	u6855		#	桕	
+zA73B	u68FC		#	棼	
+zA73C	u69FE		#	槾	
+zA73D	u6957		#	楗	
+zA73E	u68D9		#	棙	
+zA740	u6844		#	桄	
+zA741	u6774		#	杴	
+zA742	u6792		#	枒	
+zA743	u6AAB		#	檫	
+zA744	u6748		#	杈	
+zA745	u6B0B		#	欋	
+zA746	u68C5		#	棅	
+zA747	u6980		#	榀	
+zA748	u68FB		#	棻	
+zA749	u682D		#	栭	
+zA74A	u69AD		#	榭	
+zA74B	u68CC		#	棌	
+zA74C	u6B35		#	欵	
+zA74D	u6BA9		#	殩	
+zA74E	u6BAE		#	殮	
+zA74F	u69E9		#	槩	
+zA750	u6AF2		#	櫲	
+zA753	u7A40		#	穀	
+zA754	u8481		#	蒁	
+zA755	u8FF1		#	迱	
+zA757	u9002		#	适	
+zA758	u9008		#	逈	
+zA759	u8FCD		#	迍	
+zA75A	u902D		#	逭	
+zA75B	u8FEE		#	迮	
+zA75C	u7488		#	璈	
+zA75D	u7444		#	瑄	
+zA75E	u74B1		#	璱	
+zA75F	u73A6		#	玦	
+zA760	u742F		#	琯	
+zA761	u7499		#	璙	
+zA762	u73C5		#	珅	
+zA763	u73E3		#	珣	
+zA764	u73A0		#	玠	
+zA765	u74C8		#	瓈	
+zA766	u74AB		#	璫	
+zA767	u742B		#	琫	
+zA768	u744D		#	瑍	
+zA769	u740A		#	琊	
+zA76A	u75BF		#	疿	
+zA76B	u7655		#	癕	
+zA76C	u76A5		#	皥	
+zA76D	u76AA		#	皪	
+zA76E	u76E6		#	盦	
+zA76F	u76D4		#	盔	
+zA770	u7794		#	瞔	
+zA771	u7760		#	睠	
+zA773	u779F		#	瞟	
+zA774	u778D		#	瞍	
+zA775	u7736		#	眶	
+zA777	u757E		#	畾	
+zA778	u77EA		#	矪	
+zA779	u77EC		#	矬	
+zA77A	u7A6D		#	穭	
+zA77C	u88BD		#	袽	
+zA77D	u8945		#	襅	
+zA77E	u7B6F		#	筯	
+zA821	u5E18		#	帘	
+zA822	u7B07		#	笇	
+zA823	u7BD7		#	篗	
+zA824	u7C61		#	籡	
+zA825	u7C57		#	籗	
+zA826	u8932		#	褲	
+zA827	u8919		#	褙	
+zA828	u7CBF		#	粿	
+zA82B	u7E2C		#	縬	
+zA82C	u7F47		#	罇	
+zA82D	u7E86		#	纆	
+zA82E	u8016		#	耖	
+zA82F	u801F		#	耟	
+zA830	u8249		#	艉	
+zA831	u8CFE		#	賾	
+zA832	u87EB		#	蟫	
+zA833	u873A		#	蜺	
+zA834	u86A8		#	蚨	
+zA835	u87ED		#	蟭	
+zA836	u8810		#	蠐	
+zA837	u87AC		#	螬	
+zA838	u871F		#	蜟	
+zA839	u883C		#	蠼	
+zA83A	u878B		#	螋	
+zA83B	u868D		#	蚍	
+zA83C	u87DF		#	蟟	
+zA83D	u86C1		#	蛁	
+zA83E	u871E		#	蜞	
+zA841	u876F		#	蝯	
+zA843	u9D52		#	鵒	
+zA844	u9D1D		#	鴝	
+zA845	u9E1C		#	鸜	
+zA846	u9E07		#	鸇	
+zA847	u9D96		#	鶖	
+zA849	u9E0D		#	鸍	
+zA84A	u9D69		#	鵩	
+zA84B	u9DA1		#	鶡	
+zA84C	u9DF4		#	鷴	
+zA84E	u9DE7		#	鷧	
+zA84F	u93CC		#	鏌	
+zA850	u9381		#	鎁	
+zA851	u9371		#	鍱	
+zA852	u9299		#	銙	
+zA853	u91ED		#	釭	
+zA854	u9267		#	鉧	
+zA855	u9351		#	鍑	
+zA856	u93FD		#	鏽	
+zA857	u9315		#	錕	
+zA858	u92C2		#	鋂	
+zA859	u92E7		#	鋧	
+zA85A	u9434		#	鐴	
+zA85C	u92D0		#	鋐	
+zA85D	u8E54		#	蹔	
+zA85F	u8E36		#	踶	
+zA860	u8A75		#	詵	
+zA861	u8AD0		#	諐	
+zA862	u8AAE		#	誮	
+zA863	u8B2D		#	謭	
+zA864	u8AB7		#	誷	
+zA865	u89F6		#	觶	
+zA866	u91C4		#	釄	
+zA867	u91BC		#	醼	
+zA868	u91A8		#	醨	
+zA869	u91F1		#	釱	
+zA86A	u91FB		#	釻	
+zA86B	u939B		#	鎛	
+zA86C	u9427		#	鐧	
+zA86E	u9243		#	鉃	
+zA86F	u7E87		#	纇	
+zA870	u71B2		#	熲	
+zA871	u981E		#	頞	
+zA872	u9856		#	顖	
+zA873	u84B4		#	蒴	
+zA874	u857A		#	蕺	
+zA875	u82A9		#	芩	
+zA876	u4F7A		#	佺	
+zA877	u4F7E		#	佾	
+zA878	u4FCF		#	俏	
+zA879	u503B		#	倻	
+zA87A	u5135		#	儵	
+zA87B	u5666		#	噦	
+zA87C	u55C9		#	嗉	
+zA87D	u5630		#	嘰	
+zA87E	u5412		#	吒	
+zA921	u5535		#	唵	
+zA922	u553C		#	唼	
+zA923	u57E6		#	埦	
+zA924	u589D		#	墝	
+zA925	u57F5		#	埵	
+zA926	u579C		#	垜	
+zA927	u58A9		#	墩	
+zA928	u5733		#	圳	
+zA929	u58D2		#	壒	
+zA92A	u7F97		#	羗	
+zA92B	u6422		#	搢	
+zA92C	u6429		#	搩	
+zA92D	u6529		#	攩	
+zA92E	u64E4		#	擤	
+zA92F	u6335		#	挵	
+zA930	u62FC		#	拼	
+zA931	u64FB		#	擻	
+zA932	u63BD		#	掽	
+zA933	u6E51		#	湑	
+zA934	u6FF9		#	濹	
+zA935	u6CD4		#	泔	
+zA936	u728E		#	犎	
+zA937	u685B		#	桛	
+zA938	u68A3		#	梣	
+zA939	u6A0F		#	樏	
+zA93A	u68BB		#	梻	
+zA93B	u6A50		#	橐	
+zA93C	u6898		#	梘	
+zA93D	u68B2		#	梲	
+zA93E	u6A45		#	橅	
+zA93F	u6A89		#	檉	
+zA941	u6AE7		#	櫧	
+zA942	u67BB		#	枻	
+zA943	u67C3		#	柃	
+zA944	u6831		#	栱	
+zA945	u682C		#	栬	
+zA946	u6A1D		#	樝	
+zA947	u6A56		#	橖	
+zA948	u6733		#	朳	
+zA949	u68ED		#	棭	
+zA94A	u6882		#	梂	
+zA94C	u69B0		#	榰	
+zA94D	u67F7		#	柷	
+zA94E	u69F5		#	槵	
+zA94F	u6A94		#	檔	
+zA950	u686B		#	桫	
+zA951	u6B0F		#	欏	
+zA952	u6793		#	枓	
+zA953	u6972		#	楲	
+zA954	u816D		#	腭	
+zA955	u80F3		#	胳	
+zA956	u8168		#	腨	
+zA957	u6713		#	朓	
+zA958	u9C27		#	鰧	
+zA959	u84CF		#	蓏	
+zA95A	u73AB		#	玫	
+zA95B	u7430		#	琰	
+zA95C	u7447		#	瑇	
+zA95D	u74A9		#	璩	
+zA95E	u73E7		#	珧	
+zA95F	u7440		#	瑀	
+zA960	u7452		#	瑒	
+zA961	u746D		#	瑭	
+zA962	u7394		#	玔	
+zA963	u73D6		#	珖	
+zA964	u73A2		#	玢	
+zA965	u76B6		#	皶	
+zA966	u9EAC		#	麬	
+zA967	u7868		#	硨	
+zA968	u78E0		#	磠	
+zA969	u78E4		#	磤	
+zA96A	u78F2		#	磲	
+zA96B	u780D		#	砍	
+zA96C	u787E		#	硾	
+zA96D	u78B0		#	碰	
+zA96E	u7847		#	硇	
+zA96F	u7900		#	礀	
+zA970	u757A		#	畺	
+zA971	u88F0		#	裰	
+zA972	u88D1		#	裑	
+zA973	u8898		#	袘	
+zA974	u8940		#	襀	
+zA975	u88D3		#	裓	
+zA977	u8918		#	褘	
+zA978	u8939		#	褹	
+zA979	u8962		#	襢	
+zA97A	u8928		#	褨	
+zA97B	u7BCA		#	篊	
+zA97C	u7B27		#	笧	
+zA97D	u7C01		#	簁	
+zA97E	u7C0E		#	簎	
+zAA21	u7C36		#	簶	
+zAA22	u7C70		#	籰	
+zAA23	u7C59		#	籙	
+zAA24	u7C6D		#	籭	
+zAA25	u7BAF		#	箯	
+zAA26	u7C51		#	籑	
+zAA27	u8347		#	荇	
+zAA28	u84CE		#	蓎	
+zAA29	u7B2F		#	笯	
+zAA2B	u7BC5		#	篅	
+zAA2C	u7C33		#	簳	
+zAA2D	u7C39		#	簹	
+zAA2E	u7BD4		#	篔	
+zAA31	u7B72		#	筲	
+zAA32	u7B2D		#	笭	
+zAA33	u7B4E		#	筎	
+zAA34	u7F96		#	羖	
+zAA35	u7C79		#	籹	
+zAA36	u7C8F		#	粏	
+zAA37	u7CC8		#	糈	
+zAA38	u7CEB		#	糫	
+zAA39	u7CBC		#	粼	
+zAA3A	u7C94		#	粔	
+zAA3B	u7CB6		#	粶	
+zAA3C	u7CD9		#	糙	
+zAA3D	u7CC4		#	糄	
+zAA3E	u7CAC		#	粬	
+zAA3F	u7CF5		#	糵	
+zAA40	u7D3D		#	紽	
+zAA41	u7DCC		#	緌	
+zAA42	u7D41		#	絁	
+zAA43	u7D07		#	紇	
+zAA44	u7E91		#	纑	
+zAA45	u7DE6		#	緦	
+zAA46	u7D1E		#	紞	
+zAA47	u7E8D		#	纍	
+zAA49	u7FBF		#	羿	
+zAA4A	u7FFA		#	翺	
+zAA4B	u7FE5		#	翥	
+zAA4C	u7F95		#	羕	
+zAA4D	u8772		#	蝲	
+zAA4E	u87D6		#	蟖	
+zAA4F	u86B8		#	蚸	
+zAA50	u8713		#	蜓	
+zAA51	u873E		#	蜾	
+zAA52	u8787		#	螇	
+zAA53	u8801		#	蠁	
+zAA54	u8731		#	蜱	
+zAA56	u86FA		#	蛺	
+zAA57	u8675		#	虵	
+zAA58	u8771		#	蝱	
+zAA59	u8814		#	蠔	
+zAA5A	u8764		#	蝤	
+zAA5B	u86D1		#	蛑	
+zAA5C	u880A		#	蠊	
+zAA5D	u8806		#	蠆	
+zAA5E	u87A0		#	螠	
+zAA5F	u9238		#	鈸	
+zAA60	u9311		#	錑	
+zAA61	u93BA		#	鎺	
+zAA62	u9370		#	鍰	
+zAA63	u93C1		#	鏁	
+zAA64	u92B2		#	銲	
+zAA65	u9239		#	鈹	
+zAA66	u93DF		#	鏟	
+zAA67	u9416		#	鐖	
+zAA68	u946F		#	鑯	
+zAA69	u95CB		#	闋	
+zAA6B	u93F1		#	鏱	
+zAA6C	u923C		#	鈼	
+zAA6E	u9B0C		#	鬌	
+zAA6F	u9796		#	鞖	
+zAA70	u976A		#	靪	
+zAA71	u979A		#	鞚	
+zAA72	u976E		#	靮	
+zAA73	u9B20		#	鬠	
+zAA74	u9C58		#	鱘	
+zAA75	u9BAC		#	鮬	
+zAA76	u9C70		#	鱰	
+zAA77	u9C6A		#	鱪	
+zAA78	u9BF3		#	鯳	
+zAA79	u9C75		#	鱵	
+zAA7A	u9BEF		#	鯯	
+zAA7B	u9BE7		#	鯧	
+zAA7C	u9B73		#	魳	
+zAA7D	u9BCE		#	鯎	
+zAA7E	u9BE5		#	鯥	
+zAB21	u9B84		#	鮄	
+zAB22	u9C69		#	鱩	
+zAB23	u9C6E		#	鱮	
+zAB24	u9BC7		#	鯇	
+zAB25	u9B9E		#	鮞	
+zAB26	u9C16		#	鰖	
+zAB27	u9BB8		#	鮸	
+zAB28	u9BF7		#	鯷	
+zAB29	u9B6C		#	魬	
+zAB2A	u9BD8		#	鯘	
+zAB2B	u9C6B		#	鱫	
+zAB2C	u9C5D		#	鱝	
+zAB2D	u9C4F		#	鱏	
+zAB2E	u9C53		#	鱓	
+zAB2F	u9C31		#	鰱	
+zAB30	u9B8A		#	鮊	
+zAB31	u9C5B		#	鱛	
+zAB32	u9BBE		#	鮾	
+zAB33	u9C41		#	鱁	
+zAB34	u9BA7		#	鮧	
+zAB35	u9B66		#	魦	
+zAB36	u9C6D		#	鱭	
+zAB37	u5B52		#	孒	
+zAB38	u752A		#	甪	
+zAB39	u53B4		#	厴	
+zAB3A	u5C29		#	尩	
+zAB3B	u8F66		#	车	車の簡体字
+zAB3C	u7535		#	电	電の簡体字
+zAB3D	u908C		#	邌	
+zAB3E	u4ED0		#	仐	
+zAB3F	u4E48		#	么	
+zAB40	u8803		#	蠃	
+zAB41	u5157		#	兗	
+zAB42	u77E0		#	矠	
+zAB43	u77DF		#	矟	
+zAB44	u52BB		#	劻	
+zAB45	u52F0		#	勰	
+zAB46	u65B2		#	斲	
+zAB47	u59E7		#	姧	
+zAB48	u5B25		#	嬥	
+zAB49	u59A4		#	妤	
+zAB4A	u5A9E		#	媞	
+zAB4C	u5ECB		#	廋	
+zAB4D	u5EBF		#	庿	
+zAB4E	u6112		#	愒	
+zAB4F	u618D		#	憍	
+zAB50	u6110		#	愐	
+zAB51	u8C47		#	豇	
+zAB52	u8C49		#	豉	
+zAB53	u96D8		#	雘	
+zAB54	u5F54		#	彔	
+zAB55	u9095		#	邕	
+zAB56	u96BA		#	隺	
+zAB57	u5E6B		#	幫	
+zAB58	u5E2E		#	帮	
+zAB59	u6BC8		#	毈	
+zAB5B	u5F7D		#	彽	
+zAB5C	u5FB8		#	徸	
+zAB5D	u912F		#	鄯	
+zAB5E	u90C4		#	郄	
+zAB5F	u9099		#	邙	
+zAB60	u96A9		#	隩	
+zAB61	u72B0		#	犰	
+zAB62	u72F3		#	狳	
+zAB63	u7371		#	獱	
+zAB64	u8C9B		#	貛	
+zAB65	u6532		#	攲	
+zAB66	u7217		#	爗	
+zAB67	u6ECE		#	滎	
+zAB68	u7160		#	煠	
+zAB69	u71C4		#	燄	
+zAB6A	u70BB		#	炻	
+zAB6B	u70E4		#	烤	
+zAB6C	u7097		#	炗	
+zAB6D	u5261		#	剡	
+zAB6E	u6609		#	昉	
+zAB6F	u6630		#	昰	
+zAB70	u7517		#	甗	
+zAB72	u74EB		#	瓫	
+zAB74	u6554		#	敔	
+zAB75	u5FE9		#	忩	
+zAB76	u6BFF		#	毿	
+zAB77	u7635		#	瘵	
+zAB78	u75CE		#	痎	
+zAB79	u764B		#	癋	
+zAB7A	u7592		#	疒	
+zAB7B	u7664		#	癤	
+zAB7C	u766D		#	癭	
+zAB7D	u7619		#	瘙	
+zAB7E	u75DF		#	痟	
+zAC21	u75CF		#	痏	
+zAC22	u7734		#	眴	
+zAC23	u777A		#	睺	
+zAC24	u6BD7		#	毗	
+zAC25	u7FEE		#	翮	
+zAC27	u7A2D		#	稭	
+zAC28	u7A39		#	稹	
+zAC29	u7946		#	祆	
+zAC2A	u7996		#	禖	
+zAC2B	u7681		#	皁	
+zAC2C	u769D		#	皝	
+zAC2D	u7FC3		#	翃	
+zAC2E	u8222		#	舢	
+zAC2F	u8260		#	艠	
+zAC32	u8DAF		#	趯	
+zAC33	u91B6		#	醶	
+zAC34	u8DD1		#	跑	
+zAC35	u8E70		#	蹰	
+zAC36	u8E83		#	躃	
+zAC37	u8DC6		#	跆	
+zAC38	u97C9		#	韉	
+zAC39	u9960		#	饠	
+zAC3A	u8EBB		#	躻	
+zAC3B	u9AF9		#	髹	
+zAC3C	u9AC1		#	髁	
+zAC3D	u991B		#	餛	
+zAC3E	u993A		#	餺	
+zAC3F	u98E3		#	飣	
+zAC40	u98F0		#	飰	
+zAC41	u9946		#	饆	
+zAC42	u974F		#	靏	
+zAC43	u95A6		#	閦	
+zAC44	u95C8		#	闈	
+zAC45	u986C		#	顬	
+zAC46	u980A		#	頊	
+zAC47	u9AB6		#	骶	
+zAC48	u9AD0		#	髐	
+zAC4A	u9D8D		#	鶍	
+zAC4B	u9D32		#	鴲	
+zAC4C	u9E15		#	鸕	
+zAC4D	u9D7C		#	鵼	
+zAC4E	u9DC0		#	鷀	
+zAC50	u9F39		#	鼹	
+zAC51	u9F37		#	鼷	
+zAC52	u9AD6		#	髖	
+zAC54	u9E0A		#	鸊	
+zAC55	u9DC9		#	鷉	
+zAC56	u9D5F		#	鵟	
+zAC57	u9DDF		#	鷟	
+zAC58	u9D42		#	鵂	
+zAC59	u9DB9		#	鶹	
+zAC5A	u9D17		#	鴗	
+zAC5B	u9DDA		#	鷚	
+zAC5C	u9D47		#	鵇	
+zAC5D	u9D8A		#	鶊	
+zAC5E	u9DBC		#	鶼	
+zAC5F	u89EB		#	觫	
+zAC60	u89D8		#	觘	
+zAC61	u89FF		#	觿	
+zAC62	u5255		#	剕	
+zAC63	u98B8		#	颸	
+zAC64	u98C7		#	飇	
+zAC65	u98C8		#	飈	
+zAC66	u8D09		#	贉	
+zAC67	u8CD6		#	賖	
+zAC68	u8D6C		#	赬	
+zAC69	u9F17		#	鼗	
+zAC6A	u9F10		#	鼐	
+zAC6B	u9F3A		#	鼺	
+zAC6C	u9F5D		#	齝	
+zAC6D	u9F6D		#	齭	
+zAC6E	u9F75		#	齵	
+zAC6F	u9F97		#	龗	
+zAC70	u84C2		#	蓂	
+zAC71	u85CE		#	藎	
+zAC72	u847C		#	葼	
+zAC73	u833C		#	茼	
+zAC74	u85ED		#	藭	
+zAC75	u85BC		#	薼	
+zAC76	u83EA		#	菪	
+zAC77	u83A9		#	莩	
+zAC78	u84FD		#	蓽	
+zAC79	u82D5		#	苕	
+zAC7A	u82A1		#	芡	
+zAC7B	u833A		#	茺	
+zAC7D	u8524		#	蔤	
+zAD21	u8448		#	葈	
+zAD22	u4F60		#	你	
+zAD23	u511B		#	儛	
+zAD25	u587C		#	塼	
+zAD26	u577C		#	坼	
+zAD27	u584C		#	塌	
+zAD28	u57BF		#	垿	
+zAD29	u59EE		#	姮	
+zAD2A	u5AA7		#	媧	
+zAD2B	u5B19		#	嬙	
+zAD2C	u6E32		#	渲	
+zAD2D	u6D26		#	洦	
+zAD2E	u6EC7		#	滇	
+zAD2F	u6F59		#	潙	
+zAD30	u6FB6		#	澶	
+zAD31	u6DAE		#	涮	
+zAD32	u6DAA		#	涪	
+zAD33	u5550		#	啐	
+zAD34	u5688		#	嚈	
+zAD35	u5660		#	噠	
+zAD36	u5F34		#	弴	
+zAD37	u54C6		#	哆	
+zAD38	u56B3		#	嚳	
+zAD39	u6D31		#	洱	
+zAD3A	u7043		#	灃	
+zAD3B	u6FDE		#	濞	
+zAD3C	u6E49		#	湉	
+zAD3D	u6CC6		#	泆	
+zAD3E	u6D39		#	洹	
+zAD3F	u662B		#	昫	
+zAD40	u66A0		#	暠	
+zAD41	u6615		#	昕	
+zAD42	u663A		#	昺	
+zAD43	u6872		#	桲	
+zAD44	u6A49		#	橉	
+zAD45	u7ABC		#	窼	
+zAD46	u7A47		#	穇	
+zAD47	u79EB		#	秫	
+zAD48	u79ED		#	秭	
+zAD49	u799B		#	禛	
+zAD4A	u795C		#	祜	
+zAD4B	u7979		#	祹	
+zAD4C	u8707		#	蜇	
+zAD4D	u86FC		#	蛼	
+zAD4E	u869C		#	蚜	
+zAD4F	u8689		#	蚉	
+zAD50	u86FD		#	蛽	
+zAD52	u87B5		#	螵	
+zAD53	u8687		#	蚇	
+zAD54	u8793		#	螓	
+zAD55	u8710		#	蜐	
+zAD56	u7600		#	瘀	
+zAD58	u763C		#	瘼	
+zAD5A	u75F1		#	痱	
+zAD5B	u766F		#	癯	
+zAD5C	u7641		#	癁	
+zAD5D	u7934		#	礴	
+zAD5E	u791C		#	礜	
+zAD5F	u7809		#	砉	
+zAD60	u8037		#	耷	
+zAD61	u803C		#	耼	
+zAD63	u8ED1		#	軑	
+zAD64	u8F58		#	轘	
+zAD65	u8F00		#	輀	
+zAD66	u9B79		#	魹	
+zAD67	u97F4		#	韴	
+zAD68	u97B2		#	鞲	
+zAD6B	u9BB2		#	鮲	
+zAD6D	u9C18		#	鰘	
+zAD6F	u9C19		#	鰙	
+zAD70	u9BDD		#	鯝	
+zAD71	u9C23		#	鰣	
+zAD72	u9BFD		#	鯽	
+zAD74	u9B76		#	魶	
+zAD75	u9C1A		#	鰚	
+zAD76	u9C72		#	鱲	
+zAD77	u9C5C		#	鱜	
+zAD79	u9C4A		#	鱊	
+zAD7A	u9C50		#	鱐	
+zAD7B	u9C5F		#	鱟	
+zAD7C	u9B63		#	魣	
+zAD7D	u9B6B		#	魫	
+zAD7E	u9A4E		#	驎	
+zAE21	u9EAF		#	麯	
+zAE22	u9A4C		#	驌	
+zAE23	u9A2E		#	騮	
+zAE24	u9A4A		#	驊	異体字?
+zAE25	u99C3		#	駃	
+zAE26	u9A20		#	騠	
+zAE27	u99F0		#	駰	
+zAE28	u9A2D		#	騭	
+zAE29	u9E85		#	麅	
+zAE2A	u9E9E		#	麞	
+zAE2C	-		#		にんべん
+zAE2D	u4E5A		#	乚	
+zAE2E	-		#		u2E8B(⺋)
+zAE2F	u6C35		#	氵	
+zAE30	u8279		#	艹	
+zAE31	uFA5E		#	艹	
+zAE32	u624C		#	扌	
+zAE33	u961D		#	阝	
+zAE34	u72AD		#	犭	
+zAE35	u961D		#	阝	
+zAE36	u5202		#	刂	
+zAE37	-		#		やね
+zAE38	u5FC4		#	忄	
+zAE39	-		#		u2EB3(⺳)
+zAE3A	u8002		#	耂	
+zAE3B	u722B		#	爫	
+zAE3C	-		#		のつ
+zAE3D	u706C		#	灬	
+zAE3E	-		#		u38FA(㣺)
+zAE3F	u6C3A		#	氺	
+zAE40	-		#		王偏 &M020824;
+zAE41	u7F52		#	罒	
+zAE42	u793B		#	礻	
+zAE43	u8864		#	衤	
+zAE44	u98E0		#	飠	食
+zAE45	-		#		食
+zAE46	-		#		「末」の初二画
+zAE47	-		#		すてふで
+zAE48	-		#		合字（トキ）
+zAE49	-		#		合字（こと）
+zAE4A	-		#		かりがねてん 
+zAE4B	-		#		「玄」の欠画
+zAE4C	-		#		「統」の欠画
+zAE4D	-		#		たまへんの偏
+zAE4E	-		#		尩の部分
+zAE4F	-		#		一字金輪仏頂尊
+zAE51	-		#		異体文字「こ」
+zAE52	-		#		異体文字「は」
+zAE53	-		#		変体仮名「い」
+zAE54	-		#		変体仮名「た」
+zAE55	-		#		変体仮名「か」
+zAE56	-	*	#		
+zAE57	-	**	#		
+zAE58	u00A9		#	©	
+zAE59	u266E		#	♮	
+zAE5A	-		#		《楽》延長記号
+zAE5B	-		#		《楽》延長記号
+zAE5C	-		#		16分音符
+zAE5D	-	***	#		
+zAE5E	-	*	#		上付*
+zAE5F	u3299	(秘)	#	㊙	
+zAE60	u261E		#	☞	
+zAE61	-		#		《楽》スラー
+zAE62	-		#		《楽》スラー
+zAE63	-		#		フランス王家のイチハツ紋
+zAE64	-		#		ハーケンクロイツ(45度傾く)
+zAE65	-		#		右まんじ(卍の逆)
+zAE66	-		#	✓	tick 照合〔チェック〕の印
+zAE67	-		#		古英語のp(近代のth)
+zAE68	-	c/o	#		care of
+zAE69	u00AE	(R)	#	®	
+zAE6A	-	3√a	#		
+zAE6B	u00C6	AE	#	Æ	
+zAE6C	u00E6	ae	#	æ	
+zAE6D	-	ffi	#		uFB03
+zAE6E	uFB02	fl	#	ﬂ	
+zAE6F	-	n√	#		
+zAE70	u0153	oe	#	œ	
+zAE71	u2218	○	#	∘	
+zAE72	-	+-	#		+と-を合わせた記号
+zAE73	-		#		やまがた
+zAE74	u2127		#	℧	
+zAE75	-	√2	#		
+zAE76	-	√a	#		
+zAE77	u00A9		#	©	
+zAE78	-	(公)	#		
+zAE79	u329C	(適)	#	㊜	丸適マーク
+zAE7A	u3016	【	#	〖	
+zAE7B	u3017	】	#	〗	
+zAE7C	-		#		(未使用)
+zAE7D	-		#		(未使用)
+zAE7E	-		#		(未使用)
+zAF21	-		#		(未使用)
+zAF22	-		#		(未使用)
+zAF23	-		#		(未使用)
+zAF24	-		#		(未使用)
+zAF25	-		#		(未使用)
+zAF26	-		#		(未使用)
+zAF27	-		#		(未使用)
+zAF28	-		#		(未使用)
+zAF29	-		#		(未使用)
+zAF2A	-		#		(未使用)
+zAF2B	-		#		(未使用)
+zAF2C	-		#		(未使用)
+zAF2D	-		#		(未使用)
+zAF2E	-		#		(未使用)
+zAF2F	-		#		(未使用)
+zAF30	-		#		(未使用)
+zAF31	-		#		(未使用)
+zAF32	-		#		(未使用)
+zAF33	-		#		(未使用)
+zAF34	-		#		(未使用)
+zAF35	-		#		(未使用)
+zAF36	-		#		(未使用)
+zAF37	-		#		(未使用)
+zAF38	-		#		(未使用)
+zAF39	-		#		(未使用)
+zAF3A	-		#		(未使用)
+zAF3B	-		#		(未使用)
+zAF3C	-		#		(未使用)
+zAF3D	-		#		(未使用)
+zAF3E	-		#		(未使用)
+zAF3F	-		#		(未使用)
+zAF40	-		#		(未使用)
+zAF41	-		#		(未使用)
+zAF42	-		#		(未使用)
+zAF43	-		#		(未使用)
+zAF44	-		#		(未使用)
+zAF45	-		#		(未使用)
+zAF46	-		#		(未使用)
+zAF47	-		#		(未使用)
+zAF48	-		#		(未使用)
+zAF49	-		#		(未使用)
+zAF4A	-		#		(未使用)
+zAF4B	-		#		(未使用)
+zAF4C	-		#		(未使用)
+zAF4D	-		#		(未使用)
+zAF4E	-		#		(未使用)
+zAF4F	-		#		(未使用)
+zAF50	-		#		(未使用)
+zAF51	-		#		(未使用)
+zAF52	-		#		(未使用)
+zAF53	-		#		(未使用)
+zAF54	-		#		(未使用)
+zAF55	-		#		(未使用)
+zAF56	-		#		(未使用)
+zAF57	-		#		(未使用)
+zAF58	-		#		(未使用)
+zAF59	-		#		(未使用)
+zAF5A	-		#		(未使用)
+zAF5B	-		#		(未使用)
+zAF5C	-		#		(未使用)
+zAF5D	-		#		(未使用)
+zAF5E	-		#		(未使用)
+zAF5F	-		#		(未使用)
+zAF60	-		#		(未使用)
+zAF61	-		#		(未使用)
+zAF62	-		#		(未使用)
+zAF63	-		#		(未使用)
+zAF64	-		#		(未使用)
+zAF65	-		#		(未使用)
+zAF66	-		#		(未使用)
+zAF67	-		#		(未使用)
+zAF68	-		#		(未使用)
+zAF69	-		#		(未使用)
+zAF6A	-		#		(未使用)
+zAF6B	-		#		(未使用)
+zAF6C	-		#		(未使用)
+zAF6D	-		#		(未使用)
+zAF6E	-		#		(未使用)
+zAF6F	-		#		(未使用)
+zAF70	-		#		(未使用)
+zAF71	-		#		(未使用)
+zAF72	-		#		(未使用)
+zAF73	-		#		(未使用)
+zAF74	-		#		(未使用)
+zAF75	-		#		(未使用)
+zAF76	-		#		(未使用)
+zAF77	-		#		(未使用)
+zAF78	-		#		(未使用)
+zAF79	-		#		(未使用)
+zAF7A	-		#		(未使用)
+zAF7B	-		#		(未使用)
+zAF7C	-		#		(未使用)
+zAF7D	-		#		(未使用)
+zAF7E	-		#		(未使用)
+zB021	-		#		(未使用)
+zB022	-		#		(未使用)
+zB023	-		#		(未使用)
+zB024	-		#		(未使用)
+zB025	-		#		(未使用)
+zB026	-		#		(未使用)
+zB027	-		#		(未使用)
+zB028	-		#		(未使用)
+zB029	-		#		(未使用)
+zB02A	-		#		(未使用)
+zB02B	-		#		(未使用)
+zB02C	-		#		(未使用)
+zB02D	-		#		(未使用)
+zB02E	-		#		(未使用)
+zB02F	-		#		(未使用)
+zB030	-		#		(未使用)
+zB031	-		#		(未使用)
+zB032	-		#		卦を表す横段。（陰）
+zB033	-		#		卦を表す横段。（陽）
+zB034	u2630		#	☰	
+zB035	u2637		#	☷	
+zB036	u2631		#	☱	
+zB037	u2632		#	☲	
+zB038	u2634		#	☴	
+zB039	u2635		#	☵	
+zB03A	u2636		#	☶	
+zB03B	-		#	〳	u3033
+zB03C	-		#	〴	u3034
+zB03D	-		#	〵	u3035
+zB03E	-		#	〻	u303B 二の字点
+zB03F	-		#		複十字
+zB040	u2109		#	℉	
+zB041	u303D		#	〽	いおりてん
+zB042	u534D		#	卍	
+zB043	u2668		#	♨	温泉マーク
+zB044	u2660		#	♠	
+zB045	u2665		#	♥	
+zB046	-		#		フェルマータ
+zB047	-		#		オンス
+zB048	-		#		ホの異体文字
+zB049	-		#		いおりてん 
+zB04A	u2669		#	♩	
+zB04B	-		#		ダルセーニョ 
+zB04C	-		#		重嬰記号
+zB04D	u2776	(1)	#	❶	
+zB04E	u2777	(2)	#	❷	
+zB04F	u2778	(3)	#	❸	
+zB050	u2779	(4)	#	❹	
+zB051	u277A	(5)	#	❺	
+zB052	u277B	(6)	#	❻	
+zB053	u277C	(7)	#	❼	
+zB054	u277D	(8)	#	❽	
+zB055	u277E	(9)	#	❾	
+zB056	u277F	(10)	#	❿	
+zB057	u24EB	(11)	#	⓫	
+zB058	u24EC	(12)	#	⓬	
+zB059	u24ED	(13)	#	⓭	
+zB05A	u24EE	(14)	#	⓮	
+zB05B	u24EF	(15)	#	⓯	
+zB05C	u24F0	(16)	#	⓰	
+zB05D	u24F1	(17)	#	⓱	
+zB05E	u24F2	(18)	#	⓲	
+zB05F	u24F3	(19)	#	⓳	
+zB060	-		#		小さい「ゑ」
+zB061	-	ガ	#		小さい文字
+zB062	-		#		(未使用)
+zB063	-		#		(未使用)
+zB064	-		#		(未使用)
+zB065	-	ト	#		小さい文字
+zB066	u30CE	ノ	#	ノ	小さい文字
+zB067	-		#		(未使用)
+zB068	-	ミ	#		
+zB069	-		#		(未使用)
+zB06A	-	ロ	#		
+zB06B	u30F0		#	ヰ	
+zB06C	-	ン	#		
+zB06D	-		#		(未使用)
+zB06E	-		#		(未使用)
+zB06F	-		#		(未使用)
+zB070	-		#		(未使用)
+zB071	-		#		(未使用)
+zB072	-		#		(未使用)
+zB073	-		#		(未使用)
+zB074	-		#		(未使用)
+zB075	-		#		(未使用)
+zB076	-		#		(未使用)
+zB077	u33CB		#	㏋	HP
+zB078	-	(〒)	#		▽〒
+zB079	-	(〒)	#		○〒
+
+
+# CJK拡張漢字A *-JIS2004にある文字					
+#zA577	u385C		#	[巾+祭]	(Ext-A)*
+#zA62E	u3E05		#	㸅	(Ext-A)*
+#zA85E	u47FD		#	䟽	(Ext-A)*
+#zA86D	u496B		#	䥫	(Ext-A)
+#zA940	u3BB6		#	[木+朔]	(Ext-A)*
+#zAA2F	u4207		#	[竹/卓]	(Ext-A)*
+#zAA30	u41EE		#	[竹/任]	(Ext-A)*
+#zAC49	u4BCA		#	[骨+可]	(Ext-A)*
+#zAC4F	u4CD1		#	䳑	(Ext-A)*
+#zAD57	u3FAE		#	㾮	(Ext-A)*
+#zAE50	u3402		#	㐂	(Ext-A)*
+
+# CJK拡張漢字B *-JIS2004にある文字					
+#zA548	u20D45		#	[口+花]	(Ext-B)*
+#zA54C	u20E95		#	[口+留]	(Ext-B)*
+#zA554	u21742		#	[女+壯]	(Ext-B)*
+#zA55B	u2146E		#	[土+塞]	(Ext-B)*
+#zA56C	u21C56		#	[尸+朱]	(Ext-B)*
+#zA57E	u22DE1		#	[扌+丙丙/木]	(Ext-B)*
+#zA648	u24096		#	[さんずい+影]	(Ext-B)*
+#zA73F	u2344A		#	[木+在]	(Ext-B)*
+#zA751	u233D5		#	[木+朮]	(Ext-B)*
+#zA756	u285C8		#	[辶+景]	(Ext-B)*
+#zA772	u25122		#	[目+木]	(Ext-B)*
+#zA776	u25241		#	[目目/夰]	(Ext-B)
+#zA77B	u27631		#	[ころもへん+比]	(Ext-B)*
+#zA829	u25EE8		#	[米+索]	(Ext-B)*
+#zA82A	u2600C		#	[糸+如]	(Ext-B)*
+#zA83F	u273DB		#	[討/虫]	(Ext-B)*
+#zA842	u2A190		#	[集+鳥]	(Ext-B)*
+#zA848	u2A0F9		#	[即/鳥]	(Ext-B)*
+#zA94B	u2370C		#	[木+鼠]	(Ext-B)*
+#zA976	u27684		#	[ころもへん+我]	(Ext-B)*
+#zAA2A	u25AF1		#	[竹/屯]	(Ext-B)*
+#zAA48	u25FE0		#	[糸+布]	(Ext-B)*
+#zAA55	u27410		#	[虫+責]	(Ext-B)*
+#zAA6A	u28D66		#	[門+楡-木]	(Ext-B)
+#zAA6D	u28AE4		#	[金+通]	(Ext-B)*
+#zAB5A	u223F3		#	[弓+幷]	(Ext-B)
+#zAB71	u24B6F		#	[瓦+泉]	(Ext-B)*
+#zAB73	u246A5		#	[牟+含]	(Ext-B)*
+#zAC26	u25771		#	[禾+予]	(Ext-B)*
+#zAC30	u26A1E		#	[舟+元]	(Ext-B)*
+#zAC53	u2A01A		#	[鳥+戎]	(Ext-B)*
+#zAD24	u26B07		#	[艸/廾]	(Ext-B)
+#zAD51	u2726B		#	[虫+囗又]	(Ext-B)
+#zAD59	u24E0E		#	[疒+曷]	(Ext-B)*
+#zAD62	u283CD		#	[車+火火/宋]	(Ext-B)*
+#zAD69	u292B1		#	[革+毎]	(Ext-B)*
+#zAD6A	u292A0		#	[革+光]	(Ext-B)*
+#zAD6E	u29E2D		#	[魚+戻]	(Ext-B)
+#zAD73	u29E3D		#	[魚+花]	(Ext-B)*
+#zAD78	u29E8A		#	[魚+荒]	(Ext-B)*
+
+# 不明文字					
+
+zA557	-		#×	[女+兮]	
+zA56E	-		#×	[艸/廾、]	ささてんぼだい
+zA67A	-		#×	[莭-卩]	&M065576;
+zA739	-		#×	[木匨]	
+zA752	-		#×	[木惡]	
+zA840	-		#×	[虫+蚤]	
+zA84D	-		#×	[飠+鳥]	
+zA85B	-		#×	[金+丘]	&M065817;
+zAB4B	-		#×	[縁-糸]	彖?
+zAC31	-		#×	[舟+若]	&M065553;
+zAC7C	-		#×	[茴-口+甫]	
+zAC7E	-		#×	[艹/云]	
+zAD6C	-		#×	[魚+近]	&M066003;
+zAE2B	-		#×	[鹿+子]	&M066106;

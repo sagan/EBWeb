@@ -1,0 +1,15 @@
+{
+  "name": "Ebweb",
+  "short_name": "Ebweb",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "share_target": {
+    "action": "/",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": {
+      "text": "q"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@mixin light-mode {
+  .multi-dicts-selector-title,
+  .search-input-wrapper .config-btn,
+  .search-input-wrapper .voice-input-btn,
+  .search-input-wrapper .handwrite-btn,
+  .form-fields > .search-type,
+  .form-fields > .romaji-field {
+    display: none;
+  }
+  .lwmore-btn {
+    display: unset;
+  }
+}

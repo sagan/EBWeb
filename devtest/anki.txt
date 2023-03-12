@@ -1,0 +1,79 @@
+
+ankiconnect
+
+config
+
+{
+    "apiKey": null,
+    "apiLogPath": null,
+    "ignoreOriginList": [],
+    "webBindAddress": "127.0.0.1",
+    "webBindPort": 8765,
+    "webCorsOriginList": [
+        "http://localhost"
+    ]
+}
+
+
+https://github.com/FooSoft/anki-connect
+
+curl localhost:8765 -X POST -d "{\"action\": \"deckNames\", \"version\": 6}"
+
+{
+    action: "deckNames",
+    version: 6
+  }
+
+  
+
+(async () => {
+  let data = {
+    "action": "createModel",
+    "version": 6,
+    "params": {
+        "modelName": "Soradict",
+        "inOrderFields": ["id", "title", "content", "dictid"],
+        "isCloze": false,
+        "cardTemplates": [
+            {
+                "Name": "{{id}}",
+                "Front": "{{title}}",
+                "Back": "{{content}}",
+                "_dictid": "{{dictid}}"
+            }
+        ]
+    }
+  };
+  anki(data);
+})();
+
+(async () => {
+  let data = {
+    action: "addNote",
+    params: {
+      note: {
+        "deckName": "Default",
+        "modelName": "Soradict",
+        "fields": {
+            "title": "antecedent",
+            "content": "thing or circumstance that is or comes before another \n前事; 前情.",
+            "_id": "abcd",
+        }
+      }
+    },
+    version: 6
+  };
+  anki(data);
+})();
+
+
+
+async function anki(data) {
+  let req = await fetch("http://localhost:8765", {
+    method: "POST",
+    mode: 'cors', 
+    body: JSON.stringify(data)
+  });
+  let res = await req.json();
+  console.log("--", res);
+}

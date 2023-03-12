@@ -1,0 +1,1068 @@
+@charset "utf-8";
+
+@import "variables";
+
+/* general */
+.fill {
+  width: 100%;
+  height: 100%;
+}
+.no-min-width {
+  min-width: 0;
+}
+.fill-x {
+  width: 100%;
+}
+.fill-y {
+  height: 100%;
+}
+.flex-align-start {
+  align-items: flex-start;
+}
+.align-right {
+  text-align: right;
+}
+.flex {
+  display: flex;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-2 {
+  flex: 2;
+}
+.flex-3 {
+  flex: 3;
+}
+.flex-4 {
+  flex: 4;
+}
+.flex-5 {
+  flex: 5;
+}
+.flex-6 {
+  flex: 6;
+}
+
+.width20 {
+  width: 20%;
+}
+.width30 {
+  width: 30%;
+}
+.width40 {
+  width: 40%;
+}
+.width50 {
+  width: 50%;
+}
+.center {
+  text-align: center;
+}
+
+@font-face {
+  font-family: emoji;
+
+  src: local("Apple Color Emoji"), local("Noto Color Emoji"),
+    local("Noto Emoji"), local("Android Emoji"), local("Segoe UI Emoji"),
+    /*local('Segoe UI Symbol'),*/ local(EmojiSymbols),
+    url("font/Symbola-Emoji.eot?#iefix") format("embedded-opentype"),
+    url("font/Symbola-Emoji.woff") format("woff"),
+    url("font/Symbola-Emoji.ttf") format("truetype");
+
+  /* Emoji unicode blocks */
+  unicode-range: U+1F300-1F5FF, U+1F600-1F64F, U+1F680-1F6FF, U+2600-26FF;
+}
+
+input[type="search"] {
+  -webkit-appearance: searchfield;
+}
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: searchfield-cancel-button;
+}
+
+h1,
+h2,
+h3 {
+  margin: $spacing-unit * 2 0;
+}
+
+h2 label {
+  font-weight: normal;
+}
+
+em,
+i {
+  font-family: "MS PGothic", "Osaka", Arial, sans-serif; /* for italic */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ruby > rt {
+  font-size: 90%;
+}
+
+p,
+table,
+ul,
+.content,
+.msg,
+.netquery-content,
+.sidebar-content {
+  line-height: 1.5;
+}
+
+p.msg {
+  margin-top: $spacing-unit;
+  margin-bottom: $spacing-unit * 2;
+}
+
+.block p.msg {
+  margin-top: 0;
+  margin-bottom: $spacing-unit;
+}
+
+p.mds-header {
+  margin-bottom: $spacing-unit;
+}
+
+p.topmsg {
+  margin-top: 0;
+  margin-bottom: $spacing-unit;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: $spacing-unit * 2;
+}
+
+a {
+  color: #0366d6;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a[role="button"].icon:not(.active):not(.not-active) {
+  color: unset;
+}
+
+a,
+button,
+input[type="button"],
+*[role="button"],
+.icon,
+.dict {
+  cursor: pointer;
+}
+
+*[role="button"],
+button,
+.icon,
+.search-form {
+  user-select: none;
+}
+
+a.external,
+.netquery-content a {
+  padding-right: $spacing-unit * 3;
+  background: url(icons/external.png) center right no-repeat;
+}
+
+.maru {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  flex-flow: column wrap;
+  vertical-align: top;
+}
+
+.maru > * {
+  font-size: 2em;
+  line-height: 1em;
+  display: block;
+}
+
+.maru-sky {
+  color: skyblue;
+  border: 4px solid skyblue;
+}
+.maru-pink {
+  color: pink;
+  border: 4px solid pink;
+}
+
+button,
+*[role="button"],
+.label,
+.icon {
+  margin-right: $spacing-unit;
+  font-weight: normal;
+}
+
+button.last,
+*[role="button"].last,
+.label.last,
+.icon.last {
+  margin-right: 0;
+}
+
+img.icon,
+.icon img {
+  vertical-align: middle;
+}
+
+select,
+input,
+button,
+.form-fields > .romaji-field {
+  line-height: normal !important;
+}
+
+/* above general rules */
+
+.inline {
+  display: inline-block;
+}
+
+.right {
+  float: right;
+}
+
+.emoji {
+  font-family: emoji;
+}
+
+.emoji.active {
+  filter: drop-shadow(2px 4px 6px black); //  sepia(1)
+}
+
+.secondary {
+  color: grey;
+}
+
+.inline-section {
+  margin-right: $spacing-unit * 2;
+}
+
+.padding-bottom {
+  padding-bottom: $spacing-unit * 3;
+}
+
+.ok {
+  color: green;
+}
+
+.notice {
+  color: blueviolet;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* above helper / tool / anime rules */
+
+#wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+aside {
+  width: 20%;
+  overflow-y: hidden;
+  padding-left: $spacing-unit * 2;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  width: 80%;
+  overflow-y: hidden;
+  padding-left: $spacing-unit * 4;
+  padding-right: $spacing-unit * 4;
+  overflow-x: hidden;
+}
+
+.sidebar-content {
+  overflow-y: auto;
+  flex: 1;
+}
+
+aside ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: $spacing-unit * 3;
+}
+
+aside ul li {
+  list-style-type: none;
+}
+
+main > div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+main > div > *:nth-child(1) {
+}
+
+main > div > *:nth-child(2) {
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-grow: 1;
+  margin-top: $spacing-unit;
+}
+
+footer {
+  margin-top: $spacing-unit * 4;
+  margin-bottom: $spacing-unit * 2;
+  font-style: italic;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  white-space: pre-wrap; /* Since CSS 2.1 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+  font-size: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.dicts {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.dict {
+  cursor: pointer;
+  margin-right: $spacing-unit * 2;
+  margin-bottom: $spacing-unit;
+  display: inline-block;
+  // line-height: 1.3;
+}
+
+.dict label {
+  cursor: pointer;
+}
+
+.word {
+  padding-top: $spacing-unit * 2;
+  break-inside: avoid-column;
+}
+
+.form-fields {
+  margin: $spacing-unit * 2 0;
+  font-size: 1.5em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.form-fields > * {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.search-input-wrapper > * {
+  display: inline;
+  flex-shrink: 0;
+}
+
+.search-type {
+  flex-direction: column;
+  align-self: stretch;
+}
+
+.search-type > select {
+  height: 100%;
+}
+
+.search-input-wrapper > *:first-child {
+  flex: 1;
+}
+
+.form-fields > * {
+  flex-shrink: 0;
+}
+
+.form-fields > .search-input-wrapper {
+  flex: 1;
+  display: flex;
+}
+
+input[name="q"] {
+  min-width: 100px;
+  width: 100%;
+}
+
+.form-fields > .romaji-field input[name="romaji"] {
+  margin-left: $spacing-unit * 2;
+  vertical-align: middle;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.dict > a {
+  color: black;
+}
+.dict > a.active {
+  background-color: #cccccc;
+}
+
+.dict-content.multi,
+.multi-dicts-selector {
+  display: flex;
+  width: 100%;
+}
+
+.dict-content.multi.multi-style-1 {
+  flex-direction: column;
+}
+
+.dict-content.multi > *,
+.multi-dicts-selector > * {
+  overflow-x: hidden;
+  flex: 1;
+}
+
+.dict-content.multi.multi-style-0 > *,
+.multi-dicts-selector > * {
+  width: 33%;
+}
+
+.multi-dicts-selector > *:not(:first-child) {
+  margin-left: $spacing-unit;
+  padding-left: $spacing-unit;
+}
+
+.note-meta > *:not(:first-child),
+.spacing-between > *:not(:first-child) {
+  margin-left: $spacing-unit;
+}
+
+.dict-content.multi.multi-style-0 > *:not(:first-child) {
+  border-left: 1px dotted grey;
+  margin-left: $spacing-unit * 2;
+  padding-left: $spacing-unit * 2;
+}
+
+.dict-content.multi.multi-style-1 > *:not(:first-child) {
+  border-top: 1px dotted grey;
+  margin-top: $spacing-unit * 2;
+  padding-top: $spacing-unit * 2;
+}
+
+article h2 {
+  margin: 0;
+}
+aside h3 {
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.word-permalink,
+.livepreview-word-permalink {
+  color: unset;
+  // border-bottom: 1px dashed grey;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-underline-position: under;
+}
+
+.word-title-text {
+  margin-right: $spacing-unit;
+}
+
+.voice-input-btn.active,
+.g-ol .lock-orientation-btn {
+  background-color: #a6f4ff;
+}
+
+.g-ol .lock-orientation-btn .emoji {
+  display: inline-block;
+}
+.g-ol-l .lock-orientation-btn .emoji {
+  transform: rotate(45deg);
+}
+.g-ol-p .lock-orientation-btn .emoji {
+  transform: rotate(315deg);
+}
+
+.voice-input-btn.active span {
+  display: inline-block;
+  animation: rotation 2s linear 0s infinite normal none running;
+}
+
+.furigana-status-0,
+.furigana-status-1,
+.furigana-status-3 {
+  color: grey;
+}
+
+.furigana-status-2 {
+  color: #ef9309;
+}
+
+.guess-words-label {
+  color: #dd4b39;
+}
+
+.guess-words-word {
+  font-weight: bold;
+}
+
+.guess-words-word:not(:last-child):after {
+  content: "、";
+  margin-left: $spacing-unit;
+}
+
+.block {
+  border: 1px dashed grey;
+  padding: 0 $spacing-unit $spacing-unit;
+  border-radius: $spacing-unit;
+  margin-bottom: $spacing-unit * 3;
+}
+.analyze-input,
+.netquery-input {
+  color: black;
+  border-bottom: 1px dotted;
+}
+.analyze-word:not(.analyze-word-0) {
+  margin-right: $spacing-unit * 2;
+}
+.analyze-word.active {
+  font-weight: bold;
+  // font-style: italic;
+  color: black;
+}
+
+.netquery-source {
+  margin-left: $spacing-unit;
+  font-weight: normal;
+}
+
+.netquery-content-thumb {
+  padding-left: $spacing-unit * 2;
+  padding-bottom: $spacing-unit * 2;
+}
+
+.netquery-content-html {
+  display: inline;
+}
+
+.netquery-content-thumb img {
+  max-width: 300px;
+}
+
+.draw-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.draw-content-char {
+  cursor: pointer;
+}
+.draw-chars > a {
+  margin-right: $spacing-unit;
+  border-bottom: 1px solid #7b7774;
+}
+
+.actions {
+  margin: $spacing-unit auto;
+}
+
+.actions button {
+  margin-bottom: $spacing-unit;
+}
+
+.dialog {
+  max-height: calc(80vh - 40px);
+}
+
+.dialog h3 {
+  margin: 0;
+}
+.share-dialog .external-search,
+.share-dialog .tool {
+  list-style-type: none;
+  padding-left: 0;
+  margin: $spacing-unit auto;
+}
+
+.share-dialog .external-search li,
+.share-dialog .tool li {
+  display: inline-block;
+  margin-right: $spacing-unit * 2;
+}
+
+.icon.not-active {
+  opacity: 0.4;
+  filter: grayscale(100%);
+}
+
+.pagination,
+.flex-spread {
+  display: flex;
+  justify-content: space-between;
+}
+
+span[data-tip] {
+  cursor: pointer;
+  border-bottom: 1px dotted;
+}
+
+.user-config-dialog label {
+  margin-right: $spacing-unit;
+}
+
+.anki-connect-status-0,
+.sw-status-not_installed,
+.sw-status-not_active {
+  color: red;
+}
+
+.anki-connect-status-1 {
+  color: blue;
+}
+
+.anki-connect-status-2,
+.sw-status-activated {
+  color: green;
+}
+
+.popover {
+  background: white;
+  border-radius: 2px;
+  box-shadow: 0 30px 90px -20px rgba(0, 0, 0, 0.3),
+    0 0 1px 1px rgba(0, 0, 0, 0.05);
+  margin: 0 20px;
+}
+
+.livepreview-wrapper {
+  width: 320px;
+  max-height: 300px;
+  overflow: auto;
+}
+
+.livepreview {
+  padding: 0 $spacing-unit * 4 $spacing-unit * 2;
+}
+
+.livepreview-word-content {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+/*
+.g-lp-2:not(.g-lpe)
+*/
+span[data-word]:hover,
+a[data-word]:hover {
+  background: AntiqueWhite;
+}
+
+a span[data-word]:hover {
+  background: unset;
+}
+
+span[data-word],
+a[data-word] {
+  text-decoration-line: underline;
+  text-underline-position: under;
+  text-decoration-style: dotted;
+}
+
+span[data-word]:nth-child(odd),
+a[data-word]:nth-child(odd) {
+  text-decoration-color: magenta;
+}
+
+span[data-word]:nth-child(even),
+a[data-word]:nth-child(even) {
+  text-decoration-color: mediumspringgreen;
+}
+
+span[data-word][data-word-type="動詞"],
+span[data-word][data-word-type="助動詞"],
+a[data-word][data-word-type="動詞"],
+a[data-word][data-word-type="助動詞"] {
+  text-decoration-style: wavy;
+}
+
+span[data-word][data-word-type="名詞"],
+a[data-word][data-word-type="名詞"] {
+  text-decoration-style: solid;
+}
+
+span[data-word][data-word-type="形容動詞"],
+span[data-word][data-word-type="形容詞"],
+span[data-word][data-word-type="副詞"],
+a[data-word][data-word-type="形容動詞"],
+a[data-word][data-word-type="形容詞"],
+a[data-word][data-word-type="副詞"] {
+  text-decoration-style: dashed;
+}
+
+*[role="button"].loading {
+  border-bottom: 1px dotted;
+}
+
+*[role="button"].loaded {
+  border-bottom: 1px solid;
+}
+
+.g-nosr .voice-input-btn {
+  display: none;
+}
+
+.g-nojs .needjs {
+  display: none !important;
+}
+
+.none {
+  display: none;
+}
+
+.history-entry {
+  display: flex;
+}
+
+.history-entry > *:not(:first-child) {
+  margin-left: $spacing-unit;
+}
+
+.history-entry-time {
+  // flex: 0;
+}
+
+.history-entry-main {
+  flex: 1;
+}
+
+.rotate90 {
+  transform: rotate(90deg);
+  display: inline-block;
+}
+
+.rotate180 {
+  transform: rotate(180deg);
+  display: inline-block;
+}
+
+.rotate270 {
+  transform: rotate(270deg);
+  display: inline-block;
+}
+
+.error,
+.danger {
+  color: red;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#cloud-gravatar img {
+  display: inline;
+  border-radius: 50%;
+  border: 1px solid transparent;
+}
+
+#cloud-gravatar.synced img {
+  border: 1px solid green;
+}
+
+.cloud-pages {
+  margin-bottom: $spacing-unit * 2;
+}
+
+.cloud-pages li .active {
+  font-weight: bold;
+}
+
+.spin {
+  animation: spin 3s linear infinite;
+  display: inline-block;
+}
+
+.lwmore-panel {
+  background-color: skyblue;
+  margin-right: $spacing-unit * 2;
+  padding: $spacing-unit;
+}
+
+.handwrite {
+  background: wheat;
+  margin-right: $spacing-unit * 2;
+}
+
+.handwrite canvas {
+  border: 1px solid red;
+}
+
+.handwrite-candidates {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.handwrite-candidate {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 2px;
+  background-color: #eaeaea;
+  font-size: 24px;
+  text-align: center;
+  margin: 1px;
+  height: 36px;
+  width: 36px;
+  padding: 2px 4px;
+  line-height: 1.4;
+}
+
+.handwrite-tip {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.handwrite-title {
+  text-align: center;
+  padding: $spacing-unit;
+}
+
+.Popover {
+}
+
+.note-title-text a {
+  color: inherit;
+}
+
+body.g-furigana span[data-word] {
+  display: inline-block;
+}
+
+body.g-mdshd #multi-dicts-selector-default,
+body.g-mdau fieldset.dicts {
+  display: none !important;
+}
+body.g-mdau #main-content {
+  margin-top: 0;
+}
+
+.mds-sd {
+  display: none;
+}
+
+.mds-md,
+body.g-mdau .mds-sd {
+  display: block;
+}
+
+.sidebar-content::-webkit-scrollbar {
+}
+
+*[data-lpel="1"] {
+  background: MistyRose;
+}
+
+.multi-dicts-selector-editor-shortcut-dicts select {
+  max-width: 150px;
+}
+
+.multi-dicts-selector-editor-name input {
+  max-width: 80px;
+}
+
+.multi-dicts-selector-editor-desc input {
+  max-width: 120px;
+}
+
+@keyframes spin {
+  50% {
+    -webkit-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+  }
+}
+
+.lwmore-btn {
+  display: none;
+}
+
+.lwmore-panel .search-type {
+  display: inline-block;
+}
+
+.home-footer {
+  margin-top: $spacing-unit * 3;
+  margin-bottom: $spacing-unit * 2;
+}
+
+footer.mv {
+  display: none; // hide mobile footer for pc view
+}
+
+footer.pv {
+  display: block;
+}
+
+body:not([data-ir="1"]) .mod {
+  display: none;
+}
+
+.parser-content {
+  display: flex;
+}
+.parser-content > * {
+  flex: 1;
+}
+.parser-header .active {
+  font-weight: bold;
+}
+.parser-content textarea {
+  margin-right: $spacing-unit;
+  line-height: 1.5;
+  width: calc(100% - 5px);
+}
+.parser-result-content {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 2;
+}
+.parser-result-content.parser-default > * {
+  display: inline-block;
+}
+.parser-fix table {
+  text-align: left;
+  background-color: white;
+  border-collapse: collapse;
+}
+.parser-fix table th,
+.parser-fix table td {
+  border: 1px silver solid;
+}
+
+.word-permalink,
+.livepreview-word-permalink {
+  word-break: break-all;
+}
+
+/* from wikipedia_zh */
+
+#sanavi,
+#gototop,
+#gotobottom {
+  position: fixed;
+  display: none;
+}
+#sanavi {
+  // left: 50%;
+  // margin-left: -(32 * 2 + $spacing-unit ) / 2;
+  bottom: 18px;
+  left: 18px;
+}
+#goback,
+#goforward,
+#gototop,
+#gotobottom {
+  opacity: 0.7;
+}
+#gototop,
+#gotobottom {
+  left: unset;
+  right: 18px;
+}
+#gototop {
+  bottom: 65px;
+}
+#gotobottom {
+  bottom: 24px;
+  transform: rotate(180deg);
+}
+#goback:hover,
+#goforward:hover,
+#gototop:hover,
+#gotobottom:hover {
+  opacity: 1;
+}
+body[data-idle="0"] {
+  #gototop,
+  #gotobottom {
+    display: block;
+  }
+}
+body.g-sa #sanavi {
+  display: block;
+}
+#goback {
+  transform: rotate(270deg);
+  margin-right: $spacing-unit;
+}
+#goforward {
+  transform: rotate(90deg);
+}
+
+.feature-links {
+  align-items: center;
+}
+
+.profiles .active {
+  font-weight: bold;
+}
+
+body.g-noucps .userconfig-profile-selector-btn {
+  display: none;
+}
+
+body[data-il-ucps="1"] .userconfig-profile-selector-btn {
+  visibility: hidden;
+}
+
+.userconfig-profile-selector {
+  background-color: skyblue;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+@import "cloud";
+@import "notebook";
+@import "suggestions";
+@import "mobile";
+@import "print";
+@import "ie";
+@import "light";
+@import "dark";
+
+body.g-mdau-lw {
+  .opt {
+    display: none;
+  }
+  @include light-mode;
+}

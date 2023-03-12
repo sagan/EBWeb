@@ -1,0 +1,57 @@
+@import "variables";
+
+.note {
+  padding-top: $spacing-unit;
+  break-inside: avoid-column;
+}
+
+.note-content,
+.note-comment {
+  white-space: pre-wrap; /* Since CSS 2.1 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+.note-content {
+  font-size: 1em;
+  margin-top: $spacing-unit * 2;
+  margin-bottom: $spacing-unit * 2;
+}
+
+.notes-title-mode .note-title {
+  cursor: pointer;
+}
+
+.note-title-text {
+  display: inline;
+  color: unset;
+  // border-bottom: 1px dashed grey;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-underline-position: under;
+}
+
+.note-source,
+.note-title-text {
+  margin-right: $spacing-unit;
+}
+
+.note-tags,
+.note-tag-delete {
+  margin-left: $spacing-unit;
+}
+
+.note-meta {
+  margin-bottom: $spacing-unit * 2;
+}
+
+.notebook-tags {
+  margin-top: $spacing-unit * 2;
+}
+
+.note-add-tag {
+  min-height: 100px;
+}
+
+.note-add-tag form > * {
+  display: inline-block;
+}

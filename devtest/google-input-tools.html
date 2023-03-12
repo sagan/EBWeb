@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script
+      type="text/javascript"
+      src="http://vaani.neechalkaran.com/Scripts/google_jsapi.js"
+    ></script>
+    <script type="text/javascript">
+      // Load the Google Transliterate API
+      google.load("elements", "1", {
+        packages: "transliteration",
+      });
+
+      function onLoad() {
+        var options = {
+          sourceLanguage: "en",
+          destinationLanguage: ["ja"],
+          shortcutKey: "ctrl+g",
+          transliterationEnabled: true,
+        };
+
+        // Create an instance on TransliterationControl with the required
+        // options.
+        var control =
+          new google.elements.transliteration.TransliterationControl(options);
+
+        // Enable transliteration in the textbox with id
+        // 'transliterateTextarea'.
+        control.makeTransliteratable(["transliterateTextarea"]);
+      }
+      google.setOnLoadCallback(onLoad);
+    </script>
+  </head>
+  <body>
+    Type in Hindi (Press Ctrl+g to toggle between English and Hindi)<br />
+    <textarea
+      id="transliterateTextarea"
+      style="width: 600px; height: 200px"
+    ></textarea>
+  </body>
+</html>

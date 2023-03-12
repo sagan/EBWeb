@@ -1,0 +1,808 @@
+# 『岩波　理化学辞典　第５版 CD-ROM版』（EPWING規約第５版準拠）
+#
+#	FileName:RIKAGAKU.map
+#	Author	:hishida
+#	Date	:2006/09/29
+#	Porpose	:EBWin/EBPocket用外字定義ファイル
+#
+#	WindowsXp/2000のUI Gothicを想定
+
+hA121	u00E1	a	#
+hA122	u00E0	a	#
+hA123	u00E2	a	#
+hA124	u00E4	a	#
+hA126	u00E3	a	#
+hA128	u0107	c	#
+hA129	u010D	c	#
+hA12B	u00E9	e	#
+hA12C	u00E8	e	#
+hA12D	u00EA	e	#
+hA12E	u00EB	e	#
+hA12F	u0113	e	#
+hA133	u00EE	i	#
+hA134	u00EF	i	#
+hA135	u012B	i	#
+hA138	u0144	n	#
+hA139	-	n	#
+hA13C	u00F3	o	#
+hA13E	u00F4	o	#
+hA13F	u00F6	o	#
+hA141	u014D	o	#
+hA149	u00FA	u	#
+hA14A	u00FB	u	#
+hA14B	u00FC	u	#
+hA14C	u016B	u	#
+hA155	u00E7	c	#
+hA15A	-	.	#
+hA162	u00F8	o	#
+hA172			#
+hA173	u00D6	O	#
+hA176	u00DC	U	#
+hA17D			#
+hA17E	u00C9	E	#
+hA221	u00C4	A	#
+hA224	u00C5	A	#
+hA225	u005B	[	#
+hA226	u005D	]	#
+hA22B	u014C	O	#
+hA22F	u010C	C	#
+hA238	u00FD	y	#
+hA23D	u00E5	a	#
+hA249	u00B7	・	#
+hA24E	u00D8	O	#
+hA278	-	D	#
+hA279	-	L	#
+hA324	u017E	z	#
+hA325	u00E6	ae	#
+hA328	-	b	#
+hA32E	u016F	u	#
+hA330			#
+hB55B	-	D	#
+hB55C	u0153	oe	#
+hB55D			#
+hB565	-	L	#
+hB651			#
+hDE22			#
+hDE24	-	1	#
+hDE25	-	1	#
+hDE26	-	1	#
+hDE27	-	2	#
+hDE28	-	2	#
+hDE29	-	3	#
+hDE2A	-	3	#
+hDE2B	-	4	#
+hDE2C	-	4	#
+hDE2D	-	6	#
+hDE2E	-	6	#
+hDE32	u010A	C	#
+hDE37	-	N	#
+hDE44	-	c	#
+hDE46	-	d	#
+hDE52	-	q	#
+hDE57	-	s	#
+hDE58	-	t	#
+hDE67	-	α	#
+hDE68	-	α	#
+hDE69	-	β	#
+hDE6A	-	β	#
+hDE6B	-	γ	#
+hDE6C	-	ε	#
+hDE6D	-	ε	#
+hDE6F	-	η	#
+hDE70	-	θ	#
+hDE71	-	λ	#
+hDE72	-	μ	#
+hDE73	-	μ	#
+hDE74	-	μ	#
+hDE75	-	ν	#
+hDE76	-	ν	#
+hDE77	-	ξ	#
+hDE78	-	ξ	#
+hDE79	-	ρ	#
+hDE7B	-	σ	#
+hDE7C	-	φ	#
+hDE7D	-	φ	#
+hDE7E	-	χ	#
+hDF21	-	ψ	#
+hDF23	-	ω	#
+hDF24	-	N	#
+hDF25			#
+hDF26			#
+hDF27	-	C	#
+hDF28	-	N	#
+hDF29	-	O	#
+hDF2A	-	N	#
+hDF2B	-	B	#
+hDF2C	-	K	#
+hDF2D	-	N	#
+hDF2E	-	C	#
+hDF31	u0410	А	#
+hDF32	u0411	Б	#
+hDF33	u0412	В	#
+hDF34	u0413	Г	#
+hDF35	u0414	Д	#
+hDF36	u0415	Е	#
+hDF38	u0416	Ж	#
+hDF39	u0417	З	#
+hDF3A	u0418	И	#
+hDF3B	u0419	Й	#
+hDF3C	u041A	К	#
+hDF3D	u041B	Л	#
+hDF3E	u041C	М	#
+hDF3F	u041D	Н	#
+hDF40	u041E	О	#
+hDF41	u041F	П	#
+hDF42	u0420	Р	#
+hDF43	u0421	С	#
+hDF44	u0422	Т	#
+hDF45	u0423	У	#
+hDF46	u0424	Ф	#
+hDF47	u0425	Х	#
+hDF48	u0426	Ц	#
+hDF4A	u0428	Ш	#
+hDF4B	u0429	Щ	#
+hDF4F	u042D	Э	#
+hDF50	u042E	Ю	#
+hDF51	u042F	Я	#
+hDF52	u0430	а	#
+hDF53	u0431	б	#
+hDF54	u0432	в	#
+hDF55	u0433	г	#
+hDF56	u0434	д	#
+hDF57	u0435	е	#
+hDF58	u0451	ё	#
+hDF59	u0436	ж	#
+hDF5A	u0437	з	#
+hDF5B	u0438	и	#
+hDF5C	u0439	й	#
+hDF5D	u043A	к	#
+hDF5E	u043B	л	#
+hDF5F	u043C	м	#
+hDF60	u043D	н	#
+hDF61	u043E	о	#
+hDF62	u043F	п	#
+hDF63	u0440	р	#
+hDF64	u0441	с	#
+hDF65	u0442	т	#
+hDF66	u0443	у	#
+hDF67	u0444	ф	#
+hDF68	u0445	х	#
+hDF69	u0446	ц	#
+hDF6A	u0447	ч	#
+hDF6B	u0448	ш	#
+hDF6C	u0449	щ	#
+hDF6D	u044A	ъ	#
+hDF6E	u044B	ы	#
+hDF6F	u044C	ь	#
+hDF70	u044D	э	#
+hDF71	u044E	ю	#
+hDF72	u044F	я	#
+hDF73			#
+hDF78			#
+hE022			#
+hE02C	u00B0		#
+hE02F	-	a	#
+hE031	-	p	#
+hE033	-	a	#
+hE034			#
+hE035			#
+hE03A	-	c	#
+hE03F			#
+hE040	-	e	#
+hE041	-	e	#
+hE047			#
+hE048			#
+hE049	-	e	#
+hE050	-	n	#
+hE051	-	o	#
+hE052	-	S	#
+hE056	-	u	#
+hE057	-	c	#
+hE058			#
+hE059			#
+hE05A	-	o	#
+hE05B	-	U	#
+hE05C	-	h	#
+hE05D	-	E	#
+hE05E	-	a	#
+hE05F	-	p	#
+hE062	-	Ω	#
+hE064			#
+hE065			#
+hE066			#
+hE067			#
+hE068			#
+hE069	-	ss	#
+hE06A			#
+hE06E	u2261		#
+hE071			#
+hE072			#
+hE073			#
+hE074			#
+hE075	u21A6		#
+hE076			#
+hE077			#
+hE078			#
+hE079			#
+hE07A			#
+hE07B			#
+hE07C			#
+hE07D			#
+hE07E	u2191	↑	#
+hE121	u2193	↓	#
+hE122			#
+hE123			#
+hE12B			#
+hE12C			#
+hE12E	u03A9	Ω	#
+hE12F	u22C2		#
+hE130	u2206		#
+hE131	u22C3		#
+hE132	u00DF	ss	#
+hE133	u2205		#
+hE134			#
+hE135	u2213		#
+hE136			#
+hE138	u039B		#
+hE139	u03A3	Σ	#
+hE13A	u039E		#
+hE13B	-	Σ	#
+hE144	-	→	#
+hE147			#
+hE148			#
+hE149	u2070	0	#
+hE14A	u00B9	1	#
+hE14B	u00B2	2	#
+hE14C	u00B3	3	#
+hE14D	u2074	4	#
+hE14E	u2075	5	#
+hE14F	u2076	6	#
+hE150	u2077	7	#
+hE151	u2078	8	#
+hE152	u2079	9	#
+hE153	u2080	0	#
+hE154	u2081	1	#
+hE155	u2082	2	#
+hE156	u2083	3	#
+hE157	u2084	4	#
+hE158	u2085	5	#
+hE159	u2086	6	#
+hE15A	u2087	7	#
+hE15B	u2088	8	#
+hE15C	u2089	9	#
+hE171	-	A	
+hE172	-	B	
+hE173	-	C	#
+hE174	-	D	
+hE175	-	E	#
+hE176	-	F	
+hE177	-	G	
+hE178	-	H	
+hE179	-	I	#
+hE17A	-	J	
+hE17B	-	K	
+hE17C	-	L	#
+hE17D	-	M	#
+hE17E	-	N	
+hE221	-	O	
+hE222	-	P	
+hE223	-	Q	
+hE224	-	R	
+hE225	-	S	#
+hE226	-	T	
+hE227	-	U	#
+hE228	-	V	#
+hE229	-	W	
+hE22A	-	X	#
+hE22B	-	Y	
+hE22C	-	Z	
+hE22D	-	a	
+hE22E	-	b	
+hE22F	-	c	#
+hE230	-	d	#
+hE231	-	e	#
+hE232	-	f	#
+hE233	-	g	
+hE234	-	h	#
+hE235	-	i	#
+hE236	-	j	
+hE237	-	k	
+hE238	-	l	#
+hE239	-	m	#
+hE23A	-	n	#
+hE23B	-	o	#
+hE23C	-	p	
+hE23D	-	q	
+hE23E	-	r	
+hE23F	-	s	#
+hE240	-	t	#
+hE241	-	u	#
+hE242	-	v	
+hE243	-	w	
+hE244	-	x	
+hE245	-	y	
+hE246	-	z	
+hE247	-	A	#
+hE248	-	B	#
+hE249	-	C	#
+hE24A	-	D	#
+hE24B	-	E	#
+hE24C	-	F	#
+hE24D	-	G	#
+hE24E	-	H	#
+hE24F	-	I	#
+hE250	-	J	#
+hE251	-	K	#
+hE252	-	L	#
+hE253	-	M	#
+hE254	-	N	#
+hE255	-	O	#
+hE256	-	P	#
+hE257	-	Q	#
+hE258	-	R	#
+hE259	-	S	#
+hE25A	-	T	#
+hE25B	-	U	#
+hE25C	-	V	#
+hE25D	-	W	#
+hE25E	-	X	#
+hE25F	-	Y	#
+hE260	-	Z	
+hE261	-	a	#
+hE262	-	b	#
+hE263	-	c	#
+hE264	-	d	#
+hE265	-	e	#
+hE266	-	f	#
+hE267	-	g	#
+hE268	-	h	#
+hE269	-	i	#
+hE26A	-	j	
+hE26B	-	k	
+hE26C	-	l	#
+hE26D	-	m	#
+hE26E	-	n	#
+hE26F	-	o	#
+hE270	-	p	#
+hE271	-	q	#
+hE272	-	r	#
+hE273	-	s	#
+hE274	-	t	#
+hE275	-	u	#
+hE276	-	v	#
+hE277	-	w	#
+hE278	-	x	#
+hE279	-	y	#
+hE27A	-	z	#
+hE27B	-	A	#
+hE27C	-	B	#
+hE27D	-	C	#
+hE27E	-	D	#
+hE321	-	E	#
+hE322	-	F	#
+hE323	-	G	
+hE324	-	H	#
+hE325	-	I	
+hE326	-	J	
+hE327	-	K	
+hE328	-	L	#
+hE329	-	M	#
+hE32A	-	N	#
+hE32B	-	O	
+hE32C	-	P	#
+hE32D	-	Q	#
+hE32E	-	R	#
+hE32F	-	S	#
+hE330	-	T	#
+hE331	-	U	
+hE332	-	V	
+hE333	-	W	
+hE334	-	X	
+hE335	-	Y	
+hE336	-	Z	
+hE337	-	a	#
+hE338	-	b	#
+hE339	-	c	#
+hE33A	-	d	#
+hE33B	-	e	#
+hE33C	-	f	#
+hE33D	-	g	#
+hE33E	-	h	#
+hE33F	-	i	#
+hE340	-	j	#
+hE341	-	k	#
+hE342	-	l	#
+hE343	-	m	#
+hE344	-	n	#
+hE345	-	o	
+hE346	-	p	#
+hE347	-	q	#
+hE348	-	r	#
+hE349	-	s	#
+hE34A	-	t	#
+hE34B	-	u	#
+hE34C	-	v	
+hE34D	-	w	
+hE34E	-	x	#
+hE34F	-	y	#
+hE350	-	z	#
+hE351	-	A	#
+hE352	-	B	#
+hE353	-	C	#
+hE354	-	D	#
+hE355	-	E	#
+hE356	-	F	
+hE357	-	G	
+hE358	-	H	#
+hE359	-	I	
+hE35A	-	J	#
+hE35B	-	K	#
+hE35C	-	L	#
+hE35D	-	M	#
+hE35E	-	N	#
+hE35F	-	O	
+hE360	-	P	#
+hE361	-	Q	
+hE362	-	R	
+hE363	-	S	#
+hE364	-	T	#
+hE365	-	U	
+hE366	-	V	#
+hE367	-	W	
+hE368	-	X	#
+hE369	-	Y	#
+hE36A	-	Z	
+hE36B	-	a	#
+hE36C	-	b	#
+hE36D	-	c	#
+hE36E	-	d	#
+hE36F	-	e	#
+hE370	-	f	#
+hE371	-	g	#
+hE372	-	h	#
+hE373	-	i	#
+hE374	-	j	#
+hE375	-	k	#
+hE376	-	l	#
+hE377	-	m	#
+hE378	-	n	#
+hE379	-	o	#
+hE37A	-	p	#
+hE37B	-	q	#
+hE37C	-	r	#
+hE37D	-	s	#
+hE37E	-	t	#
+hE421	-	u	#
+hE422	-	v	#
+hE423	-	w	
+hE424	-	x	#
+hE425	-	y	#
+hE426	-	z	#
+hE427	-	α	#
+hE428	-	β	#
+hE429	-	γ	#
+hE42A	-	δ	#
+hE42B	-	ε	#
+hE42D	-	η	#
+hE42E	-	θ	#
+hE430	-	κ	#
+hE431	-	λ	#
+hE432	-	μ	#
+hE433	-	ν	#
+hE434	-	ξ	#
+hE436	-	π	#
+hE437	-	ρ	#
+hE438	-	σ	#
+hE439	-	τ	#
+hE43B	-	φ	#
+hE43D	-	ψ	#
+hE43E	-	ω	#
+hE441	-		#
+hE442	-		#
+hE447	-	α	#
+hE448	-	β	#
+hE449	-	γ	#
+hE44A	-	δ	#
+hE44B	-	ε	#
+hE44C	-	ζ	#
+hE44D	-	η	#
+hE44E	-	θ	#
+hE450	-	κ	#
+hE451	-	λ	#
+hE452	-	μ	#
+hE453	-	ν	#
+hE454	-	ξ	#
+hE455	-	ο	#
+hE456	-	π	#
+hE457	-	ρ	#
+hE458	-	σ	#
+hE459	-	τ	#
+hE45E	-	ω	#
+hE462	-		#
+hE466	-	A	#
+hE467	-	A	#
+hE468	-	B	#
+hE46B			#
+hE46C			#
+hE46D			#
+hE471			#
+hE472			#
+hE473			#
+hE477			#
+hE478			#
+hE479			#
+hE47A			#
+hE47B			#
+hE47C			#
+hE47D			#
+hE47E			#
+hE521			#
+hE522			#
+hE523			#
+hE526			#
+hE528			#
+hE529			#
+hE52A			#
+hE52C			#
+hE52D	u207D	(	#
+hE52E	u207E	)	#
+hE531	u207A	+	#
+hE532	u207B	-	#
+hE536			#
+hE53E			#
+hE53F			#
+hE540	u2032	'	#
+hE541	u2033	"	#
+hE542	-	*	#
+hE547			#
+hE549			#
+hE54A	-	Ⅰ	#
+hE54B	-	Ⅱ	#
+hE54C	-	Ⅲ	#
+hE54D	-	Ⅳ	#
+hE54F	-	Ⅵ	#
+hE550	-	Ⅶ	#
+hE551	-	Ⅷ	#
+hE555	-	?	#
+hE55B			#
+hE55C			#
+hE55D			#
+hE55E			#
+hE55F			#
+hE560			#
+hE563	-	+	#
+hE564	-	-	#
+hE565			#
+hE566	-	0	#
+hE567	-	2	#
+hE568	-	4	#
+hE569	-	n	#
+hE56A	-	t	#
+hE621			#
+hE622			#
+hE623			#
+hE625			#
+hE626			#
+hE628	-	/	#
+hE62A	-	~	#
+hE62B			#
+hE62D	u208D	(	#
+hE62E	u208E	)	#
+hE62F	-	[	#
+hE630	-	]	#
+hE631	u208A	+	#
+hE632	u208B	-	#
+hE633	-	x	#
+hE635	u208C	=	#
+hE636			#
+hE637			#
+hE638	-	<	#
+hE63A	u2266	<=	#
+hE63B	u2267	>=	#
+hE63C	u220A		#
+hE63E	u221E		#
+hE63F	u22A5		#
+hE640			#
+hE641			#
+hE642	-	*	#
+hE643	-	→	#
+hE645	-	↑	#
+hE646	-	↓	#
+hE648	u22EF		#
+hE64B	-	Ⅱ	#
+hE656			#
+hE657	-	D	#
+hE658			#
+hE659			#
+hE65A			#
+hE661			#
+hE662			#
+hE663	-	0	#
+hE664	-	1	#
+hE665	-	2	#
+hE666	-	3	#
+hE667	-	4	#
+hE668	-	5	#
+hE669	-	6	#
+hE66A	-	A	#
+hE66B	-	B	#
+hE66C	-	D	#
+hE66D	-	E	#
+hE66E	-	F	#
+hE66F	-	M	#
+hE670	-	N	#
+hE671	-	T	#
+hE672	-	c	#
+hE673	-	d	#
+hE674	-	g	#
+hE675	-	I	#
+hE676	-	k	#
+hE677	-	m	#
+hE678	-	n	#
+hE679	-	p	#
+hE67A	-	s	#
+hE67B	-	v	#
+hE67C	-	w	#
+hE721	-	a	#
+hE722	-	a	#
+hE723	-	e	#
+hE725	-	n	#
+hE727	-	u	#
+hE728	-	y	#
+hE72A	-	E	#
+hE72B	-	A	#
+hE72C	-	A	#
+hE72D	-	n	#
+hE72E	-	x	#
+hE72F	-	y	#
+hE730	-	k	#
+hE731	-	I	#
+hE732	-	b	#
+hE733	-	A	#
+hE734	-	B	#
+hE735	-	B	#
+hE736	-	D	#
+hE737	-	H	#
+hE738	-	M	#
+hE739	-	Q	#
+hE73A	-	Q	#
+hE73B	-	S	#
+hE73C	-	S	#
+hE73D	-	T	#
+hE73E	-	V	#
+hE73F	-	Y	#
+hE740	-	Z	#
+hE741	-	c	#
+hE742	-	f	#
+hE743	-	f	#
+hE744	-	f	#
+hE745	-	h	#
+hE746	-	h	#
+hE747	-	l	#
+hE748	-	p	#
+hE749	-	p	#
+hE74A	-	q	#
+hE74B	-	q	#
+hE74C	-	r	#
+hE74D	-	w	#
+hE74E	-	x	#
+hE74F	-	x	#
+hE750	-	x	#
+hE751	-	y	#
+hE752	-	y	#
+hE753	-	z	#
+hE754	-	z	#
+hE755	-	z	#
+hE757	-	y	#
+hE758	-	А	#
+hE759	-	И	#
+hE75A	-	М	#
+hE75B	-	П	#
+hE75C	-	Ф	#
+hE75D	-	Ч	#
+hE75E	-	а	#
+hE75F	-	в	#
+hE760	-	е	#
+hE761	-	к	#
+hE762	-	л	#
+hE763	-	н	#
+hE764	-	о	#
+hE765	-	р	#
+hE766	-	ъ	#
+hE767	-	я	#
+hE768	-	R	#
+hE769	-	m	#
+hE76A	-	r	#
+hE76B	-	r	#
+hE76C	-	x	#
+hE76D	-	y	#
+hE76E	-	z	#
+hE76F	-	B	#
+hE770	-	I	#
+hE771	-	z	#
+hE772	-	n	#
+hE773	-	a	#
+hE774	-	o	#
+hE775	-	z	#
+
+
+zA173	u00D6	O	#
+zA17E	u00C9	E	#
+zA224	u00C5	A	#
+zA225	u005B	[	#
+zA226	u005D	]	#
+zA23D	u00E5	a	#
+zA421	u2194	<->	#
+zA44F	u766D		#
+zA47D	u9239		#
+zA527	u70BB		#
+zA529			#
+zA631	u21C0		#
+zA66F			#
+zB366	u220F	Π	#
+zB37E	u2211	Σ	#
+zB536	u2460	(1)	#
+zB537	u2461	(2)	#
+zB538	u2462	(3)	#
+zB539	u2463	(4)	#
+zB53A	u2464	(5)	#
+zB53B	u2465	(6)	#
+zB53C	u2466	(7)	#
+zB555	u2160	Ⅰ	#
+zB556	u2161	Ⅱ	#
+zB559	u2162	Ⅲ	#
+zB55A	u2163	Ⅳ	#
+zB55B	-	D	#
+zB55D	u2165	Ⅵ	#
+zB565	-	L	#
+zB64F			#
+zB651			#
+zB654	-	⇒	#
+zB655	-	→	#
+zB67A	u2164	Ⅴ	#
+zB67B	u2166	Ⅶ	#
+zB67C	u2167	Ⅷ	#
+zB67D	u2168	Ⅸ	#
+zB67E	u2169	Ⅹ	#
+zB775	u2248		#
+zB776	u2243		#
+zB777	u24C5		#
+zB77D	u2295		#
+zB821			#
+zB822	u21C4		#
+zB823	u216A		#
+zB824	u216B		#
+zCB64			#
+zDD23	u21CC		#
+zDD24			#
+zDD25	u2039		#
+zDD26			#
+zDD27	u203A		#
+zDD28			#
+zDD29	u2194	<->	#
+zDD2A	-	S	#
+zDD2B	u2216		#
+zDD2D	u2265		#
+zDD2E	u2264		#
+zDD2F	u224C		#
+zDD30	u2273		#
+zDD31	u2272		#
+zDD32			#
+zDD33			#
+zDD34			#
+zDD35			#
+zDD36	u2209		#
+zDD37	u2295		#
+zDD38	u21E8		#
+zDD3B			#
+zDD3C			#
+zDD3D	-	Ⅰ	#
+zDD3E	-	Ⅱ	#
+zDD3F	-	Ⅲ	#
+zDD40	-	Ⅳ	#
+zDD42	-	Ⅵ	#
+zDD43	-	Ⅶ	#
+zDF2B			#
+zE058			#
+zE060	-	D	#
+zE061	-	L	#

@@ -1,0 +1,7 @@
+
+http://192.168.167.133:3000/dict/?api=1&binary=mp3&dict=%E5%BA%83%E8%BE%9E%E8%8B%91&endoffset=1428&endpage=516379&offset=292&page=512329
+
+
+test.wav
+
+[keyword]か‐ざん【火山】[subscript]クワ‐[/subscript][/keyword]↵[image format=jpg,inline=0,page=32855,offset=40]{{zc463}}[/image]↵[image format=jpg,inline=0,page=32926,offset=1556]{{zc463}}[/image]↵

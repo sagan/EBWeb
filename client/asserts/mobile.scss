@@ -1,0 +1,166 @@
+@import "variables";
+@import "light";
+
+/* desktop devices */
+@mixin pc-mode {
+  article.single-dict {
+    max-width: 980px;
+  }
+  .search-input-wrapper {
+    max-width: 600px;
+  }
+  article.multi-dicts {
+    margin-right: $spacing-unit * 2;
+  }
+  // max sitetitle text fix in width
+  h1#sitetitle {
+    font-size: Min(Max(calc((20vw - 10px) / 7), 1em), 2em);
+  }
+}
+
+@mixin mobile-mode-root {
+  padding-left: $spacing-unit * 1;
+  padding-right: $spacing-unit * 1;
+}
+
+@mixin mobile-mode {
+  #wrapper {
+    flex-direction: column-reverse;
+    height: auto;
+    width: 100%;
+    margin-top: calc(1.7em + #{$spacing-unit * 2});
+  }
+  main,
+  aside {
+    width: 100%;
+  }
+  h1 {
+    position: absolute;
+    top: 0;
+    font-size: 1.7em; // 5.9vw;
+    left: $spacing-unit * 1;
+    z-index: -100;
+  }
+  .feature-links {
+    position: absolute;
+    top: $spacing-unit;
+    // font-size: 1.7em; // 5.9vw;
+    right: $spacing-unit * 1;
+    z-index: -100;
+  }
+  h2 {
+    z-index: 1000;
+  }
+  h1,
+  h2,
+  h3 {
+    margin-top: $spacing-unit;
+  }
+  fieldset.dicts {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: $spacing-unit;
+    column-gap: $spacing-unit * 2;
+  }
+  .dict {
+    // margin-right: $spacing-unit * 3;
+    margin: 0;
+  }
+  main > div > *:nth-child(2) {
+    margin-top: $spacing-unit * 2;
+  }
+  #wrapper,
+  .sidebar-content,
+  main,
+  aside {
+    overflow-y: hidden;
+    padding-left: 0;
+  }
+  main,
+  .sidebar-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .dict-content {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  #wrapper,
+  h2,
+  h3,
+  .form-fields,
+  .content {
+    // font-size: 4vw;
+  }
+  .gaiji {
+    // height: 2.25em; // 4vw
+  }
+  .form-fields {
+    display: block;
+    margin: 0 0 $spacing-unit 0;
+  }
+  .form-fields > * {
+    display: inline;
+  }
+  .search-input-wrapper {
+    display: flex;
+  }
+  .mobile-last {
+    margin-right: 0;
+  }
+  .dialog h3 {
+    margin-top: 0;
+  }
+  input[name="romaji"] {
+    // width: 2.25em; // 4vw
+    // height: 2.25em;
+  }
+  .nav-words ul,
+  .notebook-tags ul,
+  .external-search {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .nav-words ul li:not(:last-child),
+  .notebook-tags ul li:not(:last-child),
+  .external-search li:not(:last-child) {
+    margin-right: $spacing-unit * 3;
+  }
+  footer.mv {
+    display: block;
+  }
+  footer.pv {
+    display: none;
+  }
+  .parser-content {
+    display: block;
+  }
+  @include light-mode;
+}
+
+body.g-pv {
+  @include pc-mode;
+}
+
+body.g-mv {
+  @include mobile-mode;
+  #root {
+    @include mobile-mode-root;
+  }
+}
+
+// fallback for javascript disabled browser
+@media (max-width: 1023px) {
+  body.g-auto {
+    @include mobile-mode;
+    #root {
+      @include mobile-mode-root;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  body.g-auto {
+    @include pc-mode;
+  }
+}

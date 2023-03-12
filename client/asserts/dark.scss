@@ -1,0 +1,31 @@
+$dark-background-color: #343434;
+
+@mixin dark-mode {
+  color: white;
+  background: black;
+
+  .icon.not-active {
+    filter: invert(1);
+  }
+  .dict > a {
+    color: white;
+  }
+  .block {
+    border: none;
+  }
+  .block,
+  .popover {
+    background-color: $dark-background-color;
+  }
+  .ReactModal__Content {
+    background-color: $dark-background-color !important;
+  }
+
+  .feature-links .active {
+    border-bottom: 1px solid sandybrown;
+  }
+}
+
+body.g-dark {
+  @include dark-mode;
+}

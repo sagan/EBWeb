@@ -1,0 +1,3652 @@
+#	Name	:ZHONG_RI-ExtB.map
+#	Purpose	:小学館日中・中日辞典(EBXA-C)用外字定義ファイル
+#		 SONY電子ブックプレーヤー「小学館編中日／日中辞典統合版」『DD-CH10』添付品
+#	Author	: hishida, wonthen
+#
+#	基礎知識：EBXA-Cは日本語部分はJIS X0208、簡体字にはGB2312が使用されている。
+#	それ以外に、異体字や繁体字のエンコードに独自の外字コードが使用されている。
+#		hXXXX	- EB半角外字(A421～A664)
+#		zXXXX	- EB全角外字(A121～A242)
+#		cXXXX	- 0x1F1C～0x1F1Dタグの間に現れる外字
+#		gXXXX	- GB2312の未使用領域にマッピングされた外字
+#			※EBXA-Cでは下位バイトのみMSB1だが、ここでは上位下位バイトともMSB1で表現)
+#			※GB2312の未使用領域は10区～15区だが、EBXA-Cでは4区～9区も独自外字に使用している
+#	EBWin/EBPocketでは、cXXXXとgXXXXの外字は□で表示する。
+#	外字定義ファイルでcXXXXとgXXXXに対応するUnicodeを定義すると、文字を表示できるようになる。
+#	外字コードの調べ方：
+#	(1)本文中にGBコードと電碼コードが記載されている場合、以下で配布されている
+#	  unihanデータベースでUnicodeと異体字、簡体字、繁体字が調べられる。
+#		http://www.unicode.org/Public/UNIDATA/Unihan.html
+#	(2)unihanデータベースにない場合、字形からUnicodeを調べる必要がある。
+#	  字形を確認する方法は、以下の通りである
+#		a.SONY DD-CH10 
+#		b.書籍版『小学館中日辞典第一版』 
+#		c.小学館中日／日中統合辞典[国際版]CD-ROM 
+#		d.『小学館中日辞典第一版』を搭載したIC電子辞書
+#	  部首から調べるには、ATOKやMS-IMEの文字パレットが使用できる
+#
+#	2005/08/07	外字カバー率57.0%
+#	2006/08/13	外字カバー率93.4%	(cXXXX-2341字、gXXXX-319字)
+#	2006/08/20	外字カバー率98.3%	(cXXXX-2649字、gXXXX-340字)
+#	2006/08/27	外字カバー率98.4%	(cXXXX-2654字、gXXXX-399字)
+#	2006/09/04	ZHONG_RI-ExtB.map ( WindowsVista MingLiU-ExtB 専用 )
+#			外字カバー率99.9%	(cXXXX-2738字、gXXXX-433字)
+#
+#	この外字定義ファイルは、WindowsVistaのMingLiU-ExtBの使用を想定している
+#
+#	* - 異体字に置き換えることによって、親字の表示が異体字と区別がつかなくなるもの
+#		例) 琤(琤)	※本来は王+争だが、Unicodeにない
+#	　熟語や成句中に出現するため、やむをえずこうする。
+
+
+# 半角外字(A421～A664 の256文字)
+# A459～A660は半角2文字のペアで全角1文字の外字を表現しているので、2文字目をnullとする
+
+hA421	-	**
+hA422	-	*
+hA423	-	**
+hA424	-	*
+hA425	u0100	A	#Ā
+hA426	u00C0	A	#À
+hA427	u0112	E	#Ē
+hA428	u00C9	E	#É
+hA429	u011A	E	#Ě
+hA42A	u00C8	E	#È
+hA42B	u014C	O	#Ō
+hA42C	u0101	a	#ā
+hA42D	u00E1	a	#á
+hA42E	u01CE	a	#ǎ
+hA42F	u00E0	a	#à
+hA430	u012B	i	#ī
+hA431	u00ED	i	#í
+hA432	u01D0	i	#ǐ
+hA433	u00EC	i	#ì
+hA434	u016B	u	#ū
+hA435	u00FA	u	#ú
+hA436	u01D4	u	#ǔ
+hA437	u00F9	u	#ù
+hA438	u0113	e	#ē
+hA439	u00E9	e	#é
+hA43A	u011B	e	#ě
+hA43B	u00E8	e	#è
+hA43C	u014D	o	#ō
+hA43D	u00F3	o	#ó
+hA43E	u01D2	o	#ǒ
+hA43F	u00F2	o	#ò
+hA440	u00FC	v	#ü
+hA441	u00EA	e	#ê
+hA442	u01D6	v	#ǖ
+hA443	u01D8	v	#ǘ
+hA444	u01DA	v	#ǚ
+hA445	u01DC	v	#ǜ
+hA446	u00AF		#¯
+hA447	u00B4	'	#´
+hA448	-		#
+hA449	u0060	`	#`
+hA44A	u00E4	a	#ä
+hA44B	u00EB	e	#ë
+hA44C	-	((
+hA44D	-	))
+hA44E	u3014	〔
+hA44F	u3015	〕
+hA450	-
+hA451	-	m	#
+hA452	-	m	#	u1E3F
+hA453	-	m	#
+hA454	u0144	n	#ń
+hA455	-	n	#
+hA456	-	n	#
+hA457	-	2
+hA458	-	3
+hA459	-
+hA45A	-
+hA45B	u63E2		#揢
+hA45C	null
+hA45D	u4D97		#(繁体字)	(CJK Ext.A)
+hA45E	-
+hA45F	u7798		#瞘
+hA460	null
+hA461	u39DF		#	(CJK Ext.A)
+hA462	-
+hA463	u5672		#噲
+hA464	null
+hA465	u81BE		#膾
+hA466	null
+hA467	u736A		#獪
+hA468	null
+hA469	u5DCB		#巋
+hA46A	null
+hA46B	-
+hA46C	-
+hA46D	u775E		#睞
+hA46E	null
+hA46F	u9E1D		#鸝
+hA470	null
+hA471	u9148		#酈
+hA472	null
+hA473	u6BAE		#殮
+hA474	null
+hA475	u5562		#啢
+hA476	null
+hA477	u5AFD		#嫽
+hA478	null
+hA479	u9ACE		#髎
+hA47A	null
+hA47B	u7F4F		#罏
+hA47C	null
+hA47D	-		#(未使用)
+hA47E	-
+hA521	u5187		#冇
+hA522	null
+hA523	-
+hA524	-
+hA525	-
+hA526	-
+hA527	u9E85		#麅
+hA528	null
+hA529	-		#(未使用)
+hA52A	-
+hA52B	-		#(未使用)
+hA52C	-
+hA52D	-
+hA52E	-
+hA52F	-
+hA530	-
+hA531	u5e67		#幧
+hA532	null
+hA533	-
+hA534	-
+hA535	-
+hA536	-
+hA537	-
+hA538	-
+hA539	u89F4		#觴
+hA53A	null
+hA53B	u5010		#倐
+hA53C	null
+hA53D	-
+hA53E	-
+hA53F	u5EDD		#廝
+hA540	null
+hA541	u8784		#螄
+hA542	null
+hA543	u5621		#嘡
+hA544	null
+hA545	u9933		#餳
+hA546	null
+hA547	u9482		#钂
+hA548	null
+hA549	-
+hA54A	-
+hA54B	-
+hA54C	-
+hA54D	-
+hA54E	-
+hA54F	u5AA7		#媧
+hA550	null
+hA551	-
+hA552	-
+hA553	-
+hA554	-
+hA555	u63fb		#揻
+hA556	null
+hA557	u97CB		#韋
+hA558	null
+hA559	u9ba0		#鮠
+hA55A	null
+hA55B	-		#(未使用)
+hA55C	-
+hA55D	-
+hA55E	-
+hA55F	u93A2		#鎢
+hA560	null
+hA561	u7214		#爔
+hA562	null
+hA563	-
+hA564	-
+ha565	u5d8d		#嶍
+ha566	null
+hA567	u74BD		#璽
+hA568	null
+hA569	u993C		#餼
+hA56A	null
+hA56B	u5C6D		#屭
+hA56C	null
+hA56D	u79c8
+hA56E	null
+hA56F	u736B		#獫
+hA570	null
+hA571	-
+hA572	-
+hA573	u7fdb		#翛
+hA574	null
+hA575	-
+hA576	-
+hA577	u5070		#偰
+hA578	null
+hA579	u7444		#瑄
+hA57A	null
+hA57B	u74BF		#璿
+hA57C	null
+hA57D	u40E0		# (CJK Ext.A)
+hA57E	-
+hA621	-
+hA622	-
+hA623	u91C5		#釅
+hA624	null
+hA625	u995C		#饜
+hA626	null
+hA627	u8D17		#贗
+hA628	null
+hA629	u9DC3		#鷃(繁体字)
+hA62A	null
+hA62B	u9D33		#鴳
+hA62C	null
+hA62D	u760D		#瘍
+hA62E	null
+hA62F	u509c		#傜
+hA630	null
+hA631	u733a		#猺
+hA632	null
+hA633	u9768		#靨
+hA634	null
+hA635	u7616		#瘖
+hA636	null
+hA637	u7F0A		#缊
+hA638	null
+hA639	u5A96		#媖
+hA63A	null
+hA63B	u7E08		#縈
+hA63C	null
+hA63D	u504a		#偊
+hA63E	null
+hA63F	u9B4A		#魊
+hA640	null
+hA641	-
+hA642	-
+hA643	u8B05		#謅
+hA644	null
+hA645	-
+hA646	-
+hA647	-
+hA648	-
+hA649	u7451		#瑑
+hA64A	null
+hA64B	u6913		#椓
+hA64C	null
+hA64D	u65B2		#斲
+hA64E	null
+hA64F	-
+hA650	-
+hA651	u69DC		#槜
+hA652	null
+hA653	u9d69		#鵩
+hA654	null
+hA655	-
+hA656	-
+hA657	u8127		#脧
+hA658	null
+hA659	-
+hA65A	-
+hA65B	-
+hA65C	-
+hA65D	u910f		#鄏
+hA65E	null
+hA65F	-
+hA660	-
+hA661	u3016	【
+hA662	u3017	】
+hA663	u3010	【
+hA664	u3011	】
+
+
+# 全角外字（A121～A242の128文字）
+
+
+zA121	u5715		#圕
+zA122	u5f07		#弇
+zA123	-
+zA124	-
+zA125	-
+zA126	-
+zA127	-
+zA128	-
+zA129	-
+zA12A	-	[囲
+zA12B	-	み]
+zA12C	-	[文
+zA12D	-	法]
+zA12E	-	[絵]
+zA12F	-	[拡]
+zA130	-	[中]
+zA131	-
+zA132	-	[1]
+zA133	-	[2]
+zA134	-	[3]
+zA135	-	[4]
+zA136	-	[5]
+zA137	-	[6]
+zA138	-	[a]
+zA139	-	[b]
+zA13A	-	[c]
+zA13B	-	[d]
+zA13C	-	[e]
+zA13D	-	[f]
+zA13E	-	[g]
+zA13F	-	[h]
+zA140	-	[i]
+zA141	-	[1]
+zA142	-	[2]
+zA143	-	[3]
+zA144	-	[4]
+zA145	-	[5]
+zA146	-	[6]
+zA147	-	[慣
+zA148	-	用]
+zA149	u7B04		#笄
+zA14A	u8332		#茲
+zA14B	-	[7]
+zA14C	u79AA		#禪
+zA14D	u5B0B		#嬋
+zA14E	u92cb		#鋋
+zA14f	u5574		#啴
+zA150	u5257		#剗
+zA151	u5000		#倀
+zA152	u92f9		#鋹
+zA153	u5f28		#弨
+zA154	u8DBB		#趻
+zA155	u725a		#牚
+zA156	u5041		#偁
+zA157	u645b		#摛
+zA158	u74FB		#瓻
+zA159	u7d7a		#絺
+zA15A	-		#(未使用)
+zA15B	-
+zA15c	u640a		#搊
+zA15D	-
+zA15E	-
+zA15F	u8E95		#躕
+zA160	u82BB		#芻
+zA161	-
+zA162	u67f7		#柷
+zA163	u6b58		#歘
+zA164	u84F4		#蓴
+zA165	u747d		#瑽
+zA166	u7462		#瑢
+zA167	u84ef		#蓯
+zA168	u6a05		#樅
+zA169	u93e6		#鏦
+zA16a	u93e6		#鏦
+zA16b	u8ce8		#賨
+zA16C	u7120		#焠
+zA16D	-		#(未使用)
+zA16E	u97C3		#韃
+zA16f	u7e68		#繨
+zA170	u894C		#襌
+zA171	u6BAB		#殫
+zA172	u758d		#疍
+zA173	u74AB		#璫
+zA174	u8B9C		#讜
+zA175	u71FE		#燾
+zA176	u5ef8		#廸
+zA177	u7998		#禘
+zA178	u508e		#傎
+zA179	u6527		#攧
+za17a	u5c4c		#屌
+zA17B	u7006		#瀆
+zA17C	u71C9		#燉
+zA17D	u5234		#刴
+zA17E	u9F76		#齶
+zA221	u97a5		#鞥
+zA222	u9087		#邇
+zA223	u743A		#琺
+zA224	u9A11		#騑
+zA225	u5C37		#尷
+zA226	u51ae		#冮
+zA227	u9F94		#龔
+zA228	-		#(未使用)
+zA229	u7377		#獷
+zA22a	u5b00		#嬀
+zA22b	u4f79		#佹
+zA22C	-
+zA22D	u87C8		#蟈
+zA22E	-
+zA22f	u5637		#嘷
+zA230	u769C		#皜
+zA231	-		#(未使用)
+zA232	u8C9B		#貛
+zA233	u74dB		#瓛
+zA234	u6FAE		#澮
+zA235	u8588		#薈
+zA236	-		#(未使用)
+zA237	u74A3		#璣
+zA238	u87E3		#蟣
+zA239	-		#(未使用)
+zA23A	u621E		#戞
+zA23B	u724B		#牋
+zA23C	u7906		#礆
+zA23d	u7a09		#稉
+zA23E	u73A6		#玦
+zA23F	-		#(未使用)
+zA240	u3B9F		# (CJK Ext.A)
+zA241	-		#(未使用)
+zA242	u7187		#熇
+
+
+# 1F1C～1F1Dの間に現れる外字
+
+#ebcode	unicode	comment
+
+c2122	u4E31	#丱
+c2124	u4E78	#乸
+c2125	u4EB6	#亶
+c2127	u4EB9	#亹
+c2133	u4F03	#伃
+c2136	u4F08	#伈
+c2137	u4F0B	#伋
+c2141	u4F3E	#伾
+c2147	u4F4A	#佊
+c214A	u4F6B	#佫
+c214E	u4F7A	#佺
+c214F	u4F7D	#佽
+c2151	u99EA	#駪(繁体字)
+c2154	u4F98	#侘
+c2155	u4F9C	#侜
+c2159	u4FB9	#侹
+c215B	u4FBB	#侻
+c2160	u4FCD	#俍
+c2164	u4FE4	#俤
+c2168	u4FF6	#俶
+c216C	u5000	#倀
+c2170	u5013	#倓
+c2173	u501E	#倞
+c2174	u5022	#倢
+c2177	u5034	#倴
+c2179	u5037	#倷
+c217A	u503B	#倻
+c217D	u5053	#偓
+c217E	u5062	#偢
+c2221	u5072	#偲
+c2222	u5089	#傉
+c2224	u5092	#傒
+c2225	u5095	#傕
+c2226	u5096	#傖
+c2227	u50A4	#傤
+c2229	u50B3	#傳
+c222A	u50C4	#僄
+c222B	u50C7	#僇
+c222C	u50CD	#働
+c222E	u50DD	#僝
+c2230	u50E2	#僢
+c2232	u50FD	#僽
+c2235	u5102	#儂
+c2236	u5108	#儈
+c2237	u5110	#儐
+c2238	u5113	#儓
+c2239	u5114	#儔
+c223A	u5117	#儗
+c223E	u5193	#冓
+c2241	u51ca	#凊
+c2245	u51D3	#凓
+c2249	u51D8	#凘
+c224A	u51D9	#凙
+c2251	u520C	#刌
+c2253	u5213	#刓
+c2254	u521C	#刜
+c2258	u5232	#刲
+c2259	u5235	#刵
+c225B	u5249	#剉
+c225D	u5252	#剒
+c225E	u525A	#剚
+c225F	u525F	#剟
+c2260	u526E	#剮
+c2262	u5280	#劀
+c2263	u528C	#劌
+c2264	u5298	#劘
+c2265	u5299	#劙
+c2266	u52BB	#劻
+c2267	u52BC	#劼
+c2268	u52C5	#勅
+c2269	u52CD	#勍
+c226B	u52D1	#勑
+c226D	u52D4	#勔
+c226E	u52DA	#勚
+c2270	u52E0	#勠
+c2275	u52F7	#勷
+c2276	u52Fc	#勼
+c2277	u5304	#匄
+c2278	u5309	#匉
+c2279	u530A	#匊
+c227A	u530B	#匋
+c227C	u531C	#匜
+c2321	u533C	#匼
+c232C	u5394	#厔
+c232F	u53AA	#厪
+c2330	u53AB	#厫
+c2334	u5425	#吥
+c2342	u54B7	#咷
+c2348	u551D	#唝
+c2350	u5559	#啙
+c2360	u55DE	#嗞
+c236B	u564F	#噏
+c236C	u5660	#噠
+c2378	u56AD	#嚭
+c237C	u56E5	#囥
+c2421	u56F7	#囷
+c2424	u5702	#圂
+c242B	u574B	#坋
+c242F	u5762	#坢
+c2430	u5770	#坰
+c2431	u5787	#垇
+c2432	u578D	#垍
+c2433	u5795	#垕
+c2434	u579A	#垚
+c2435	u579D	#垝
+c2436	u579E	#垞
+c2437	u579F	#垟
+c2438	u57af	#垯
+c2439	u57B1	#垱
+c243a	u57B5	#垵
+c243E	u57BE	#垾
+c243F	u57BF	#垿
+c2445	u57CC	#埌
+c2449	u57f0	#埰
+c244A	u57FB	#埻
+c244B	u57FC	#埼
+c244E	u5803	#堃
+c244F	u5804	#堄
+c2450	u5809	#堉
+c2455	u581D	#堝
+c2459	u5827	#堧
+c245a	u5829	#堩
+c245D	u582F	#堯
+c245F	u5836	#堶
+c2462	u583D	#堽
+c2463	u583E	#堾
+c2465	u5843	#塃
+c2466	u5845	#塅
+c2467	u5846	#塆
+c2469	u5855	#塕
+c246B	u585A	#塚
+c246D	u585D	#塝
+c246F	u5868	#塨
+c2470	u586e	#塮
+c2477	u5888	#墈
+c247a	u5898	#墘
+c247D	u58A6	#墦
+c2537	u5CC7	#峇
+c253A	u5CE3	#峣
+c253C	u5CEC	#峬
+c2541	u5D11	#崑
+c2543	u5D19	#崙
+c2545	u5D1f	#崟
+c2549	u5D56	#嵖
+c254A	u5D5A	#嵚
+c254F	u5D92	#嶒
+c2550	u5D93	#嶓
+c2554	u5DB8	#嶸
+c255F	u5E56	#幖
+c2569	u5EA4	#庤
+c256B	u5EAF	#庯
+c256C	u5EBC	#庼
+c256D	u5EC4	#廄
+c256E	u5EC6	#廆
+c256F	u5ECB	#廋
+c2570	u5ED9	#廙
+c2578	u5F2E	#弮
+c2622	u6264	#扤
+c2627	u6283	#抃
+c2632	u62B4	#抴
+c2633	u62B6	#抶
+c2635	u62D5	#拕
+c2638	u62E4	#拤
+c2640	u631C	#挜
+c2641	u6326	#挦
+c2642	u6336	#挶
+c2643	u6358	#捘
+c2644	u6366	#捦
+c2645	u6375	#捵
+c2646	u637D	#捽
+c2649	u639E	#掞
+c264A	u63AB	#掫
+c264C	u63CC	#揌
+c2653	u6409	#搉
+c2657	u6422	#搢
+c2659	u6430	#搰
+c2663	u64C4	#擄
+c2665	u64D6	#擖
+c2666	u64E9	#擩
+c266B	u6524	#攤
+c2672	u655A	#敚
+c2673	u6560	#敠
+c2674	u6532	#攲
+c2731	u686E	#桮
+c2745	u68B9	#梹
+c2747	u68bD	#梽
+c274C	u68D1	#棑
+c2754	u68E8	#棨
+c275A	u68FB	#棻
+c275D	u6909	#椉
+c2760	u69FC	#槼
+c2776	u6983	#榃
+c2777	u6991	#榑
+c2778	u69A4	#榤
+c277c	u6985	#榅
+c2821	u6D50	#浐
+c2822	u6D55	#浕
+c2823	u6D5B	#浛
+c2824	u6D61	#浡
+c2825	u6D65	#浥
+c282A	u6D87	#涇
+c282B	u6D8A	#涊
+c282C	u6D90	#涐
+c282D	u6D98	#涘
+c282E	u6DA2	#涢
+c2833	u6DB4	#涴
+c2838	u6DCF	#淏
+c283B	u6DDF	#淟
+c283D	u6DEF	#淯
+c283F	u6DF4	#淴
+c2841	u6DF6	#淶
+c2847	u6E1F	#渟
+c284F	u6E49	#湉
+c2853	u6E5C	#湜
+c2854	u6E5D	#湝
+c2855	u6E62	#湢
+c2856	u6E63	#湣
+c2859	u6E68	#湨
+c285b	u6E74	#湴
+c285F	u6E88	#溈
+c2862	u6EA6	#溦
+c2863	u6EB5	#溵
+c2864	u6EC0	#滀
+c2865	u6EC3	#滃
+c2866	u6EC6	#滆
+c2867	u6EC8	#滈
+c2868	u6EC9	#滉
+c286A	u6ECE	#滎
+c286B	u6ED8	#滘
+c286D	u6EEB	#滫
+c286E	u6EEE	#滮
+c286F	u6EFB	#滻
+c2872	u6F16	#漖
+c2873	u6F18	#漘
+c2875	u6F1A	#漚
+c2876	u6F26	#漦
+c2878	u6F37	#漷
+c287C	u6F4F	#潏
+c287E	u6F56	#潖
+c2922	u6F5F	#潟
+c2925	u6F75	#潵
+c2926	u6F77	#潷
+c2929	u6F94	#澔
+c292B	u6FA5	#澥
+c292C	u6FA8	#澨
+c292F	u6FB4	#澴
+c2930	u6FBC	#澼
+c2931	u6FBD	#澽
+c2934	u6FC7	#濇
+c2935	u6FDC	#濜
+c2936	u6FEB	#濫
+c2937	u6FEC	#濬
+c2939	u6FFC	#濼
+c293B	u700C	#瀌
+c293C	u700D	#瀍
+c293D	u6F82	#澂
+c293E	u701F	#瀟
+c293F	u7027	#瀧
+c2940	u703C	#瀼
+c2941	u703D	#瀽
+c2942	u7043	#灃
+c2943	u7044	#灄
+c2945	u704A	#灊
+c2946	u704B	#灋
+c2948	u7067	#灧
+c294B	u7068	#灨
+c2950	u7086	#炆
+c2969	u7105	#焅
+c296A	u710C	#焌
+c2973	u7174	#煴
+c297D	u71BE	#熾
+c2A22	u71CF	#燏
+c2A26	u7207	#爇
+c2A2d	u7242	#牂
+c2A2F	u7253	#牓
+c2A33	u7263	#牣
+c2A38	u7278	#牸
+c2A39	u7287	#犇
+c2A3E	u72A2	#犢
+c2A3F	u72A8	#犨
+c2A50	u733B	#猻
+c2A52	u7355	#獕
+c2A53	u7358	#獘
+c2A55	u738d	#玍
+c2A5C	u739A	#玚
+c2A5F	u739E	#玞
+c2A60	u73A0	#玠
+c2A7C	u73F7	#珷
+c2B21	u7514	#甔
+c2B22	u7517	#甗
+c2B26	u752A	#甪
+c2B27	u752e	#甮
+c2B28	u753D	#甽
+c2B29	u7547	#畇
+c2B2B	u754A	#畊
+c2B2D	u7556	#畖
+c2B30	u7560	#畠
+c2B33	u7564	#畤
+c2B34	u7572	#畲
+c2B35	u756F	#畯
+c2B3A	u758C	#疌
+c2B3D	u75A2	#疢
+c2B3f	u75Ad	#疭
+c2B46	u75CC	#痌
+c2B47	u75CE	#痎
+c2B49	u75D7	#痗
+c2B4C	u75EF	#痯
+c2B4D	u75F2	#痲
+c2B52	u7608	#瘈
+c2B55	u761D	#瘝
+c2B5B	u763A	#瘺
+c2B62	u7659	#癙
+c2B65	u7664	#癤
+c2B6A	u7695	#皕
+c2B6B	u769A	#皚
+c2B6C	u769D	#皝
+c2B6D	u769E	#皞
+c2B71	u76A6	#皦
+c2B73	u76ad	#皭
+c2B76	u76C9	#盉
+c2B7A	u76E6	#盦
+c2B7C	u76E9	#盩
+c2B7E	u76EC	#盬
+c2C22	u78B6	#碶
+c2C27	u78CE	#磎
+c2C28	u78CF	#磏
+c2C29	u78D1	#磑
+c2C2B	u78DC	#磜
+c2C2C	u78DF	#磟
+c2C2D	u78E1	#磡
+c2C31	u78FB	#磻
+c2C3c	u7933	#礳
+c2C3D	u7935	#礵
+c2C41	u793D	#礽
+c2C46	u794f	#祏
+c2C48	u7954	#祔
+c2C52	u7972	#祲
+c2C53	u797c	#祼
+c2C73	u7A19	#稙(異体字)
+c2C75	u7A28	#稨
+c2C78	u7A44	#穄
+c2C79	u7A47	#穇
+c2C7a	u7A4a	#穊
+c2D2D	u7CF5	#糵
+c2D37	u7D1F	#紟
+c2D3D	u7D5C	#絜
+c2D4e	u7e22	#縢
+c2D58	u7D18	#紘
+c2D59	u7EB4	#纴
+c2D5D	u7EE4	#绤
+c2D63	u7F3D	#缽
+c2D64	u7F3F	#缿
+c2D66	u7F5B	#罛
+c2D67	u7F5D	#罝
+c2D6C	u7F66	#罦
+c2D6D	u7F6D	#罭
+c2D6F	u7F73	#罳
+c2D70	u7F76	#罶
+c2D71	u7F7B	#罻
+c2D74	u7F7F	#罿
+c2D76	u7F91	#羑
+c2D78	u7F96	#羖
+c2D79	u7FA5	#羥
+c2D7B	u7FB6	#羶
+c2D7C	u7FC0	#翀
+c2D7D	u7FC3	#翃
+c2E21	u83C2	#菂
+c2E22	u83C9	#菉
+c2E24	u83D1	#菑
+c2E25	u83F6	#菶
+c2E26	u83FB	#菻
+c2E27	u5485	#咅
+c2E28	u8407	#萇
+c2E29	u841A	#萚
+c2E2A	u842C	#萬
+c2E2B	u8439	#萹
+c2E2C	u8453	#葓
+c2E2D	u8456	#葖
+c2E2E	u8479	#葹
+c2E31	u8494	#蒔
+c2E32	u849E	#蒞
+c2E35	u84C2	#蓂
+c2E36	u84C7	#蓇
+c2E3A	u84FA	#蓺
+c2E3B	u84FD	#蓽
+c2E3D	u8502	#蔂
+c2E3F	u852D	#蔭
+c2E40	u853E	#蔾
+c2E43	u8586	#薆
+c2E45	u8594	#薔
+c2E47	u85BF	#薿
+c2E49	u85CA	#藊
+c2E4A	u85D1	#藑
+c2E4C	u85E0	#藠
+c2E4E	u85ED	#藭
+c2E4F	u8604	#蘄
+c2E50	u8606	#蘆
+c2E54	u8652	#虒
+c2E55	u8653	#虓
+c2E5F	u869B	#蚛
+c2E60	u86A1	#蚡
+c2E64	u870E	#蜎
+c2E66	u873A	#蜺
+c2E69	u8742	#蝂
+c2E6B	u8780	#螀
+c2E6d	u87a3	#螣
+c2E70	u87BE	#螾
+c2E71	u87C4	#蟄
+c2E75	u87eb	#蟫
+c2E76	u87F6	#蟶
+c2E77	u8814	#蠔
+c2E78	u881A	#蠚
+c2E7d	u8860	#衠
+c2F21	u8D51	#赑
+c2F23	u8D57	#赗
+c2F26	u8D6F	#赯
+c2F2A	u8DC2	#跂
+c2F2B	u8DC5	#跅
+c2F2C	u8DD5	#跕
+c2F2D	u8DE9	#跩
+c2F2F	u8DF2	#跲
+c2F31	u8E06	#踆
+c2F32	u8E16	#踖
+c2F33	u8E26	#踦
+c2F34	u8E27	#踧
+c2F35	u8E64	#蹤
+c2F37	u8E36	#踶
+c2F38	u8E38	#踸
+c2F39	u8E45	#蹅
+c2F3A	u8E4C	#蹌
+c2F3B	u8E4D	#蹍
+c2F3D	u8E55	#蹕
+c2F3E	u8E61	#蹡
+c2F3F	u8E62	#蹢
+c2F41	u8E7d	#蹽
+c2F42	u8E83	#躃
+c2F43	u8E84	#躄
+c2F45	u8E8A	#躊
+c2F47	u8EA1	#躡
+c2F48	u8EA5	#躥
+c2F5c	u8F3c	#輼
+c2F5D	u8FBF	#辿
+c2F5E	u8FCD	#迍
+c2F5F	u8FD2	#迒
+c2F60	u9034	#逴
+c2F65	u9079	#遹
+c2F66	u9085	#邅
+c2F67	u9098	#邘
+c2F68	u90A0	#邠
+c2F6A	u90BD	#邽
+c2F6B	u90C3	#郃
+c2F6C	u90C8	#郈
+c2F6D	u90CB	#郋
+c2F6F	u90D5	#郕
+c2F70	u90DA	#郚
+c2F71	u90DF	#郟
+c2F72	u90E4	#郤
+c2F73	u90EA	#郪
+c2F75	u90FF	#郿
+c2F76	u9100	#鄀
+c2F77	u9103	#鄃
+c2F78	u9105	#鄅
+c2F7A	u910C	#鄌
+c2F7B	u9112	#鄒
+c2F7C	u9117	#鄗
+c2F7D	u9118	#鄘
+c2F7E	u911A	#鄚
+c3024	u969E	#隞
+c3025	u969F	#隟
+c3026	u96A9	#隩
+c3027	u96B4	#隴
+c3029	u96CB	#雋
+c302B	u96F1	#雱
+c302C	u9702	#霂
+c302D	u9705	#霅
+c302E	u9719	#霙
+c302f	u9721	#霡
+c3032	u973D	#霽
+c3038	u977A	#靺
+c3048	u97B5	#鞵
+c3054	u97E8	#韨
+c3071	u9856	#顖
+c3079	u9899	#颙
+c307A	u98A3	#颣
+c312A	u98D4	#飔
+c312B	u98D7	#飗
+c312e	u98f1	#飱
+c3165	u9A4C	#驌
+c3166	u9A50	#驐(繁体字)
+c316A	u9A72	#驲
+c316F	u9A95	#骕
+c3171	u9Aa6	#骦
+c317E	u9AEE	#髮
+c3225	u9B05	#鬅
+c3245	u9B8C	#鮌
+c3248	u9C8A	#鲊
+c3250	u9C3A	#鰺
+c3259	u9C7D	#鱽
+c325a	u9b62	#魢
+c325c	u9c83	#鲃
+c325F	u9B8A	#鮊
+c3260	u9C8F	#鲏
+c3262	u9C96	#鲖
+c3264	u9C99	#鲙
+c3265	u9C9D	#鲝
+c3266	u9C0F	#鰏
+c3268	u9C03	#鰃
+c3269	u9CC8	#鳈
+c326A	u9CD1	#鳑
+c3329	u9DA4	#鶤
+c333B	u9DC4	#鷄
+c3341	u9E24	#鸤
+c3342	u9E3C	#鸼
+c3343	u9E40	#鹀
+c3344	u9E4D	#鹍
+c3345	u9E50	#鹐
+c3348	u9E54	#鹔
+c3349	u9E56	#鹖
+c334A	u9E59	#鹙
+c334B	u9E5D	#鹝
+c334C	u9E62	#鹢
+c334E	u9E6F	#鹯
+c334F	u9E72	#鹲
+c3350	u9E74	#鹴
+c3353	u9E81	#麁
+c3358	u9E95	#麕
+c335c	u9Ec1	#黁
+c3365	u9EF1	#黱
+c3373	u9F25	#鼥
+c3374	u9F26	#鼦
+c3377	u9F2B	#鼫
+c3378	u9F34	#鼴
+c337B	u9F41	#齁
+c342B	u9F81	#龁
+c3431	u923A	#鈺
+c3433	u5434	#吴
+c343D	u82AA	#芪
+c3441	u9FA2	#龢
+c3442	u7640	#癀
+c3446	u2198	#↘
+c344B	u2510	#┐(罫線要素で代用)
+c3451	u52F0	#勰
+c3452	u741B	#琛
+c3453	u81CF	#臏
+c3454	u8B5A	#譚
+c3455	u6657	#晗
+c3456	u71FE	#燾
+c3457	u58E9	#壩
+c3458	u68F0	#棰
+c3459	u8DB5	#趵
+c345A	u743c	#琼
+c345B	u90A2	#邢
+c345F	u544D	#呍
+c3460	u7F52	#罒
+c3461	u6D5A	#浚	#淩(U+6DE9)は誤記と判断
+c3462	u8FC2	#迂
+c3463	u68B2	#梲
+c3464	u9C6E	#鱮
+c3465	u9B9E	#鮞
+c3466	u98E2	#飢
+c3467	u9C5B	#鱛
+c3468	u75E4	#痤
+c3469	u9B5E	#魞
+c346A	u58d4	#壔
+c346B	u8002	#耂
+c346C	u961D	#阝
+c346D	u9D6C	#鵬
+c346E	u7953	#祓
+c346F	u5BE0	#寠
+c3470	u7DD2	#緒
+c3471	u8764	#蝤
+c3472	u86D1	#蛑
+c3473	u9278	#鉸
+c3474	u7146	#煆
+c3475	u685B	#桛
+c3476	u8910	#褐
+c3477	u64E4	#擤
+c3478	u9370	#鍰
+c3479	u9E79	#鹹
+c347A	u81D7	#臗
+c347B	u723E	#爾
+c347C	u6A0F	#樏
+c347D	u6898	#梘
+c3524	u5F54	#彔
+c3525	u9A4E	#驎
+c3526	u7529	#甩
+c3527	u712E	#焮
+c3528	u863D	#蘽
+c3529	u75C0	#痀
+c352A	u5F50	#彐
+c352B	u9F37	#鼷
+c352C	u99C3	#駃
+c352D	u9A20	#騠
+c352E	u72AD	#犭
+c352F	u6602	#昂
+c3530	u84D1	#蓑
+c3531	u2197	#↗
+c3532	u7E20	#縠
+c3533	u986C	#顬
+c3534	u69A8	#榨
+c3535	u8801	#蠁
+c3536	u6753	#杓
+c3537	u9C5D	#鱝
+c3538	u5F11	#弑
+c3539	u7D53	#絓
+c353A	u9BF7	#鯷
+c353B	u6E51	#湑
+c353C	u7CC8	#糈
+c353D	u7006	#瀆
+c353E	u9C4F	#鱏
+c353F	u5666	#噦
+c3540	u7868	#硨
+c3541	u78F2	#磲
+c3542	u6F5A	#潚
+c3543	u7CDD	#糝
+c3544	u80FC	#胼
+c3545	u8DDA	#跚
+c3546	u83AC	#莬
+c3547	u53A8	#厨
+c3548	u7830	#砰
+c3549	u6798	#枘
+c354A	u81CD	#臍(異体字)
+c354B	u8CD3	#賓
+c354C	u6335	#挵
+c354D	u87EC	#蟬
+c354E	u9B29	#鬩
+c354F	u7C01	#簁
+c3550	u8AF3	#諳
+c3551	u5F0E	#弎
+c3552	u7447	#瑇
+c3553	u9C16	#鰖
+c3554	u97DB	#韛
+c3555	u6529	#攩
+c3556	u6964	#楤
+c3557	u30EC	#レ
+c3558	u7238	#爸
+c3559	u63B4	#掴
+c355A	u7950	#祐
+c355B	u9238	#鈸
+c355C	u6831	#栱
+c355D	u6793	#枓
+c355E	u68B3	#梳
+c355F	u701E	#瀞
+c3560	u629B	#抛
+c3561	u7120	#焠
+c3562	u9D7C	#鵼
+c3563	u6357	#捗
+c3564	u6759	#杙
+c3565	u6BAD	#殭
+c3566	u7CD7	#糗
+c3567	u9EA8	#麨
+c3568	u6F51	#潑
+c3569	u93BA	#鎺
+c356A	u8354	#荔
+c356B	u9239	#鈹
+c356C	u737C	#獼
+c356D	u67C3	#柃
+c356E	u9AB6	#骶
+c356F	u7BCA	#篊
+c3570	u868D	#蚍
+c3571	u83A7	#莧
+c3572	u762D	#瘭
+c3573	u8898	#袘
+c3575	u6A45	#橅
+c3576	u6747	#杇
+c3577	u6B0F	#欏
+c3578	u53B4	#厴
+c3579	u5E2E	#帮
+c357A	u8D1B	#贛
+c357B	u95A9	#閩
+c357C	u9B84	#鮄
+c357D	u5F40	#彀
+c357E	u73AB	#玫
+c3621	u925E	#鉞
+c3622	u76FC	#盼
+c3623	u7C60	#籠
+c3624	u8651	#虑
+c3625	u620f	#戏
+c3626	u8E20	#踠
+c3627	u6365	#捥
+c3628	u93DD	#鏝
+c3629	u854E	#蕎
+c362A	u7C0E	#簎
+c362B	u9C48	#鱈
+c362C	u83A2	#莢
+c362D	u84EC	#蓬
+c362E	u7395	#玕
+c362F	u81C8	#臈
+c3630	u78E0	#磠
+c3631	u7A2D	#稭
+c3632	u8604	#蘄
+c363D	u9472	#鑲
+c363E	u66EC	#曬
+c363F	u8222	#舢
+c3640	u84EF	#蓯
+c3642	u766D	#癭
+c3643	u5259	#剙
+c3644	u9127	#鄧
+c3645	u5600	#嘀
+c3646	u561F	#嘟
+c3647	u4E1F	#丟
+c3648	u853B	#蔻
+c364A	u5435	#吵
+c364B	u5733	#圳
+c364C	u97A0	#鞠
+c364D	u61A8	#憨
+c364E	u7064	#灤
+c3651	u8ED1	#軑
+c3652	u7d07	#紇
+c3653	u6137	#愷
+c3654	u8523	#蔣
+c3655	u5DA0	#嶠
+c3656	u53B2	#厲
+c3657	u9871	#顱
+c3658	u82C6	#苆
+c3659	u6963	#楣
+c365A	u77D3	#矓
+c365B	u9F90	#龐
+c365C	u6805	#栅
+c365D	u6368	#捨
+c365E	u56CD	#囍
+c365F	uFE4F	#﹏
+c3661	u9B00	#鬀
+c3663	u9F94	#龔
+c3664	u9853	#顓
+c3665	u980A	#頊
+c3666	u56B3	#嚳
+c3668	u6FA0	#澠
+c3669	u8798	#螘
+c366A	u640A	#搊
+c366B	u681F	#栟
+c366C	u62fd	#拽
+c366D	u816D	#腭
+c366E	u923E	#鈾
+c366F	u6EC7	#滇
+c3670	u5586	#喆
+c3671	u4E28	#丨
+c3673	u7430	#琰
+c3674	u4E86	#了
+c3675	u4F17	#众
+c3676	u640F	#搏
+c3677	u300C	#「
+c3678	u543D	#吽
+c3679	u8835	#蠵
+c367A	u73CA	#珊
+c367B	u9E2E	#鸮
+c367C	u97C2	#韂
+c367D	u9B5F	#魟(繁体字)
+c367e	u85cb	#藋
+#c3721	u9699	#隙(異体字)*	U+28EF6(CJK Ext.B)
+c3721	u28EF6	#隙(異体字)	(CJK Ext.B)
+c3722	u9CAA	#鲪
+c3723	u9C89	#鲉
+c3724	u8E5A	#蹚
+c3725	u9BF5	#鯵
+c3726	u891F	#褟
+c3727	u6734	#朴
+c3728	u89CD	#觍
+c3729	u6B38	#欸
+#c372A	u5406	#吆(異体字)*	/口+么/ U+2F83B(CJK Compati.Sup.)
+c372A	u2F83B	#吆(異体字)	/口+么/ (CJK Compati.Sup.)
+c372B	u9690	#隐
+c372C	u629B	#抛
+c372D	u633C	#挼
+#c372E	u9D37	#鴷(繁体字)	u4D15䴕(CJK Ext.A)
+c372E	u4D15	#䴕(CJK Ext.A)
+c372f	u5f53	#当(異体字)	/口+当/ U+5679噹
+c3730	u78E3	#磣
+c3731	u9B9F	#鮟(繁体字)
+c3732	u9C47	#鱇(繁体字)
+c3733	u8449	#葉
+c3734	u87CE	#蟎
+c3735	u7613	#瘓
+c3736	u790C	#礌
+c3737	u8772	#蝲
+c3738	u79B1	#禱
+c3739	u8393	#莓
+c373A	u7F10	#缐
+c373B	u636F	#捯
+c373C	u849F	#蒟
+c373D	u84BB	#蒻
+c373E	u9C24	#鰤(繁体字)
+c373F	u9858	#願
+c3740	u4E2B	#丫
+c3741	u880B	#蠋
+c3742	u74EE	#瓮
+c3743	u926F	#鉯(繁体字)
+c3744	u9C1B	#鰛
+c3745	u6670	#晰
+c3746	u8303	#范
+c3747	u7A1F	#稟
+c3748	u9E34	#鸴
+c3749	u68B2	#梲
+c374A	u5212	#划
+c374b	u88f2	#裲(異体字)*	/衤+两/
+c374C	u6EFE	#滾
+c374D	u6E9A	#溚
+c374E	u772C	#眬
+c374F	u7FA8	#羨
+c3750	u8838	#蠸
+c3752	u9C15	#鰕(繁体字)
+c3753	u698E	#榎
+c3754	u8621	#蘡
+c3755	u8581	#薁
+c3756	u7B99	#箙
+c3757	u8429	#萩
+c3758	u904A	#遊
+c3759	u87CF	#蟏
+c375A	u9C72	#鱲(繁体字)
+c375B	u707C	#灼
+c375C	u9D7C	#鵼(繁体字)
+c375D	u9DED	#鷭(繁体字)
+c375E	u9E5F	#鹟
+c375F	u88B4	#袴
+c3760	u9393	#鎓(繁体字)
+c3761	u892F	#褯
+c3762	u55D9	#嗙
+#c3763	u779c	#瞜(繁体字)*	u4056䁖(CJK Ext.A)
+c3763	u4056	#䁖	(CJK Ext.A)
+c3765	u4FE0	#俠
+c3766	u4E0F	#丏
+c3767	u56EE	#囮
+c376A	u6D11	#洑
+c376B	u9E0A	#鸊
+#c376C	u9DC9	#鷉(繁体字)	u4D18䴘(CJK Ext.A)
+c376C	u4D18	#䴘	(CJK Ext.A)
+c376D	u8DFC	#跼
+c376E	u8E50	#蹐
+c376F	u514E	#兎
+c3770	u7AB8	#窸
+c3771	u7AA3	#窣
+c3772	u87f3	#蟳
+c3773	u69DA	#槚
+c3774	u77C7	#矇
+c3775	u9CC0	#鳀
+c3776	u860B	#蘋
+c3777	u7460	#瑠
+c3778	u561A	#嘚
+c3779	u992C	#餬
+c377A	u9B84	#鮄(繁体字)
+c377B	u93AF	#鎯(繁体字)
+c377C	u71FF	#燿
+c377D	u8758	#蝘
+c377E	u69A0	#榠
+c3821	u9e3b	#鸻	※修正
+c3822	u9C80	#鲀
+c3823	u625E	#扞
+c3824	u66A2	#暢
+c3825	u7947	#祇
+c3826	u8839	#蠹
+c3827	u7F3C	#缼
+c3829	u7DFB	#緻
+c382A	u9C5A	#鱚(繁体字)
+c382B	u70D4	#烔
+c382C	u6FDB	#濛
+c382D	u9A4E	#驎(繁体字)
+c382E	u9CDA	#鳚
+c382F	u8278	#艸
+c3830	u63F3	#揳
+c3831	u9F49	#齉
+c3832	u6894	#梔
+c3833	u9CC9	#鳉
+c3834	u611C	#愜
+c3836	u7881	#碁
+c3837	u85E8	#藨
+c3838	u805A	#聚
+c3839	u6B2C	#欬
+c383A	u5F50	#彐
+c383B	u8C3F	#谿
+c383C	u9D03	#鴃(繁体字)
+c383D	u99C3	#駃(繁体字)
+c383E	u9A20	#騠(繁体字)
+c383F	u9B18	#鬘
+c3840	u4FB7	#侷
+c3841	u727B	#牻
+c3842	u7B87	#箇
+c3843	u7264	#牤
+c3844	u9EB4	#麴
+c3845	u9EAF	#麯
+c3846	u5006	#倆
+c3847	u7551	#畑
+c3849	u9CAC	#鲬
+c384A	u9C36	#鰶(繁体字)
+c384B	u9BA3	#鮣(繁体字)
+c384C	u8A60	#詠
+c384D	u627A	#扺
+c384E	u59F8	#姸
+c384F	u7B92	#箒
+c3850	u7C48	#籈
+c3851	u518A	#冊
+c3852	u83FE	#菾
+c3853	u9C75	#鱵(繁体字)
+c3854	u9C06	#鰆(繁体字)
+c3855	u9CAF	#鲯
+c3856	u882E	#蠮
+c3857	u8789	#螉
+c3858	u7009	#瀉
+c3859	u68F2	#棲
+c385A	u7652	#癒
+c385B	u6E96	#準
+c385C	u8158	#腘
+c385D	u8FAE	#辮
+c385E	u81E5	#臥
+c385F	u9F29	#鼩
+c3860	u758A	#疊
+c3861	u9D97	#鶗(繁体字)
+c3862	u9D02	#鴂(繁体字)
+c3863	u69C3	#槃
+c3864	u6B54	#歔
+c3865	u6A0B	#樋
+c3866	u6C5A	#汚
+c3867	u8569	#蕩
+c3868	u59EE	#姮
+c3869	u522A	#刪
+c386A	u68D3	#棓
+c386B	u87FF	#蟿
+c386C	u97A7	#鞧
+c386D	u778B	#瞋
+c386E	u75FA	#痺
+c386F	u8599	#薙
+c3870	u9A8E	#骎
+c3871	u53C6	#叆
+c3872	u53C7	#叇
+c3873	u8F13	#輓
+c3874	u8DD0	#跐
+c3875	u647D	#摽
+c3876	u9E61	#鹡
+c3877	u9E30	#鸰
+c3878	u6E72	#湲
+c3879	u8635	#蘵
+c387A	u77AD	#瞭
+c387B	u5B56	#孖
+c387C	u8129	#脩
+c387D	u9061	#遡
+c387E	u524B	#剋
+c3921	u8E60	#蹠
+c3922	u7447	#瑇
+c3923	u8199	#膙
+c3924	u696F	#楯
+c3925	u9B25	#鬥
+c3926	u8df6	#跶
+c3927	u9C4A	#鱊(繁体字)
+c3928	u977F	#靿
+c3929	u88AA	#袪
+c392A	u5C4D	#屍
+c392B	u5920	#夠
+c392C	u512A	#優
+c392D	u6802	#栂
+c392e	u7424	#琤(異体字)*	/王+争/
+c3930	u67F5	#柵
+c3932	u6E67	#湧
+c3933	u7C2A	#簪
+c3934	u8D6A	#赪
+c3935	u8399	#莙
+c3936	u8359	#荙
+c3937	u6428	#搨
+c3938	u7606	#瘆
+c3939	u9F31	#鼱
+c393a	u9e6e	#鹮
+c393B	u85A2	#薢
+c393c	u8e7e	#蹾
+c393D	u68A3	#梣
+c393E	u9E60	#鹠
+c393F	u81B5	#膵
+c3940	u5521	#唡
+c3941	u819E	#膞
+c3942	u5548	#啈
+c3943	u9575	#镵
+c3944	u67B9	#枹
+c3945	u5F0D	#弍
+c3946	u63D1	#揑
+c3947	u6F7D	#潽
+c3948	u6803	#栃
+c3949	u891D	#褝(異体字)	/衤+単(点2個)/
+c394A	u59B3	#妳
+c394B	u627D	#扽
+c394C	u6E26	#渦
+c394D	u9F7C	#齼(繁体字)
+#c394E	u93fa	#鏺(繁体字)	u497D䥽(CJK Ext.A)
+c394E	u497D	#䥽(CJK Ext.A)
+c3950	u734F	#獏
+c3951	u5016	#倖
+c3952	u9574	#镴
+c3953	u54AE	#咮
+c3954	u9BA8	#鮨(繁体字)
+c3955	u8375	#荵
+c3956	u8591	#薑
+c3957	u9c65	#鱥(繁体字)	/魚+↑山↓夕/
+c3958	u84C6	#蓆
+c3959	u540B	#吋
+c395A	u811D	#脝
+c395B	u67CA	#柊
+c395C	u534D	#卍
+c395D	u8616	#蘖
+c395E	u60BD	#悽
+c395f	u7b74	#筴
+c3960	u544E	#呎
+c3961	u55d0	#嗐
+c3963	u5F14	#弔
+c3964	u7D41	#絁
+c3965	u8e53	#蹓
+c3966	u7432	#琲
+c3968	u7CDE	#糞
+c3969	u8C92	#貒
+c396A	u639B	#掛
+c396B	u93FB	#鏻
+c396c	u87a0	#螠
+c396E	u5EC2	#廂
+c396F	u6793	#枓
+c3970	u9E27	#鸧
+c3972	u6872	#桲
+c3973	u8960	#襠
+c3974	u7374	#獴
+c3975	u9c27	#鰧(繁体字)
+c3976	u97EE	#韮
+c3977	u9CFD	#鳽
+c3978	u5023	#倣
+c3979	u8618	#蘘
+c397A	u86C1	#蛁
+c397B	u87DF	#蟟
+c397C	u5C28	#尨
+c397D	u844E	#葎
+c397E	u51DC	#凜
+c3A21	u71a5	#熥
+c3A23	u88FD	#製
+c3A25	u9E13	#鸓(繁体字)
+c3A26	u5684	#嚄
+c3A27	u53E1	#叡
+c3A28	u9E1C	#鸜(繁体字)
+c3A29	u9C97	#鲗
+c3A2A	u62C3	#拃
+c3A2B	u84C0	#蓀
+c3A2C	u7AA9	#窩
+c3A2D	u854C	#蕌
+c3A2E	u82E7	#苧
+c3A2F	u6BD8	#毘
+c3A30	u9CF7	#鳷(繁体字)
+c3A31	u7395	#玕
+c3A32	u6372	#捲
+c3A33	u7C70	#籰
+c3A34	u842e	#萮
+c3A35	u9D75	#鵵(繁体字)
+c3A36	u5570	#啰
+c3A37	u9D17	#鴗(繁体字)
+c3A38	u881e	#蠞(異体字)	/虫+节/
+c3A39	u81DC	#臜
+c3A3A	u7919	#礙
+c3A3B	u83F4	#菴
+c3A3C	u95C7	#闇
+c3A3D	u9AAF	#骯
+c3A3E	u8956	#襖
+#c3A3F	u61b9	#憹(繁体字)*	U+22650(CJK Ext.B)
+c3A3F	U+22650	#	(CJK Ext.B)
+c3A40	u629D	#抝
+c3A41	u7590	#疐
+c3A42	u8987	#覇
+c3A43	u58E9	#壩
+c3A44	u7F77	#罷
+c3A46	u6B1B	#欛
+c3A47	u6822	#栢
+c3A48	u64FA	#擺
+c3A49	u896C	#襬
+c3A4A	u52C7	#勇
+c3A4B	u95C6	#闆
+c3A4C	u8FA6	#辦
+c3A4D	u90A6	#邦
+c3A4E	u5E6B	#幫
+c3A4F	u7A16	#稖
+c3A51	u8943	#襃
+c3A52	u5BF3	#寳
+c3A53	u5BF6	#寶
+c3A54	u5831	#報
+c3A55	u96F0	#雰
+c3A56	u83E2	#菢
+c3A57	u924B	#鉋
+c3A58	u9464	#鑤
+c3A59	u76C3	#盃
+c3A5A	u63F9	#揹
+c3A5B	u7FB1	#羱
+c3A5C	u5099	#備
+c3A5D	u4FFB	#俻
+c3A5E	u8C9D	#貝
+c3A5f	u6896	#梖
+c3A60	u618A	#憊
+c3A61	u9029	#逩
+c3A62	u7E43	#繃
+c3A63	u506A	#偪
+c3A64	u9F46	#齆
+c3A65	u7B46	#筆
+c3A66	u7C83	#粃
+c3A67	u5E63	#幣
+c3A68	u7955	#祕
+c3A69	u7562	#畢
+c3A6A	u6583	#斃
+c3A6B	u908A	#邊
+c3A6C	u8FAF	#辯
+c3A6D	u8B8A	#變
+c3A6E	u5FA7	#徧
+c3A6F	u6A19	#標
+c3A70	u81D5	#臕
+c3A71	u9336	#錶
+c3A72	u765F	#癟
+c3A73	u9F08	#鼈
+c3A74	u5F46	#彆
+c3A75	u8CD3	#賓
+c3A76	u8CD4	#賔
+c3A77	u6FF1	#濱
+c3A78	u7E7D	#繽
+c3A79	u9B22	#鬢
+c3A7A	u9AE9	#髩
+c3A7B	u6C37	#氷
+c3A7C	u4F75	#併
+c3A7D	u4E26	#並
+c3A7E	u7ADD	#竝
+c3B21	u64A5	#撥
+c3B22	u8590	#薐
+c3B24	u8c40	#豀
+c3B25	u99EE	#駮
+c3B26	u8514	#蔔
+c3B27	u88DC	#補
+c3B28	u976A	#靪
+c3B29	u4F48	#佈
+c3B2A	u7E94	#纔
+c3B2B	u63A1	#採
+c3B2C	u5038	#倸
+c3B2D	u8DF4	#跴
+c3B2E	u7DB5	#綵
+c3B2F	u98E1	#飡
+c3B30	u6E4C	#湌
+c3B31	u53C3	#參
+c3B32	u6159	#慙
+c3B33	u8836	#蠶
+c3B34	u6B98	#殘
+c3B35	u6158	#慘
+c3B36	u71E6	#燦
+c3B37	u5009	#倉
+c3B38	u9E52	#鹒
+c3B39	u6EC4	#滄
+c3B3A	u84BC	#蒼
+c3B3B	u8259	#艙
+c3B3D	u9A32	#騲
+c3B3E	u5EC1	#廁
+c3B3F	u7B5E	#筞
+c3B40	u5C64	#層
+c3B41	u6260	#扠
+c3B43	u6519	#攙
+c3B44	u647B	#摻
+c3B45	u7E8F	#纏
+c3B46	u55AE	#單
+c3B47	u87EC	#蟬
+c3B48	u995E	#饞
+c3B49	u7523	#産
+c3B4A	u93DF	#鏟
+c3B4B	u5277	#剷
+c3B4C	u95E1	#闡
+c3B4D	u5617	#嘗
+c3B4E	u5690	#嚐
+c3B4F	u511F	#償
+c3B50	u9577	#長
+c3B51	u5834	#場
+c3B52	u5872	#塲
+c3B53	u8178	#腸
+c3B54	u53B0	#厰
+c3B55	u5EE0	#廠
+c3B56	u52E6	#勦
+c3B57	u8B3F	#謿
+c3B58	u8ECA	#車
+c3B59	u68BE	#梾
+c3B5A	u64A6	#撦
+c3B5B	u5FB9	#徹
+c3B5C	u5875	#塵
+c3B5D	u9673	#陳
+c3B5E	u896F	#襯
+c3B5F	u8D82	#趂
+c3B60	u7A31	#稱
+c3B61	u6490	#撐
+c3B62	u943A	#鐺
+c3B63	u5289	#劉
+c3B64	u766E	#癮
+c3B65	u61F2	#懲
+c3B67	u7661	#癡
+c3B68	u9A03	#騃(繁体字)
+c3B69	u55AB	#喫
+c3B6A	u9072	#遲
+c3B6B	u6065	#恥
+c3B6C	u9F52	#齒
+c3B6D	u7FC4	#翄
+c3B6E	u6C96	#沖
+c3B6F	u885D	#衝
+c3B70	u87F2	#蟲
+c3B71	u5BF5	#寵
+#c3B72	u7d2c	#紬(繁体字)	u4337䌷(CJK Ext.A)
+c3B72	u4337	#䌷(CJK Ext.A)
+c3B73	u7587	#疇
+c3B74	u7C4C	#籌
+c3B75	u9167	#酧
+c3B76	u91BB	#醻
+c3B77	u8B90	#讐
+c3B78	u919C	#醜
+c3B79	u9F63	#齣
+c3B7A	u5EDA	#廚
+c3B7C	u6AE5	#櫥
+c3B7D	u8021	#耡
+c3B7E	u96DB	#雛
+c3C21	u790E	#礎
+c3C22	u8655	#處
+c3C24	u51E6	#処
+c3C25	u89F8	#觸
+#c3C26	u85ed	#藭(異体字)*	u44D6䓖(CJK Ext.A)
+c3C26	u44D6	#䓖(CJK Ext.A)
+c3C28	u8229	#舩
+c3C29	u7A93	#窓
+c3C2A	u7ABB	#窻
+c3C2B	u7621	#瘡
+c3C2C	u75CF	#痏
+c3C2D	u5275	#創
+c3C2E	u7240	#牀
+c3C2F	u6425	#搥
+c3C30	u939A	#鎚
+c3C31	u8123	#脣
+c3C32	u60F7	#惷
+c3C33	u7506	#甆
+c3C34	u8FAD	#辭
+c3C35	u8FA4	#辤
+c3C36	u5640	#噀
+c3C37	u8070	#聰
+c3C38	u6031	#怱
+c3C39	u60A4	#悤
+c3C3A	u8525	#蔥
+c3C3B	u5F9E	#從
+c3C3C	u53E2	#叢
+c3C3D	u6A37	#樷
+c3C3E	u6E4A	#湊
+c3C3F	u9EA4	#麤
+c3C41	u89D5	#觕
+c3C42	u6522	#攢
+c3C43	u7AC4	#竄
+c3C44	u8103	#脃
+c3C45	u90A8	#邨
+c3C46	u8D78	#赸
+c3C47	u8345	#荅
+c3C48	u9D4F	#鵏(繁体字)
+c3C49	u4F21	#伡
+c3C4A	u85B8	#薸
+c3C4B	u7343	#獃
+c3C4C	u54F1	#哱
+c3C4D	u5E36	#帶
+c3C4E	u8EAD	#躭
+c3C4F	u64D4	#擔
+c3C50	u64A3	#撣
+c3C51	u64A2	#撢
+c3C52	u81BD	#膽
+c3C53	u5F48	#彈
+c3C54	u7576	#當
+c3C55	u5679	#噹
+c3C56	u73F0	#珰
+c3C57	u64CB	#擋
+c3C58	u6529	#攩
+c3C59	u9EE8	#黨
+c3C5A	u6A94	#檔
+c3C5B	u76EA	#盪
+c3C5C	u5CF6	#島
+c3C5D	u6417	#搗
+c3C5E	u64E3	#擣
+c3C5F	u5C0E	#導
+c3C60	u60EA	#惪
+c3C61	u71C8	#燈
+c3C62	u6AC8	#櫈
+c3C63	u9127	#鄧
+c3C64	u6ECC	#滌
+c3C65	u5519	#唙
+c3C66	u6575	#敵
+c3C67	u8570	#蕰
+c3C68	u7274	#牴
+c3C69	u8515	#蔕
+c3C6A	u905E	#遞
+c3C6C	u6541	#敁
+c3C6D	u9EDE	#點
+c3C6E	u53BE	#厾
+c3C6F	u6FB1	#澱
+c3C70	u588A	#墊
+c3C71	u96FB	#電
+c3C72	u5F6B	#彫
+c3C73	u7431	#琱
+c3C74	u9D70	#鵰
+c3C75	u8728	#蜨
+c3C76	u66E1	#曡
+c3C77	u6771	#東
+c3C78	u9F15	#鼕
+c3C79	u52D5	#動
+c3C7A	u51CD	#凍
+c3C7B	u68DF	#棟
+c3C7C	u6831	#栱
+c3C7D	u9B26	#鬦
+c3C7E	u9B2D	#鬭
+c3D21	u8373	#荳
+c3D23	u8B80	#讀
+c3D24	u7258	#牘
+c3D25	u7368	#獨
+c3D26	u89A9	#覩
+c3D28	u65B7	#斷
+c3D29	u6EEA	#滪
+c3D2A	u5C0D	#對
+c3D2B	u968A	#隊
+c3D2C	u5678	#噸
+c3D2D	u596A	#奪
+c3D2E	u6736	#朶
+c3D2F	u579C	#垜
+c3D30	u8EB1	#躱
+c3D31	u58AE	#墮
+c3D33	u8DE5	#跥
+c3D34	u9D5E	#鵞
+c3D35	u9d5d	#鵝	u4CD8 (CJK Ext.A) /鳥+我/
+c3D36	u8B4C	#譌
+c3D37	u60E1	#惡
+c3D38	u5641	#噁
+c3D39	u9C77	#鱷
+c3D3A	u5152	#兒
+c3D3B	u723E	#爾
+c3D3C	u767C	#發
+c3D3D	u7F78	#罸
+c3D3F	u7DD0	#緐
+c3D40	u51E2	#凢
+c3D41	u792C	#礬
+c3D42	u6C4E	#汎
+c3D43	u6C3E	#氾
+c3D44	u7BC4	#範
+c3D45	u5F7F	#彿
+c3D46	u9AE3	#髣
+c3D47	u9AF4	#髴
+c3D48	u98DB	#飛
+c3D49	u98CF	#飏
+c3D4A	u5EE2	#廢
+c3D4B	u4FF5	#俵
+c3D4C	u58B3	#墳
+c3D4D	u596E	#奮
+c3D4E	u8C50	#豐
+c3D4F	u882D	#蠭
+c3D50	u5CEF	#峯
+c3D51	u94D3	#铓
+c3D52	u98A8	#風
+c3D53	u9CF3	#鳳
+c3D55	u819A	#膚
+c3D57	u8946	#襆
+c3D58	u7B93	#箓
+c3D59	u9CE7	#鳧
+c3D5A	u64AB	#撫
+c3D5B	u9527	#锧
+c3D5C	u8907	#複
+c3D5D	u5FA9	#復
+c3D5E	u577F	#坿
+c3D5F	u5D4E	#嵎
+c3D60	u5A66	#婦
+c3D61	u593E	#夾
+c3D62	u84CB	#蓋
+c3D63	u69E9	#槩
+c3D64	u8D95	#趕
+c3D65	u687F	#桿
+c3D66	u7A08	#稈
+c3D67	u5E79	#幹
+c3D68	u69A6	#榦
+c3D6A	u5CA1	#岡
+c3D6B	u525B	#剛
+c3D6C	u92FC	#鋼
+c3D6d	u955a	#镚
+c3D6E	u7DB1	#綱
+c3D6F	u5D17	#崗
+c3D70	u69D3	#槓
+c3D71	u993B	#餻
+c3D72	u7A3E	#稾
+c3D73	u8090	#肐
+c3D74	u9694	#隔(異体字)*	/隔のつくりの口がはしご/
+c3D75	u9838	#頸
+c3D76	u8EB3	#躳
+c3D77	u978F	#鞏
+c3D78	u6E9D	#溝
+c3D79	u8DAF	#趯
+c3D7A	u82B6	#芶
+c3D7B	u69CB	#構
+c3D7C	u6406	#搆
+c3D7D	u8CFC	#購
+c3D7E	u6996	#榖
+c3E21	u50F1	#僱
+c3E22	u9867	#顧
+c3E23	u98B3	#颳
+c3E24	u67FA	#柺
+c3E25	u6060	#恠
+c3E26	u95DC	#關
+c3E27	u95A2	#関
+c3E28	u89C0	#觀
+c3E29	u9928	#館
+c3E2A	u7F46	#罆
+c3E2B	u5EE3	#廣
+c3E2D	u6B78	#歸
+c3E2E	u9F9C	#龜
+c3E2F	u6AC3	#櫃
+c3E30	u528A	#劊
+c3E31	u904E	#過
+c3E32	u934B	#鍋
+c3E33	u570B	#國
+c3E34	u56EF	#囯
+c3E35	u6767	#杧
+c3E36	u9983	#馃
+c3E38	u548D	#咍
+c3E39	u9084	#還
+c3E3A	u6D6C	#浬
+c3E3B	u96A3	#隣
+c3E3C	u97D3	#韓
+c3E3D	u5705	#圅
+c3E3E	u92B2	#銲
+c3E3F	u91EC	#釬
+c3E40	u6F22	#漢
+c3E43	u884F	#衏
+c3E45	u865F	#號
+c3E46	u6B31	#欱
+c3E47	u8988	#覈
+c3E48	u9978	#饸
+c3E49	u9979	#饹
+c3E4A	u95A4	#閤(繁体字)
+c3E4B	u9FA2	#龢
+c3E4C	u5687	#嚇
+c3E4D	u9B46	#魆
+c3E4E	u6046	#恆
+c3E4F	u8F5F	#轟
+c3E50	u63C8	#揈
+c3E51	u9B28	#鬨
+c3E52	u52D7	#勗
+c3E55	u6232	#戲
+c3E56	u622F	#戯
+c3E57	u58FA	#壺
+c3E58	u9B0D	#鬍
+c3E59	u885a	#衚
+c3E5A	u8855	#衕
+c3E5B	u6EEC	#滬
+c3E5C	u8B77	#護
+c3E5D	u67B2	#枲
+c3E5E	u5629	#嘩
+c3E5F	u5283	#劃
+c3E60	u6433	#搳
+c3E61	u83EF	#華
+c3E62	u8B41	#譁
+c3E63	u756B	#畫
+c3E64	u6A3A	#樺
+c3E65	u61F7	#懷
+c3E66	u58DE	#壞
+c3E67	u6B61	#歡
+c3E68	u61FD	#懽
+c3E69	u74B0	#環
+c3E6A	u7304	#猄
+c3E6C	u7147	#煇
+c3E6D	u56EC	#囬
+c3E6E	u8FF4	#迴
+c3E6F	u5EFB	#廻
+c3E70	u8698	#蚘
+c3E71	u86D5	#蛕
+c3E72	u71EC	#燬
+c3E73	u8B6D	#譭
+c3E74	u6ED9	#滙
+c3E75	u532F	#匯
+c3E76	u5F59	#彙
+c3E77	u8AF1	#諱
+c3E78	u7A62	#穢
+c3E79	u6703	#會
+c3E7A	u7E6A	#繪
+c3E7B	u798D	#禍
+c3E7C	u7372	#獲
+c3E7D	u7A6B	#穫
+c3E7E	u7A4D	#積
+c3F21	u64CA	#擊
+c3F22	u5E7E	#幾
+c3F23	u8B4F	#譏
+c3F24	u6A5F	#機
+c3F25	u5630	#嘰
+c3F26	u9951	#饑
+c3F27	u96DE	#雞
+c3F29	u6975	#極
+c3F2A	u6FDF	#濟
+c3F2B	u64E0	#擠
+c3F2C	u8DE1	#跡
+c3F2D	u8E5F	#蹟
+c3F2E	u85BA	#薺
+c3F2F	u5291	#劑
+c3F30	u969B	#際
+c3F31	u7E6B	#繫
+c3F32	u7E7C	#繼
+c3F33	u50A2	#傢
+c3F34	u88cc	#裌
+c3F35	u83A2	#莢
+c3F36	u9830	#頰
+c3F37	u55DB	#嗛
+c3F38	u50F9	#價
+c3F39	u9592	#閒
+c3F3A	u6BB2	#殲
+c3F3B	u76E3	#監
+c3F3C	u5805	#堅
+c3F3D	u8271	#艱
+c3F3E	u59E6	#姦
+c3F3F	u7E6D	#繭
+c3F40	u63C0	#揀
+c3F41	u9E7B	#鹻
+c3F42	u583F	#堿
+c3F43	u6AA2	#檢
+c3F44	u64BF	#撿
+c3F45	u5109	#儉
+c3F46	u8E10	#踐
+c3F47	u8CE4	#賤
+c3F48	u6FFA	#濺
+c3F49	u85A6	#薦
+c3F4A	u9452	#鑒
+c3F4B	u9451	#鑑
+c3F4C	u8266	#艦
+c3F4D	u528D	#劍
+c3F4E	u5292	#劒
+c3F4F	u5C07	#將
+c3F50	u6F3F	#漿
+c3F51	u6BAD	#殭
+c3F52	u97C1	#韁
+c3F53	u8523	#蔣
+c3F54	u69F3	#槳
+c3F55	u596C	#奬
+c3F56	u8B1B	#講
+c3F57	u91AC	#醬
+c3F58	u5F37	#強
+c3F59	u5F4A	#彊
+c3F5A	u6F86	#澆
+c3F5B	u81A0	#膠
+c3F5C	u5B0C	#嬌
+c3F5D	u9A55	#驕
+c3F5E	u652A	#攪
+c3F5F	u77EF	#矯
+c3F60	u50E5	#僥
+c3F61	u510C	#儌
+c3F62	u8173	#腳
+c3F63	u89BA	#覺
+c3F64	u544C	#呌
+c3F65	u8F4E	#轎
+c3F66	u7A2D	#稭
+c3F67	u7BC0	#節
+c3F68	u968E	#階
+c3F69	u5826	#堦
+c3F6A	u6F54	#潔
+c3F6B	u5226	#刦
+c3F6C	u523C	#刼
+c3F6E	u5091	#傑
+c3F6F	u89E7	#觧
+c3F70	u5C46	#屆
+c3F71	u89D4	#觔
+c3F72	u50C5	#僅
+c3F73	u7DCA	#緊
+c3F74	u5118	#儘
+c3F75	u9032	#進
+c3F76	u6649	#晉
+c3F77	u52C1	#勁
+c3F78	u52A4	#劤
+c3F79	u5BD6	#寖
+c3F7A	u76E1	#盡
+c3F7B	u9A5A	#驚
+c3F7C	u8396	#莖
+c3F7D	u7D93	#經
+c3F7E	u7A7D	#穽
+c4021	u7AF6	#競
+c4022	u51C8	#凈
+c4023	u6DE8	#淨
+c4024	u975C	#靜
+c4025	u5F91	#徑
+c4026	u9015	#逕
+c4027	u6C3F	#氿
+c4028	u820A	#舊
+c4029	u8209	#舉
+c402A	u64E7	#擧
+c402B	u77F1	#矱
+c402C	u61FC	#懼
+c402D	u5287	#劇
+c402F	u7760	#睠
+c4030	u5101	#儁
+c4031	u958B	#開
+c4032	u5605	#嘅
+c4033	u681E	#栞
+c4034	u57F3	#埳
+c4035	u8f57	#轗
+#c4036	u58c8	#壈(異体字)*	/土+禀/ U+21484(CJK Ext.B)
+c4036	u21484	#	/土+禀/ (CJK Ext.B)
+c4037	u7081	#炁
+c4038	u5FFC	#忼
+c4039	u7A45	#穅
+c403A	u6537	#攷
+c403B	u6415	#搕
+c403C	u6BBB	#殻
+c403D	u5C05	#尅
+c403E	u808E	#肎
+c403F	u61C7	#懇
+c4040	u58BE	#墾
+c4041	u6473	#摳
+c4042	u558e	#喎
+c4043	u91E6	#釦
+c4044	u7D5D	#絝
+c4045	u8A87	#誇
+c4046	u584A	#塊
+c4047	u5BEC	#寬
+c4048	u6B35	#欵
+c4049	u7926	#礦
+c404A	u945B	#鑛
+c404B	u66E0	#曠
+c404C	u95DA	#闚
+c404D	u8667	#虧
+c404E	u5ABF	#媿
+#c404F	u6ba8	#殨(繁体字)	u3C6E㱮(CJK Ext.A)
+c404F	u3C6E	#㱮(CJK Ext.A)
+c4050	u7D91	#綑
+c4051	u774F	#睏
+c4052	u64F4	#擴
+c4053	u6FF6	#濶
+c4054	u881F	#蠟
+c4055	u81D8	#臘
+c4056	u81C8	#臈
+c4057	u4F86	#來
+c4058	u59D7	#姗
+c4059	u840A	#萊
+c405A	u862D	#蘭
+c405B	u6B04	#欄
+c405C	u6514	#攔
+c405D	u85CD	#藍
+c405e	u9c4D	#鱍(繁体字)*
+c405F	u7C43	#籃
+c4060	u5B3E	#嬾
+c4061	u89BD	#覽
+c4062	u6B16	#欖
+c4063	u652C	#攬
+c4064	u7E9C	#纜
+c4066	u721B	#爛
+c4067	u69FA	#槺
+c4068	u746F	#瑯
+c4069	u5B1B	#嬛
+c406A	u5ACF	#嫏
+c406B	u6488	#撈
+c406C	u52DE	#勞
+c406D	u562E	#嘮
+c406E	u6F87	#澇
+c406F	u6A02	#樂
+c4070	u63AF	#掯
+c4071	u7E8D	#纍
+c4073	u58D8	#壘
+c4074	u6DDA	#淚
+c4075	u985E	#類
+c4076	u7A1C	#稜
+c4077	u96E2	#離
+c4078	u7055	#灕
+c4079	u74C8	#瓈
+c407A	u7C6C	#籬
+c407B	u68C3	#棃
+c407C	u7282	#犂
+c407D	u79AE	#禮
+c407E	u79FE	#秾
+c4121	u88CF	#裏
+c4122	u88E1	#裡
+c4123	u9E97	#麗
+c4124	u6144	#慄
+c4125	u53B2	#厲
+c4126	u52F5	#勵
+c4127	u792B	#礫
+c4128	u96B8	#隸
+c4129	u96B7	#隷
+c412A	u96B6	#隶
+c412B	u6B77	#歷
+c412C	u53A4	#厤
+c412D	u66C6	#曆
+c412E	u701D	#瀝
+c412F	u9742	#靂
+c4130	u7C3E	#簾
+c4131	u4eb7	#亷
+c4132	u938C	#鎌
+c4133	u6190	#憐
+c4134	u806F	#聯
+c4135	u68BF	#梿
+c4136	u6582	#斂
+c4137	u81C9	#臉
+c4138	u6200	#戀
+c4139	u7149	#煉
+c413A	u934A	#鍊
+c413B	u7DF4	#練
+c413C	u6A11	#樑
+c413D	u6DBC	#涼
+c413E	u7CE7	#糧
+c413F	u5169	#兩
+c4140	u8F1B	#輛
+c4141	u55a8	#喨
+c4142	u7642	#療
+c4143	u907C	#遼
+c4144	u7375	#獵
+c4145	u71D0	#燐
+c4147	u81E8	#臨
+c4148	u9130	#鄰
+c4149	u6A81	#檁
+c414A	u6DE9	#淩
+c414b	u51d9	#凙(繁体字)*
+c414C	u9748	#靈
+c414D	u971B	#霛
+c414E	u5DBA	#嶺
+c414F	u9724	#霤
+c4150	u9678	#陸
+c4151	u9F8D	#龍
+c4152	u807E	#聾
+c4153	u56A8	#嚨
+c4154	u7C60	#籠
+c4155	u6727	#朧
+c4156	u58DF	#壟
+c4157	u58E0	#壠
+c4158	u650F	#攏
+c4159	u645F	#摟
+c415A	u5A41	#婁
+c415B	u6A13	#樓
+c415C	u7C0D	#簍
+c415D	u5EEC	#廬
+c415E	u7210	#爐
+c415F	u946A	#鑪
+c4162	u9E75	#鹵
+c4163	u6EF7	#滷
+c4164	u865C	#虜
+c4165	u9304	#錄
+c4166	u9A62	#驢
+c4167	u5C62	#屢
+c4168	u7E37	#縷
+c4169	u6FFE	#濾
+c416A	u5DD2	#巒
+c416B	u4E82	#亂
+c416C	u7567	#畧
+c416D	u6384	#掄
+c416E	u4F96	#侖
+c416F	u6DEA	#淪
+c4170	u8AD6	#論
+c4171	u8F2A	#輪
+c4172	u502B	#倫
+c4173	u9A58	#驘
+c4174	u7F85	#羅
+c4175	u827B	#艻
+c4176	u908F	#邏
+c4177	u863F	#蘿
+c4178	u7C6E	#籮
+c4179	u947C	#鑼
+c417A	u8EB6	#躶
+c417B	u81DD	#臝
+c417D	u8534	#蔴
+c4221	u87C7	#蟇
+c4222	u99AC	#馬
+c4223	u7B9A	#箚(答+刂)
+c4224	u7F75	#罵
+c4225	u8CB7	#買
+c4226	u9EA5	#麥
+c4227	u8CE3	#賣
+c4228	u9081	#邁
+c4229	u8108	#脈
+c422A	u8847	#衇
+c422B	u883B	#蠻
+c422C	u779E	#瞞
+c422D	u6EFF	#滿
+c422E	u8C93	#貓
+c4230	u9EF4	#黴
+c4231	u6973	#楳
+c4232	u69D1	#槑
+c4233	u9580	#門
+c4234	u77D3	#矓
+c4235	u5922	#夢
+c4236	u7787	#瞇
+c4237	u5F4C	#彌
+c4238	u7030	#瀰
+c4239	u8994	#覔
+c423A	u7DDC	#緜
+c423C	u9763	#靣
+c423D	u9EB5	#麵
+c423E	u9EAA	#麪
+c423F	u5EDF	#廟
+c4240	u6EC5	#滅
+c4241	u884A	#衊
+c4242	u995D	#饝
+c4243	u773D	#眽
+c4244	u755D	#畝
+c4245	u62CF	#拏
+c4246	u8FFA	#迺
+c4247	u5EFC	#廼
+c4248	u5B2D	#嬭
+c4249	u96E3	#難
+c424A	u6493	#撓
+c424B	u60F1	#惱
+c424C	u8166	#腦
+c424D	u9B27	#鬧
+c424E	u66B1	#暱
+c424F	uF995	#秊
+c4250	u649A	#撚
+c4251	u5538	#唸
+c4252	u5B43	#孃
+c4253	u91C0	#釀
+c4254	u9CE5	#鳥
+c4255	u6f74	#潴
+c4256	u8076	#聶
+c4257	u5B7C	#孼
+c4258	u5BE7	#寧
+c4259	u6AB8	#檸
+c425A	u64F0	#擰
+c425B	u7370	#獰
+c425C	u6FD8	#濘
+c425D	u8FB2	#農
+c425E	u8FB3	#辳
+c425F	u6FC3	#濃
+c4260	u81BF	#膿
+c4263	u7156	#煖
+c4264	u7157	#煗
+c4266	u7627	#瘧
+c4267	u7A64	#穤
+c4268	u7A2C	#稬
+c4269	u5340	#區
+c426A	u9DD7	#鷗
+c426B	u6B50	#歐
+c426C	u6BC6	#毆
+c426D	u8545	#蕅
+c426E	u5614	#嘔
+c426F	u63B1	#掱
+c4270	u5961	#奡
+c4271	u5EF9	#廹
+c4272	u76E4	#盤
+c4273	u9641	#陁
+c4274	u80EE	#胮
+c4275	u9F90	#龐
+c4276	u5396	#厖
+c4277	u80A8	#肨
+c4278	u7832	#砲
+c4279	u792E	#礮
+c427A	u80A7	#肧
+c427B	u73EE	#珮
+c427C	u875F	#蝟
+c427D	u63BD	#掽
+c427e	u8e2b	#踫
+c4321	u95E2	#闢
+c4322	u98C3	#飃
+c4323	u98D6	#飖
+c4324	u7F3E	#缾
+c4325	u7064	#灤
+c4326	u84F1	#蓱
+c4327	u6191	#憑
+c4328	u51F4	#凴
+c4329	u6F51	#潑
+c432A	u9166	#酦
+c432B	u7AB0	#窰
+c432C	u64B2	#撲
+c432D	u57F5	#埵
+c432E	u50D5	#僕
+c432F	u6A38	#樸
+c4330	u92EA	#鋪
+c4331	u617C	#慼
+c4332	u93DA	#鏚
+c4333	u6DD2	#淒
+c4334	u9F4A	#齊
+c4335	u81CD	#臍
+c4336	u65C2	#旂
+c4337	u68CA	#棊
+c4338	u555F	#啟
+c4339	u5553	#啓
+c433A	u8C48	#豈
+c433B	u68C4	#棄
+c433C	u6814	#栔
+c433D	u5650	#噐
+c433E	u6C23	#氣
+c433F	u727D	#牽
+c4340	u7C3D	#簽
+c4341	u7C64	#籤
+c4342	u74E9	#瓩
+c4343	u68C4	#遷
+c4344	u6F5B	#潛
+c4345	u9322	#錢
+c4346	u62D1	#拑
+c4347	u6DFA	#淺
+c4348	u7E34	#縴
+c4349	u69CD	#槍
+c434A	u9397	#鎗
+c434B	u55C6	#嗆
+c434C	u58BB	#墻
+c434D	u7246	#牆
+c434E	u6436	#搶
+c434F	u8E7A	#蹺
+c4350	u936B	#鍫
+c4351	u7FF9	#翹
+c4352	u55AC	#喬
+c4353	u854E	#蕎
+c4354	u6A4B	#橋
+c4355	u50D1	#僑
+c4356	u9866	#顦(繁体字)
+c4357	u9847	#顇(繁体字)
+c4358	u7AC5	#竅
+c435A	u9657	#陗
+c435B	u7ACA	#竊
+c435C	u89AA	#親
+c435D	u61C3	#懃
+c435E	u5BE2	#寢
+#c435F	u68e1	#棡(異体字)	u3B4E㭎(CJK Ext.A)
+c435F	u3B4E	#㭎(CJK Ext.A)
+c4360	u8F15	#輕
+c4361	u6C2B	#氫
+c4362	u6176	#慶
+c4363	u74CA	#瓊
+c4364	u7AAE	#窮
+c4365	u79CC	#秌
+c4366	u97A6	#鞦
+c4367	u97C6	#韆
+c4368	u5775	#坵
+c4369	u6BEC	#毬
+c436A	u82A3	#芣
+c436B	u5D87	#嶇
+c436C	u8EC0	#軀
+c436D	u9A45	#驅
+c436E	u657A	#敺
+c436F	u8DA8	#趨
+c4370	u4F62	#佢
+c4371	u60D3	#惓
+c4372	u6B0A	#權
+c4373	u52F8	#勸
+c4374	u537B	#卻
+c4375	u78BA	#確
+c4376	u5859	#塙
+c4377	u78BB	#碻
+c4378	u57C6	#埆
+c4379	u7FA3	#羣
+c437A	u5E2C	#帬
+c437B	u7E95	#纕
+c437C	u8B93	#讓
+c437D	u9952	#饒
+c437E	u64FE	#擾
+c4421	u7E5E	#繞
+c4422	u71B1	#熱
+c4423	u4F15	#伕
+c4424	u8A8D	#認
+c4425	u5204	#刄
+c4426	u97CC	#韌
+c4427	u976D	#靭
+c4428	u9394	#鎔
+c4429	u7FA2	#羢
+c442A	u6BE7	#毧
+c442B	u69AE	#榮
+c442C	u5B82	#宂
+c442D	u8761	#蝡
+c442E	u60BE	#悾
+c442F	u8F2D	#輭
+c4430	u854B	#蕋
+c4431	u8602	#蘂
+c4432	u7051	#灑
+c4433	u85A9	#薩
+c4434	u984B	#顋
+c4435	u5098	#傘
+c4436	u7E56	#繖
+c4437	u55AA	#喪
+c4439	u6383	#掃
+c443A	u6F80	#澀
+c443B	u6BBA	#殺
+c443C	u510D	#儍
+c443D	u5EC8	#廈
+c443E	u7BE9	#篩
+c443F	u66EC	#曬
+c4440	u6427	#搧
+c4441	u965D	#陝
+c4442	u994D	#饍
+c4443	u50B7	#傷
+c4444	u71D2	#燒
+c4445	u8675	#虵
+c4446	u651D	#攝
+c4447	u84e1	#蓡
+c4448	u8460	#葠
+c4449	u700B	#瀋
+c444A	u5BE9	#審
+c444B	u8B85	#讅
+c444C	u5B38	#嬸
+c444D	u814E	#腎
+c444E	u6EF2	#滲
+c444F	u8072	#聲
+c4450	u7E69	#繩
+c4451	u52DD	#勝
+c4452	u6FD5	#濕
+c4453	u6EBC	#溼
+c4454	u7345	#獅
+c4455	u8768	#蝨
+c4456	u5BE6	#實
+c4457	u8B58	#識
+c4458	u8710	#蜐
+c4459	u6642	#時
+c445A	u534B	#卋
+c445B	u52E2	#勢
+c445C	u9069	#適
+#c445d	u9002	#适(異体字)*	/辶+↑氏↓口/ U+284C8(CJK Ext.B)
+c445d	u284C8	#	/辶+↑氏↓口/ (CJK Ext.B)
+c445E	u53CE	#収
+c445F	u7E4D	#繍
+c4460	u7378	#獸
+c4461	u58FD	#壽
+c4462	u5900	#夀
+c4463	u758E	#疎
+c4464	u6A1E	#樞
+c4465	u66F8	#書
+c4466	u8D16	#贖
+c4467	u6578	#數
+c4468	u85F7	#藷
+c4469	u5C6C	#屬
+c446A	u6A39	#樹
+c446B	u7AEA	#竪
+c446C	u8C4E	#豎
+c446D	u8853	#術
+c446F	u5E25	#帥
+c4470	u96D9	#雙
+c4472	u56CD	#囍
+c4473	u720D	#爍
+c4474	u7D72	#絲
+c4475	u9B06	#鬆
+c4476	u8073	#聳
+c4477	u8D99	#趙
+c4478	u8490	#蒐
+c4479	u8607	#蘇
+c447A	u7526	#甦
+c447B	u56CC	#囌
+c447C	u3021	#〡
+c447D	u3022	#〢
+c447E	u3023	#〣
+c4521	u3024	#〤
+c4522	u3025	#〥
+c4523	u3026	#〦
+c4524	u3027	#〧
+c4525	u3028	#〨
+c4526	u3029	#〩
+c4527	u5341	#十
+c4528	u83D3	#菓
+c4529	u6CDD	#泝
+c452A	u8085	#肅
+c452B	u75E0	#痠
+c452C	u7958	#祘
+c452D	u96D6	#雖
+c452E	u96A8	#隨
+c452F	u5D57	#嵗
+c4530	u6B73	#歳(異体字)	/歳の止が山/
+c4531	u6B72	#歲
+c4532	u7E50	#繐
+c4533	u5B6B	#孫
+c4534	u7B4D	#筍
+c4536	u7260	#牠
+c4537	u81FA	#臺
+c4538	u6AAF	#檯
+c4539	u67B1	#枱
+c453A	u98B1	#颱
+c453B	u5D01	#崁
+c453C	u64E1	#擡
+c453D	u614B	#態
+c453E	u7058	#灘
+c453F	u7671	#癱
+c4541	u58C7	#壇
+c4542	u58DC	#壜
+c4543	u7F4E	#罎
+c4544	u58B0	#墰
+c4545	u7F48	#罈
+c4546	u66C7	#曇
+c4547	u5606	#嘆
+c4548	u6B4E	#歎
+c4549	u6E6F	#湯
+c454A	u513B	#儻
+c454B	u71D9	#燙
+c454C	u6FE4	#濤
+c454D	u642F	#搯
+c454E	u8FEF	#迯
+c454F	u8B04	#謄
+c4550	u7C50	#籐
+c4551	u55C1	#嗁
+c4552	u8E4F	#蹏
+c4553	u9AC8	#髈
+c4554	u9AD4	#體
+c4555	u8EB0	#躰
+c4556	u5C5C	#屜
+c4557	u522C	#刬
+c4558	u689D	#條
+c4559	u9435	#鐵
+c455A	u9295	#銕
+c455B	u9207	#鈇(繁体字)
+c455C	u939D	#鎝(繁体字)
+c455D	u5EF3	#廳
+c455e	u539b	#厛
+c455F	u807D	#聽
+c4560	u807C	#聼
+c4561	u7B69	#筩
+c4563	u5A7E	#婾
+c4564	u982D	#頭
+c4565	u9481	#钁(繁体字)	u9562镢
+c4566	u5857	#塗
+c4567	u51c3	#凃
+c4568	u9E3B	#鸻
+c4569	u5718	#團
+c456A	u7CF0	#糰
+c456b	u571e	#圞(繁体字)	/囗のなかは↑亦↓木/
+c456C	u8E12	#踒
+c456D	u8A17	#託
+c456E	u6A62	#橢
+c456F	u7AAA	#窪
+c4570	u9F03	#鼃
+c4571	u896A	#襪
+c4572	u97E4	#韤
+c4573	u5F4E	#彎
+c4574	u7063	#灣
+c4575	u7FEB	#翫
+c4576	u76CC	#盌
+c4577	u6900	#椀
+c4579	u5166	#兦
+c457A	u7DB2	#網
+c457B	u70BA	#為
+c457C	u7232	#爲
+c457D	u9055	#違
+c457E	u570D	#圍
+c4621	u507D	#偽
+c4622	u50DE	#僞
+c4623	u8466	#葦
+c4624	u5049	#偉
+c4625	u7DEF	#緯
+c4626	u9935	#餵
+c4627	u9927	#餧
+c4628	u885B	#衛
+c4629	u885E	#衞
+c462A	u7A69	#穩
+c462B	u6017	#怗
+c462C	u8117	#脗
+c462D	u7515	#甕
+c462E	u7F4B	#罋
+c462F	u8778	#蝸
+c4630	u6C59	#汙
+c4631	u70CF	#烏
+c4632	u55DA	#嗚
+c4633	u7121	#無
+c4634	u856A	#蕪
+c4635	u5433	#吳
+c4636	u5255	#剕
+c4637	u6440	#摀
+c4638	u60AE	#悮
+c4639	u52D9	#務
+c463A	u9727	#霧
+c463B	u9770	#靰
+c463C	u97A1	#鞡
+c463D	u5862	#塢
+c463E	u9696	#隖
+c463F	u72A7	#犧
+c4640	u6673	#晳
+c4641	u761C	#瘜
+c4642	u8972	#襲
+c4643	u7FD2	#習
+c4644	u87E2	#蟢
+c4645	u4FC2	#係
+c4646	u8766	#蝦
+c4647	u5CFD	#峽
+c4648	u72F9	#狹
+c4649	u938B	#鎋
+c464A	u821D	#舝
+c464B	u50CA	#僊
+c464C	u6774	#杴
+c464E	u7E96	#纖
+c464F	u7D43	#絃
+c4650	u8CE2	#賢
+c4651	u5563	#啣
+c4652	u986F	#顯
+c4653	u5C1F	#尟
+c4654	u5C20	#尠
+c4655	u96AA	#險
+c4656	u5DC7	#巇
+c4657	u5D04	#崄
+c4658	u61B2	#憲
+c4659	u737B	#獻
+c465A	u7E23	#縣
+c465B	u7DAB	#綫
+c465C	u9109	#鄉
+c465D	u97FF	#響
+c465E	u56AE	#嚮
+c465F	u66CF	#曏
+c4660	u56BB	#嚻
+c4661	u856D	#蕭
+c4662	u7C2B	#簫
+c4663	u66C9	#曉
+c4664	u509A	#傚
+c4665	u52B9	#効
+c4666	u54B2	#咲
+c4667	u562F	#嘯
+c4668	u6B57	#歗
+c4669	u880D	#蠍
+c466A	u9778	#靸
+c466B	u633E	#挾
+c466C	u651C	#攜
+c466D	u64D5	#擕
+c466E	u5354	#協
+c466F	u8107	#脇
+c4670	u8105	#脅
+c4671	u5BEB	#寫
+c4672	u6D29	#洩
+c4673	u880F	#蠏
+c4674	u8A22	#訢
+c4675	u91C1	#釁
+c4676	u8208	#興
+c4677	u5147	#兇
+c4678	u6D36	#洶
+c4679	u8BBB	#讻
+c467A	u80F7	#胷
+c467B	u93FD	#鏽
+c467C	u9B1A	#鬚
+c467D	u6558	#敘
+c467E	u654D	#敍
+c4721	u5379	#卹
+c4722	u8CC9	#賉
+c4723	u58FB	#壻
+c4724	u7E8C	#續
+c4725	u61F8	#懸
+c4726	u9078	#選
+c4727	u93C7	#鏇
+c4728	u8852	#衒
+c4729	u97BE	#鞾
+c472A	u5B78	#學
+c472B	u6588	#斈
+c472C	u52F3	#勳
+c472D	u71FB	#燻
+c472E	u5EF5	#廵
+c472F	u5C0B	#尋
+c4730	u905C	#遜
+c4731	u555E	#啞
+c4732	u58D3	#壓
+c4733	u9D76	#鵶
+c4734	u5393	#厓
+c4735	u5D15	#崕
+c4736	u4E9E	#亞
+c4737	u6DCA	#淊
+c4738	u9183	#醃
+c4739	u7159	#煙
+c473A	u9586	#閆
+c473B	u9607	#阇
+c473C	u784F	#硏
+c473D	u9E7D	#鹽
+c473E	u56B4	#嚴
+c473F	u7C37	#簷
+c4740	u5DD6	#巖
+c4741	u5D52	#嵒
+c4742	u5DC9	#巉
+c4743	u63DC	#揜
+c4744	u8277	#艷
+c4745	u8C54	#豔
+c4746	u9DF0	#鷰
+c4747	u8B8C	#讌
+c4748	u91BC	#醼
+c4749	u53AD	#厭
+c474A	u9D08	#鴈
+c474B	u56A5	#嚥
+c474C	u71C4	#燄
+c474D	u9A57	#驗
+c474E	u9A10	#騐
+c474F	u967D	#陽
+c4750	u694A	#楊
+c4751	u63DA	#揚
+c4752	u656D	#敭
+c4753	u7662	#癢
+c4754	u990A	#養
+c4755	u6A23	#樣
+c4756	u6B80	#殀
+c4757	u991A	#餚
+c4758	u7AAF	#窯
+c475A	u9F69	#齩
+c475B	u85E5	#藥
+c475C	u9470	#鑰
+c475D	u723A	#爺
+c475E	u9801	#頁
+c4760	u696D	#業
+c4761	u6294	#抔
+c4762	u5F0C	#弌
+c4763	u91AB	#醫
+c4764	u6BC9	#毉
+c4765	u5100	#儀
+c4766	u8FFB	#迻
+c4767	u87FB	#蟻
+c4768	u8798	#螘
+c4769	u7FA9	#義
+c476A	u8B70	#議
+c476B	u4E42	#乂
+c476C	u61B6	#憶
+c476D	u5104	#億
+c476E	u85DD	#藝
+c476F	u8B6F	#譯
+c4770	u7E79	#繹
+c4771	u7570	#異
+c4772	u9684	#隄
+c4773	u88C0	#裀
+c4774	u5A63	#婣
+c4775	u6147	#慇
+c4776	u9670	#陰
+c4777	u9682	#隂
+c4778	u5A6C	#婬
+c4779	u552B	#唫
+c477A	u96B1	#隱
+c477B	u6AFD	#櫽(異体字)	/↑阝急↓木/
+c477C	u61C9	#應
+c477D	u540B	#吋
+c477e	u565a	#應
+c4821	u9DAF	#鶯
+c4822	u9E0E	#鸎
+c4824	u7192	#熒
+c4825	u71DF	#營
+c4826	u8805	#蠅
+c4827	u64C1	#擁
+c4828	u50AD	#傭
+c4829	u8E34	#踴
+c482A	u6182	#憂
+c482B	u5910	#夐
+c482C	u7336	#猶
+c482D	u90F5	#郵
+c482E	u7950	#祐
+c482F	u8E30	#踰
+c4830	u9918	#餘
+c4831	u857A	#蕺
+c4833	u5DBC	#嶼
+c4834	u7C72	#籲
+c4835	u9B31	#鬱
+c4836	u8B7D	#譽
+c4837	u5EBD	#庽
+c4838	u617E	#慾
+c4839	u7609	#瘉
+c483A	u79A6	#禦
+c483B	u7344	#獄
+c483C	u5BC3	#寃
+c483D	u7328	#猨
+c483E	u9060	#遠
+c483F	u8E8D	#躍
+c4840	u5DBD	#嶽
+c4841	u96F2	#雲
+c4842	u904B	#運
+c4843	u9196	#醖
+c4844	u97FB	#韻
+c4845	u7D25	#紥
+c4846	u7D2E	#紮
+c4847	u96DC	#雜
+c4848	u905D	#遝
+c4849	u707D	#災
+c484A	u5592	#喒
+c484B	u507A	#偺
+c484C	u6522	#攢
+c484D	u8CDB	#賛
+c484E	u8B9A	#讚
+c484F	u8D1C	#贜
+c4850	u8D13	#贓
+c4851	u9AD2	#髒
+c4852	u81DF	#臟
+c4853	u947F	#鑿
+c4854	u68D7	#棗
+c4855	u7AC8	#竈
+c4856	u8B5F	#譟
+c4857	u7681	#皁
+c4858	u6FA4	#澤
+c4859	u64C7	#擇
+c485A	u67FB	#査
+c485B	u6313	#挓
+c485C	u7250	#牐
+c485D	u7160	#煠
+c485E	u5953	#奓
+c485F	u643E	#搾
+c4860	u9F4B	#齋
+c4861	u9711	#霑
+c4862	u6C08	#氈
+c4863	u76DE	#盞
+c4864	u68E7	#棧
+c4865	u4F54	#佔
+c4866	u6230	#戰
+c4867	u5F35	#張
+c4868	u7903	#礃
+c4869	u6F32	#漲
+c486A	u5E33	#帳
+c486B	u8CEC	#賬
+c486C	u8139	#脹
+c486D	u982B	#頫(繁体字)
+c486F	u6DDB	#淛
+c4870	u9019	#這
+c4871	u72C9	#狉
+c4872	u7349	#獉
+c4873	u937C	#鍼
+c4874	u73CE	#珎
+c4875	u7665	#癥
+c4876	u722D	#爭
+c4877	u912D	#鄭
+c4878	u8B49	#證
+c4879	u96BB	#隻
+c487A	u7E54	#織
+c487B	u8077	#職
+c487C	u57F7	#執
+c487D	u962F	#阯
+c487E	u8879	#衹
+c4921	u5E0B	#帋
+c4922	u6049	#恉
+c4923	u6EEF	#滯
+c4924	u8A8C	#誌
+c4925	u7DFB	#緻
+c4926	u64F2	#擲
+c4927	u646F	#摯
+c4928	u5E5F	#幟
+c4929	u7A49	#穉
+c492A	u8CEA	#質
+c492B	u9418	#鐘
+c492C	u7A2E	#種
+c492D	u816B	#腫
+c492E	u8846	#衆
+c492F	u9031	#週
+c4930	u8CD9	#賙
+c4931	u546A	#呪
+c4932	u76BA	#皺
+c4933	u665D	#晝
+c4934	u7843	#硃
+c4935	u8C6C	#豬
+c4936	u71ED	#燭
+c4938	u56D1	#囑
+c4939	u8CAF	#貯
+c493A	u8A3B	#註
+c493B	u3119	#ㄙ
+c493C	u7BC9	#築
+c493D	u9444	#鑄
+c493E	u9AFD	#髽
+c493F	u8F49	#轉
+c4940	u5C08	#專
+c4941	u8011	#耑
+c4942	u78DA	#磚
+c4943	u750E	#甎
+c4944	u587C	#塼
+c4945	u599D	#妝
+c4946	u7CA7	#粧
+c4947	u88DD	#裝
+c4948	u838A	#莊
+c4949	u6A01	#樁
+c494A	u58EF	#壯
+c494B	u72C0	#狀
+c494C	u589C	#墜
+c494D	u6FC1	#濁
+c494E	u8AEE	#諮
+c494F	u6936	#椶
+c4951	u7E02	#縂
+c4952	u7E3D	#總
+c4953	u7E31	#縱
+c4954	u947D	#鑽
+c4955	u9c83	#鲃
+c4957	u84FD	#蓽
+c4958	u72F4	#狴
+c4959	u72b4	#犴
+c495A	u90A0	#邠
+c495B	u993A	#餺
+c495C	u98E5	#飥
+c495D	u8AF6	#諶
+c495E	u7424	#琤
+c4962	u6DDD	#淝
+c4963	u9146	#酆
+c4964	u982B	#頫(繁体字)
+c4965	u9CE1	#鳡
+c4966	u90DC	#郜
+c4967	u8CE1	#賡
+c4968	u7DF1	#緱
+c4969	u681D	#栝
+c496A	u7B66	#筦
+c496B	u90BD	#邽
+c496C	u5AAF	#媯
+c496E	u9C56	#鱖
+c496F	u8662	#虢
+c4970	u90DD	#郝
+c4971	u958E	#閎
+c4972	u90C8	#郈
+c4973	u8EE4	#軤
+c4974	u90C7	#郇
+c4975	u87EA	#蟪
+c4976	u9148	#酈
+c4977	u5D46	#嵆
+c4978	u573e	#圾	※修正
+c4979	u5783	#垃
+c497A	u84BA	#蒺
+c497B	u853E	#蔾
+c497C	u8071	#聱
+c497E	u6222	#戢
+c4A21	u4F0B	#伋
+c4A22	u503B	#倻
+c4A23	u90DF	#郟
+c4A25	u911E	#鄞
+c4A26	u5A55	#婕
+c4A27	u59A4	#妤
+c4A28	u9773	#靳
+c4A29	u6D87	#涇
+c4A2A	u5036	#倶
+c4A2B	u741A	#琚
+c4A2C	u5658	#噘
+c4A2D	u95DE	#闞
+c4A2E	u9AC1	#髁
+c4A2F	u84AF	#蒯
+c4A30	u9136	#鄶
+c4A31	u913A	#鄺
+c4A32	u5914	#夔
+c4A33	u5D97	#嶗
+c4A34	u5AEA	#嫪
+c4A35	u6BD0	#毐
+c4A36	u9BEA	#鯪
+c4A37	u6CE0	#泠
+c4A38	u6F33	#漳
+c4A39	u902F	#逯
+c4A3A	u91BD	#醽
+c4A3B	u9181	#醁
+c4A3D	u752A	#甪
+c4A3E	u96D2	#雒
+c4A3F	u8306	#茆
+c4A40	u6CAC	#沬
+c4A41	u791E	#礞
+c4A42	u54F6	#哶
+c4A43	u5B93	#宓
+c4A44	u6E63	#湣
+c4A46	u6DC4	#淄
+c4A47	u4E5C	#乜
+c4A48	u6CEE	#泮
+c4A49	u90B3	#邳
+c4A4A	u8386	#莆
+c4A4B	u8386	#莆
+c4A4C	u7DA6	#綦
+c4A4D	u8604	#蘄
+c4A4E	u793B	#礻
+c4A4F	u8723	#蜣
+c4A50	u8B59	#譙
+c4A51	u90C4	#郄
+c4A52	u866F	#虯
+c4A53	u8A58	#詘
+c4A54	u74A9	#璩
+c4A55	u8627	#蘧
+c4A56	u56F7	#囷
+c4A57	u5189	#冉
+c4A59	u82AE	#芮
+c4A5a	u6f98	#澘
+c4A5B	u912F	#鄯
+c4A5C	u5D4A	#嵊
+c4A5D	u4F58	#佘
+c4A5E	u5399	#厙
+c4A5F	u8398	#莘
+c4A60	u845A	#葚
+c4A61	u596D	#奭
+c4A63	u772D	#眭
+c4A64	u7762	#睢
+c4A65	u90B0	#邰
+c4A67	u87A3	#螣
+c4A69	u4F5F	#佟
+c4A6A	u9204	#鈄
+c4A6C	u5EB9	#庹
+c4A6D	u5AA7	#媧
+c4A6F	u5594	#喔
+c4A70	u5053	#偓
+c4A71	u9114	#鄔
+c4A72	u4EF5	#仵
+c4A73	u5A7A	#婺
+c4A74	u8C68	#豨
+c4A75	u859F	#薟
+c4A76	u90D7	#郗
+c4A77	u7A80	#窀
+c4A78	u7A78	#穸
+c4A79	u8204	#舄
+c4A7A	u7946	#祆
+c4A7B	u51BC	#冼
+c4A7C	u736B	#獫
+c4A7D	u72C1	#狁
+c4A7E	u7381	#玁
+c4B21	u736C	#獬
+c4B23	u736F	#獯
+c4B24	u5D99	#嶙
+c4B25	u5ccb	#峋	※修正
+c4B26	u6FF0	#濰
+c4B27	u9122	#鄢
+c4B29	u9865	#顥
+c4B2A	u9134	#鄴
+c4B2B	u858F	#薏
+c4B2C	u7FBF	#羿
+c4B2D	u5B34	#嬴
+c4B2E	u9118	#鄘
+c4B2F	u9116	#鄖
+c4B30	u60F2	#惲
+c4B31	u9106	#鄆
+c4B32	u661D	#昝
+c4B33	u8FEE	#迮
+c4B34	u86B1	#蚱
+c4B35	u8722	#蜢
+c4B36	u8A79	#詹
+c4B37	u4EC9	#仉
+c4B39	u9BD6	#鯖
+c4B3A	u7D77	#絷
+c4B3B	u7E36	#縶
+c4B3C	u90C5	#郅
+c4B3D	u8A3E	#訾
+c4B3E	u9A36	#騶
+c4B3F	u5A2D	#娭
+c4B40	u5AEA	#嫪
+c4B41	u566F	#噯
+c4B42	u784B	#硋
+c4B44	u74A6	#璦
+c4B45	u9749	#靉
+c4B46	u8586	#薆(異体字)*
+c4B47	u5B21	#嬡
+c4B48	u978C	#鞌
+c4B49	u5A95	#媕
+c4B4A	u5A3F	#娿
+c4B4B	u667B	#晻
+c4B4C	u536C	#卬
+c4B4D	u678A	#枊
+c4B4E	u720A	#爊
+c4B50	u7488	#璈
+c4B51	u5D85	#嶅
+c4B52	u9F07	#鼇
+c4B53	u5DB4	#嶴
+c4B54	u5773	#坳
+c4B56	u6733	#朳
+#c4B57	u8c5d	#豝(異体字)*	/犭+巴/ U+24731(CJK Ext.B)
+c4B57	u24731	#	/犭+巴/ (CJK Ext.B)
+c4B59	u9F27	#鼧
+c4B5c	u97db	#韛(異体字)*	/韦+(備のつくり)/
+c4B5d	u97db	#韛
+c4B5E	u653D	#攽
+c4B5F	u875C	#蝜(繁体字)
+c4B60	u977D	#靽
+c4B61	u67C8	#柈
+c4B63	u6412	#搒
+c4B64	u872F	#蜯
+c4B65	u7DE5	#緥
+c4B67	u6911	#椑
+c4B68	u8A96	#誖
+c4B69	u7CD2	#糒
+c4B6A	u9781	#鞁
+c4B6B	u681F	#栟
+c4B6c	u794a	#祊
+c4B6f	u979b	#鞛
+c4b70	u5c44	#屄
+c4B71	u6BF4	#毴	/尸+必/ bi1屄の異体字
+c4B72	u6C98	#沘
+c4B73	u959f	#閟
+c4B74	u73CC	#珌
+c4B76	u90B2	#邲
+c4B77	u99DC	#駜(繁体字)
+c4B78	u714F	#煏
+c4B7A	u55F6	#嗶
+c4B7B	u7BF3	#篳
+c4B7c	u9946	#饆(繁体字)*	/食(簡体字)+毕/
+c4B7d	u9946	#饆
+c4B7e	u9960	#饠(繁体字)
+c4C21	u6890	#梐
+c4C22	u6791	#枑
+c4C23	u5C43	#屃
+c4C24	u9AF2	#髲
+c4C25	u5F3B	#弻
+c4C26	u9BFE	#鯾
+c4C27	u7C69	#籩
+c4C28	u7A6E	#穮
+c4C2A	u719B	#熛
+c4C2C	u730B	#猋
+c4C2D	u98C7	#飇
+c4C2E	u6AB3	#檳
+c4C30	u6BAF	#殯
+c4C31	u64EF	#擯
+c4C32	u9AD5	#髕
+c4C33	u979E	#鞞
+c4C34	u661E	#昞
+c4C35	u76cb	#盋
+c4C36	u9C4D	#鱍
+c4C38	u6B02	#欂
+c4C39	u9AC6	#髆
+c4C3A	u998E	#馎
+c4C3B	u9966	#饦
+c4C3C	u50F0	#僰
+c4C3D	u894F	#襏
+c4C40	u7BF0	#篰
+c4C41	u9914	#餔(繁体字)
+c4C46	u7E29	#縩(繁体字)
+c4C47	u7DB7	#綷(繁体字)
+c4C49	u9A42	#驂
+c4C4A	u9EF2	#黲
+c4C4b	u7bf8	#篸
+#c4C4C	u7a47	#穇(異体字)*	u415F䅟(CJK Ext.A)
+c4C4C	u415F	#䅟(CJK Ext.A)
+c4C4D	u9DAC	#鶬
+c4C4E	u7B74	#筴
+
+
+# GB2312 未使用領域の外字
+
+#ebcode	unicode	comment
+gA4A3	u58C8	#壈
+gA4A5	u58D9	#壙
+gA4A6	u58F8	#壸
+gA4A9	u593F	#夿
+gA4AA	u5940	#奀
+gA4AB	u5945	#奅
+gA4AC	u5964	#奤
+gA4AD	u596D	#奭
+gA4C8	u5A7C	#婼
+gA4F4	u5BA7	#宧
+gA4F5	u5BAC	#宬
+gA4F7	u5BC0	#寀
+gA4F9	u5BD4	#寔
+gA4FA	u5BD8	#寘
+gA5A2	u5F5F	#彟
+gA5A3	u5F67	#彧
+gA5AF	u5FD3	#忓
+gA5B1	u5FE3	#忣
+gA5B2	u5FE8	#忨
+gA5B5	u5FF3	#忳
+gA5B7	u5FF7	#忷
+gA5B8	u5FFA	#忺
+gA5BE	u6033	#怳
+gA5C0	u6047	#恇
+gA5C1	u6053	#恓
+gA5C2	u605F	#恟
+gA5C3	u6082	#悂
+gA5C5	u60A2	#悢
+gA5CE	u60D9	#惙
+gA5CF	u60DB	#惛
+gA5D3	u60FC	#惼
+gA5D7	u610A	#愊
+gA5DA	u607A	#恺
+gA5DB	u6114	#愔
+gA5DF	u612C	#愬
+gA5E0	u6134	#愴
+gA5E1	u613E	#愾
+gA5E2	u6153	#慓
+gA5E3	u615F	#慟
+gA5E4	u6160	#慠
+gA5E5	u6165	#慥
+gA5EA	u6193	#憓
+gA5EC	u619A	#憚
+gA5ED	u61AD	#憭
+gA5EE	u61AF	#憯
+gA5EF	u61B1	#憱
+gA5F0	u61B9	#憹
+gA5F1	u61C6	#懆
+gA5F8	u6209	#戉
+gA5F9	u6223	#戣
+gA6A2	u65AE	#斮
+gA6A4	u65B6	#斶
+gA6AB	u65F8	#旸
+gA6AC	u65FB	#旻
+gA6B0	u6609	#昉
+gA6B2	u6621	#昡
+gA6B4	u662A	#昪
+gA6B5	u662B	#昫
+gA6B6	u6633	#昳
+gA6B9	u663A	#昺
+gA6BA	u663D	#昽
+gA6BC	u6645	#晅
+gA6C6	u666C	#晬
+gA6CB	u668B	#暋
+gA6CC	u668D	#暍
+gA6CF	u6698	#暘
+gA6D0	u66A0	#暠
+gA6D2	u66B5	#暵
+gA6D4	u66C0	#曀
+gA6D5	u66C4	#曄
+gA6D6	u66C8	#曈
+gA6D8	u66D6	#曖
+gA6D9	u66DA	#曚
+gA6DC	u6705	#朅
+gA6DE	u6712	#朒
+gA6E1	u6723	#朣
+gA7AE	u6A48	#橈
+gA7B4	u6A64	#橤
+gA7C8	u6B3B	#欻
+gA7C9	u6B3F	#欿
+gA7CA	u6B45	#歅
+gA7CD	u6B5C	#歜
+gA7D1	u6BA3	#殣
+gA7D5	u6BD0	#毐
+gA7D6	u6BD1	#毑
+gA7D7	u6BE8	#毨
+gA7DC	u6C48	#汈
+gA7DD	u6C4D	#汍
+gA7DE	u6C4F	#汏
+gA7E0	u6C67	#汧
+gA7E1	u6C6B	#汫
+gA7E2	u6C6D	#汭
+gA7E4	u6C84	#沄
+gA7E5	u6C8D	#沍
+gA7E8	u6C9A	#沚
+gA7E9	u6CA8	#沨
+gA7EA	u6CAC	#沬
+gA7EB	u6CB4	#沴
+gA7EC	u6CB5	#沵
+gA7ED	u6CC2	#泂
+gA7EF	u6CC6	#泆
+gA7F0	u6CDA	#泚
+gA7F4	u6D0F	#洏
+gA7F7	u6D28	#洨
+gA7F8	u6D2D	#洭
+gA7F9	u6D34	#洴
+gA7FA	u6D38	#洸
+gA7FB	u6D3A	#洺
+gA7FC	u6D3F	#洿
+gA7FE	u6D49	#浉
+gA8BC	u4E5A	#乚
+gA8BD	u571F	#土 つちへん(【部首名称】)
+gA8BF	u2EAE	#⺮
+gA8C0	u91C6	#釆
+gA8C1	u7676	#癶
+gA8C4	u4E28	#丨
+gA8D6	u5759	#坙
+gA8E0	u3120	#ㄠ
+gA8EA	u212D	#丶の逆(代用)
+gA8EB	u4E40	#乀
+gA8EC	u4E41	#乁
+gA8ED	u4E8C	#二（上下が狭い）
+gA8EE	u30CE	#左下へはねる(ノ カタカナで代用)
+gA8F1	u513F	#儿(U+513F)の異体字
+gA8F2	u4E5B	#乛
+gA8F7	u6708	#月(U+6708)の異体字(上下が狭い)
+gA8F8	u722B	#爫
+gA8FA	u30CF	#八の異体字 ハ(カタカナで代用)
+gA8FB	u516B	#丷の異体字 (八で代用)
+gA8FC	u5341	#十(U+5341)の異体字（上下が狭い）
+gA8FD	u5341	#十(U+5341)の異体字（上下が狭い）
+gA8FE	u5341	#十(U+5341)の異体字(「協」の偏)
+gA9A1	u4E8C	#二（上下が非常に狭い）
+gA9A3	u8C55	#豕
+gA9A5	u3003	#〃 U+2E80
+gA9A8	u5182	#冂(U+5182)の幅が狭い
+gA9A9	u5DDC	#巜
+gA9AB	u6C3A	#氺
+gA9AC	u2E88	#⺈(U+2E88)の異体字
+gA9AD	u2E8B	#⺋
+gA9AE	u5927	#大(U+5927)の上下が狭い
+gA9AF	u590A	#夊
+gA9B0	u4E45	#久(U+4E45)の上下が狭い
+gA9B1	u51E0	#几(U+51E0)の幅が広い
+gA9B2	u30CC	#ヌ(カタカナで代用)
+gA9B3	u725C	#牜
+gA9B4	u2EA7	#⺧
+gA9B6	u2ECA	#⻊
+gA9B7	u8FB6	#辶(二点しんにょうU+2ECD)
+gA9B8	u8FB5	#辵
+gA9B9	u2E8C	#⺌
+gA9BA	u531A	#匚
+gA9BB	u5DE5	#工(U+5DE5)の偏
+gA9BC	u8279	#艹 U+2EBF / U+FA5E
+gA9BD	u535D	#卝 U+FA5D
+gA9BE	u8033	#耳
+gA9BF	u4E0C	#丌
+gA9C0	u98E0	#飠
+gA9C1	u98E0	#飠 U+2EDE(正字体)
+gA9C2	u2EB6	#⺶
+gA9C3	u2EB7	#⺷
+gA9C7	u2EB3	#⺳
+gA9C9	u7259	#牙
+gA9CA	u6534	#攴(点がある)
+gA9CB	u723B	#爻(U+723B)の異体字 「爼」の偏
+gA9D0	u6C10	#氐
+gA9D9	u8840	#血(U+8840)の上下が狭い
+gA9DA	u821B	#舛
+gA9DB	u2EBB	#聿(U+807F)の異体字
+gA9DC	u826F	#良(U+826F)の偏
+gA9DD	u9EA5	#麥(U+9EA5)の下がのびる(例:麴)
+gA9DE	u9149	#酉
+gA9DF	u8EAB	#身(U+8EAB)の偏
+gA9E4	u4E37	#丷
+gA9E5	u5182	#冂
+gA9E7	u2E88	#⺈
+gA9E8	u30DE	#マ(カタカナで代用)
+gA9EA	u7F52	#罒
+gA9EB	u8002	#耂
+gA9F0	u79B8	#禸
+gA9F1	u2EAA	#⺪
+gA9F2	u4EA6	#亦
+gAAA8	u740E	#琎
+gAAB2	u742B	#琫
+gAAb2	u742b	#琫
+gAACB	u7468	#瑨
+gAACD	u7474	#瑴
+gAAD5	u7486	#璆
+gAAD7	u748a	#璊
+gAAFB	u7503	#甃
+gAAFE	u750C	#甌
+gABA3	u76FB	#盻
+gABA7	u770A	#眊
+gABAD	u7746	#睆
+gABAF	u7752	#睒
+gABB1	u7756	#睖
+gABC4	u779C	#瞜
+gABC7	u779F	#瞟
+gABCE	u77D9	#矙
+gABD0	u77DE	#矞
+gABD7	u77FB	#矻
+gABD8	u77FC	#矼
+gABD9	u7804	#砄
+gABDB	u7806	#砆
+gABDE	u7822	#砢
+gABE1	u782b	#砫
+gABEA	u7859	#硙
+gABEB	u785A	#硚
+gABEC	u7860	#硠
+gABF6	u788F	#碏
+gABF8	u7894	#碔
+gABFC	u78A8	#碨
+gABFD	u78AA	#碪
+gABFE	u78AB	#碫
+gACA6	u7A75	#穵
+gACAA	u7A85	#窅
+gACAD	u7A8A	#窊
+gACB0	u7A8E	#窎
+gACB6	u7ABE	#窾
+gACB9	u7AC7	#竇
+gACC2	u7AFE	#竾
+gACC6	u7B13	#笓
+gACCA	u7B22	#笢
+gACCC	u7B12	#笒
+gACCE	u7B34	#笴
+gACD2	u7B48	#筈
+gACD3	u7B4A	#筊
+gACD5	u7B5C	#筜
+gACD6	u7B65	#筥
+gACD7	u7B66	#筦
+gACD8	u7B6D	#筭
+gACD9	u7B7C	#筼
+gACDE	u7B91	#箑
+gACE1	u7BA0	#箠
+gACE4	u7BB5	#箵
+gACE6	u7BC5	#篅
+gACE7	u7BCB	#篋
+gACEB	u7BE8	#篨
+gACEE	u7BF8	#篸
+gACEF	u7C03	#簃
+gACF0	u7C09	#簉
+gACF1	u7C15	#簕
+gACF2	u7C20	#簠
+gACF5	u7C30	#簰
+gACF6	u7C46	#籆
+gACFB	u7C65	#籥
+gACFC	u7C67	#籧
+gACFD	u7C6A	#籪
+gACFE	u7CDD	#糝
+gADA1	u7FD9	#翙
+gADA2	u7FDA	#翚
+gADA4	u7FEF	#翯
+gADA5	u7FFA	#翺
+gADA6	u7FFE	#翾
+gADAA	u8030	#耰
+gADAB	u8032	#耲
+gADB0	u805D	#聝
+gADB3	u8079	#聹
+gADB5	u8088	#肈
+gADB6	u808F	#肏
+gADB8	u80B8	#肸
+gADBA	u80c8	#胈
+gADBD	u80D4	#胔
+gADBE	u80E0	#胠
+gADBF	u80F5	#胵
+gADC0	u80F9	#胹
+gADC1	u80FE	#胾
+gADC2	u8101	#脁
+gADC3	u8121	#脡
+gADC4	u8122	#脢
+gADC5	u8126	#脦
+gADC6	u8130	#脰
+gADC7	u813A	#脺
+gADC8	u8152	#腒
+gADC9	u8164	#腤
+gADCA	u816F	#腯
+gADCB	u8177	#腷
+gADCC	u8187	#膇
+gADCE	u818D	#膍
+gADCF	u8195	#膕
+gADD0	u8197	#膗
+gADD1	u81B0	#膰
+gADD2	u81CF	#臏
+gADD3	u81D1	#臑
+gADD4	u81DB	#臛
+gADD5	u81DE	#臞
+gADD7	u81FF	#臿
+gADD9	u8232	#舲
+gADDA	u8245	#艅
+gADDB	u824E	#艎
+gADDC	u8251	#艑
+gADDE	u8255	#艕
+gADDF	u8256	#艖
+gADE1	u8283	#芃
+gADE2	u82A7	#芧
+gADE4	u82BC	#芼
+gADE6	u82C5	#苅
+gADE8	u82E2	#苢
+gADEB	u82F2	#苲
+gADED	u82F6	#苶
+gADEE	u82FD	#苽
+gADEF	u82FE	#苾
+gADF0	u8300	#茀
+gADF1	u8313	#茓
+gADF3	u831E	#茞
+gADF6	u8332	#茲
+gADFE	u839D	#莝
+gAEA1	u8886	#袆
+gAEA3	u8897	#袗
+gAEA5	u88AF	#袯
+gAEA6	u88BA	#袺
+gAEA7	u88C8	#裈
+gAEA8	u88CB	#裋
+gAEAB	u88EF	#裯
+gAEAE	u8915	#褕
+gAEAF	u8918	#褘
+gAEB0	u8926	#褦
+gAEB2	u893B	#褻
+gAEB5	u8974	#襴(繁体字)
+gAEB6	u895C	#襜
+gAEB7	u8964	#襤
+gAEB8	u896B	#襫
+gAEBA	u896E	#襮
+gAEBB	u8975	#襵
+gAEBC	u8976	#襶
+gAEBD	u8982	#覂
+gAEBE	u8985	#覅
+gAEBF	u8997	#覗(繁体字)
+gAEC1	u89AC	#覬
+gAEC5	u89DD	#觝
+gAEC6	u89ED	#觭
+gAEC7	u89F1	#觱
+gAEC8	u89FA	#觺
+gAECA	u8A04	#訄
+gAED0	u8A27	#訧
+gAED6	u8A67	#詧
+gAED7	u8A92	#誒
+gAED8	u8AD0	#諐
+gAEDD	u8B33	#謳
+gAEDE	u8B37	#謷
+gAEE4	u8B92	#讒
+gAEE9	u8BB1	#讱
+gAEEA	u8BC7	#诇
+gAEEB	u8BD0	#诐
+gAEEE	u8C1E	#谞
+gAEEF	u8C57	#豗
+gAEF0	u8C5D	#豝
+gAEF3	u8C68	#豨
+gAEF6	u8C76	#豶
+gAEF8	u8C86	#貆
+gAEFD	u8D11	#贑
+gAFA1	u911C	#鄜
+gAFA2	u9120	#鄠
+gAFA5	u9132	#鄲
+gAFA8	u913A	#鄺
+gAFA9	u913E	#鄾
+gAFAA	u9142	#酂
+gAFAC	u9155	#酕
+gAFAD	u9156	#酖
+gAFAE	u9158	#酘
+gAFAF	u917A	#酺
+gAFB0	u9181	#醁
+gAFB1	u9184	#醄
+gAFB2	u918A	#醊
+gAFB3	u91A1	#醡
+gAFB5	u91A8	#醨
+gAFB6	u91B0	#醰
+gAFB7	u91B1	#醱
+gAFB9	u91BD	#醽
+gAFBA	u91BE	#醾
+gAFBC	u91CB	#釋
+gafc3	u924f	#鉏
+gAFC8	u92B6	#銶(繁体字)
+gAFC9	u92C6	#鋆
+gAFCB	u92EC	#鋬
+gAFD9	u9438	#鐸
+gAFDB	u944C	#鑌
+gAFDC	u947E	#鑾
+gAFDF	u9498	#钘
+gAFE1	u94CF	#铏
+gAFE3	u94DA	#铚
+gAFE4	u94E6	#铦
+gAFE5	u94FB	#铻
+gAFE6	u951C	#锜
+gAFE8	u9533	#锳
+gAFE9	u953D	#锽
+gAFEB	u9548	#镈
+gAFEC	u954B	#镋
+gAFEE	u9560	#镠
+gAFF4	u9618	#阘
+gAFF7	u95FF	#闿
+gAFFC	u9627	#阧
+gAFFD	u9628	#阨
+gAFFE	u962C	#阬
+gD4A6	u9A6D	#驭
+gD8C7	u5399	#厙
+gDDAE	u82FA	#苺
+gF3BC	u8827	#蠧
+
+
+##########################
+# 以下は WindowsXPのMingLiUに該当なし
+##########################
+
+#c422F	-	#	/火+乚/ 煤méi ～また,俗字で“□”と書くこともある
+
+#gA9A4	-	#「豕」の上の「一」がない
+#gA9AA	-	#「全」の冠
+#gA9CC	-	#「邦」の偏
+#gA9D1	-	#學のかんむり
+#gA9D2	-	#秦の上側
+#gA9D3	-	#螢のかんむり
+#gA9D4	-	#业の異体字
+#gA9D7	-	#「戀」の上
+#gA9E9	-	#「昜」の下側
+#gA9ED	-	#学のかんむり
+#gA9EE	-	#秦の上側
+#gA9EF	-	#蛍のかんむり
+
+c3434	u0250	#× MingLiU
+c344F	u9FB9	#× MingLiU まきがしら
+c3633	u268A	#× MingLiU 八卦陽
+c3634	u268B	#× MingLiU 八卦陰
+c3635	u2630	#× MingLiU 八卦乾qián
+c3636	u2635	#× MingLiU 八卦坎kan
+c3637	u2636	#× MingLiU 八卦艮gèn
+c3638	u2633	#× MingLiU 八卦震zhèn
+c3639	u2634	#× MingLiU 八卦巽xùn
+c363A	u2632	#× MingLiU 八卦离lí
+c363B	u2637	#× MingLiU 八卦坤kun
+c363C	u2631	#× MingLiU 八卦兑duì
+c364F	u0266	#× MingLiU
+c3650	u0294	#× MingLiU
+c3662	u31C0	#× MingLiU
+c3667	u0352	#× MingLiU フェルマータ.延長記号
+
+gA8BE	u31C0	#× MingLiU 右上へはねる
+gA8C2	u31CF	#× MingLiU 右払い(□)（【書道】）
+gA8EF	u2E95	#× MingLiU 彐(U+5F50)の異体字
+gA8F0	u2E95	#× MingLiU 彐(U+5F50)の異体字
+gA8F3	u31C7	#× MingLiU 
+gA8F5	u31C2	#× MingLiU はね（【書道】）
+gA8F6	u2EBC	#× MingLiU 月の異体字(中が点２個)
+gA8F9	u2EA4	#× MingLiU 爫(U+722B)の異体字
+gA9A2	u2EAC	#× MingLiU 示偏
+gA9A7	u2E8A	#× MingLiU 「虎」の上部のﾄ
+gA9B1	u2E87	#× MingLiU かぜがまえ(【部首名称】)
+gA9B5	u2E97	#× MingLiU したごころ(【部首名称】)
+gA9D8	u2EC3	#× MingLiU 西の冠（「要」の上）
+gA9E1	u2ED7	#× MingLiU 雨冠
+gA9E3	u31C6	#× MingLiU 
+
+c3751	u378E	#	(CJK Ext.A) /尸+巴/
+c3768	u3625	#	(CJK Ext.A) /囗+爫缶+系/ 異体字 U+56EE囮
+c3828	u45C9	#	(CJK Ext.A) /虫+昌/ 
+c3848	u45D0	#	(CJK Ext.A) /↑施↓虫/
+c394F	u35D1	#	(CJK Ext.A) /口+拜/
+c3962	u3E74	#	(CJK Ext.A)/犭+更/
+c3967	u43E1	#	(CJK Ext.A) /月+示/
+c396D	u356B	#	(CJK Ext.A) /口+方/ 
+c3A24	u44DD	#	(CJK Ext.A) /艹孟/
+c3A45	u43B1	#䎱	(CJK Ext.A)
+c3B23	u3A8D	#	(CJK Ext.A) /勃のつくりが攵/ 
+c3B42	u3FB9	#	(CJK Ext.A) /疒+柴/
+c3B7B	u3551	#	(CJK Ext.A)/廚のかまえが厂/
+c3C23	u458F	#	(CJK Ext.A) /↑虍↓匆/  
+c3C6B	u45EA	#	(CJK Ext.A) /↑庶↓虫/
+c3D22	u473A	#	(CJK Ext.A) /豆+昔/
+c3D54	u4D38	#	(CJK Ext.A) /麥+↑爫↓子/ 
+c3E41	u40AB	#	(CJK Ext.A) /石+夅/
+c3E42	u4615	#	(CJK Ext.A) /行の間に亢/
+c3E53	u3E80	#	(CJK Ext.A) /犭+忽/
+c3E6B	u3A2A	#	(CJK Ext.A) /扌+晃/
+c3F6D	u3A17	#	(CJK Ext.A)
+c4146	u3E6D	#	(CJK Ext.A) /犭+曳/
+c4161	u426C	#	(CJK Ext.A) /↑竹↓广+(發の簡体字)/
+c423B	u3743	#	(CJK Ext.A) /子+免/
+c4265	u3B09	#	(CJK Ext.A) /日+↑而↓大/
+c4359	u3681	#	(CJK Ext.A) /堯+堯/
+c4438	u462E	#	(CJK Ext.A)/喪の口が人/
+c4471	u3560	#	(CJK Ext.A) /↑冫隹↓又/
+c4759	u4DA7	#	(CJK Ext.A) /齒+堯/
+c475F	u420E	#	(CJK Ext.A) /↑笹↓木/ 
+c4832	u4C77	#	(CJK Ext.A)
+c4937	u45DB	#	(CJK Ext.A) /虫+脩/
+c4B43	u3905	#	(CJK Ext.A) /↑旡↓心/
+c4B5A	u4D95	#	(CJK Ext.A)  /歯(簡体字)+巴/
+c4B5B	u34E6	#	(CJK Ext.A) /百+刂/
+c4B6E	u4A6C	#	(CJK Ext.A) /革+奉/
+c4B75	u3EEB	#	(CJK Ext.A) /王+畢/
+c4C3E	u377F	#	(CJK Ext.A) /尢+皮/
+c4C44	u3635	#	(CJK Ext.A) /土+布/ 
+c4C45	u40F0	#	(CJK Ext.A) /石+察/ 
+c4C48	u4C57	#	(CJK Ext.A) /↑(トタ+又)↓魚/
+
+c3574	u27631	#	(CJK Ext.B) /衤+比/
+c3764	u20242	#	(CJK Ext.B) / にんべん+辶+大/ tà
+c3769	u2A568	#	(CJK Ext.B) /鼠+兒/
+c3835	u247E5	#	(CJK Ext.B) /犭+是/
+c3931	u25FDD	#	(CJK Ext.B) /↑代↓糸/ dài
+c3A50	u25ED7	#	(CJK Ext.B) /米+木日一/ chá
+c3D27	u22F96	#	(CJK Ext.B) /度+攴/ dù
+c3D32	u2579B	#	(CJK Ext.B) /禾+↑乃↓木/ duò 
+c3D69	u24B5B	#	(CJK Ext.B) /岡+瓦/ gang
+c3E37	u28263	#	(CJK Ext.B) /身+叚/ ha 
+c3E54	u2477D	#	(CJK Ext.B) /犭+聿/ lu
+c402E	u29707	#	(CJK Ext.B) /食+巻/ juan
+c417C	u22CC0	#	(CJK Ext.B) /扌+麻/ ma
+c4261	u22AD3	#	(CJK Ext.B) /扌+奴/ nu
+c4262	u20D02	#	(CJK Ext.B) /口+努/
+c446E	u2812E	#	(CJK Ext.B) /足+率/shuai
+c4535	u20a44	#	(CJK Ext.B) /厂+ﾘｹ/
+c4562	u22CDF	#	(CJK Ext.B) /扌+通/
+c464D	u23519	#	(CJK Ext.B) /木+欣/ xian
+c4B4F	u243F6	#	(CJK Ext.B) /火+↑鹿↓ヒ/ ao
+c4B62	u20CD0	#	(CJK Ext.B) /口+邦/ bang
+c4B6D	u256F1	#	(CJK Ext.B) /↑彭↓示/ beng 異体字 U+958D閍
+c4B79	u25DD1	#	(CJK Ext.B) /↑竹+↓觱/ bìlì
+c4C29	u26529	#	(CJK Ext.B) /耒+↑鹿↓灬/ biao
+c4C4F	u24B62	#	(CJK Ext.B) /卒+瓦/ cèi
+
+gA8C3	u22016	#(CJK Ext.B)↑ス↓工
+gA8F4	u200CC	#(CJK Ext.B) 「刁」のかっこ
+gA9E6	u20089	#(CJK Ext.B) 「気」の上の部分
+gACF3	u26E88	#(CJK Ext.B) /↑艹↓巽/
+
+
+####################
+#	ERRATA(辞書データの間違い)
+####################
+
+#【中日】yingmu(口+畝)という字がyingcun(吋)と混同されている(EBXA-Cのみ)
+#【中日】ji1fen3の親字であるjiの繁体字(齋)は、U+97f2(韲)であるべき(EBXA-Cのみ)
+#【日中】「さんざし」の"山渣"はU+6942(楂)が正しい(EBXA-C、SEIKO SILUCA CARDとも)
+#【中日】kun3 壸(壺)の異体字は、U+58FC(壼)が正しい
+#【中日】「yushi」の「于是」が、「比較」の後で、「干是」になっている
+#【中日】du4/の最後から第二字、異体字は親字と混同 -> gF3BCの定義で修正
+#【中日】yuan4/の第三字（行の中に元）で、解釈の第一字は行の中に亢であるべき

@@ -1,0 +1,111 @@
+
+
+单词本（收藏）、历史记录功能
+
+单词本：
+
+* 无限数量、永久储存单词。（必须考虑同步数据量可能较大）
+* 可以给单词打任意 tag。（等效于 list）
+* 储存在云存储服务器端，本地 indexeddb 缓存+同步。支持多设备同步(CPA 里的 PA)。
+
+数据存储选择？
+
+1. 自己服务器上的 database
+2. 公有云基础设施 (eg. amazon dynamodb)
+3. 授权绑定用户自己的第三方服务平台(eg. google drive, dropbox, evernote)
+
+1. 自己服务器上的 database
+
+Pro: 传统方式，开发入手难度低。
+Con: 后期运维越来越复杂（随数据量增大）。
+
+2. 公有云基础设施 (eg. amazon dynamodb)
+
+Pro: 开发入手难度较低。无需自己运维。
+Con: 大部分公有云付费！目前实际可用于生产环境的免费数据库只有 amazon dynamodb，
+但有数据量 / 性能限制，并且由于 API 限制，建模限制很大。
+
+3. 授权绑定用户自己的第三方服务平台(eg. google drive, dropbox)
+
+Pro: 无需自己运维。完全免费。
+Con: 开发难度高。API限制非常大。API 调用频率限制很大（单个app每天1亿次。每用户默认限制100秒1000次)
+加分项：数据用户自己掌握，保护用户隐私
+
+
+首先考虑 Google Drive:
+
+* 类似 fs。
+* 文件可以有属于 parent 目录
+* 定位多级目录必须从根目录逐级查找（适用于 tag )
+* list 目录最大列出 1000 个文件
+
+设计：单词 id 作为文件名，分级存储
+
+気持ち
+
+/word/気/気持ち.txt
+/tag/基本単語/気持ち.txt
+/date/2020/04/26/気持ち.txt
+
+在新设备登录并首次同步时，需要发送 N 个请求才能下载所有单词到本地，不可接受。
+
+/date/words.txt
+
+
+Dropbox: 比 Google Drive 限制还多，不考虑。
+Evernote: 越做越差，没前途的笔记服务。API也难用，不考虑。
+
+Google Sheets
+
+* 免费。表格天生适合模拟数据库！
+* 完整支持 API。天生支持并行、多用户编辑(values.append)。通过 protected ranges 可以实现给区域加锁
+* API 限制每100秒每个app最多500个请求。每用户每100秒100个请求。可增加到 2500 / 500
+* 支持 Google App Script (serveless function)
+
+每个单词假设 1KB (300个字左右)
+10MB Sheets 文件能存 10000个单词。足够使用
+
+
+
+https://developers.google.com/sheets/api/limits
+https://developers.google.com/apps-script/guides/services/quotas
+
+单词本同步方案：
+
+存储：按添加/修改到服务器端的时间排序(stime)。所有修改内容（包括删除）必须重新放到适当位置
+
+1. 本地内容同步：
+
+新增：末尾插入一行
+变更/删除：找到服务器记录，删除，末尾再插一行
+
+2. 云端内容拉取（其它设备的内容）
+
+以服务器时间为准，本地记录上一次同步的时间，拉取此时间之后的内容
+
+
+status:
+
+* 0 : local new created.同步时只需要插入sheet末尾
+* 1 : cloud synced
+* 2 : local updated (already synced before)
+* 3 : deleted (reserved for cloud storage)
+
+deleted_notebook: id,time
+暂存：本地之前状态为 1，已删除的笔记，等待同步服务器删除。
+
+同步请求：
+
+{
+  since: 上次同步到服务器数据stime时间
+  deleteNotes: [id] // 删除笔记
+  updateNotes: [{id,...}]
+}
+
+返回：
+
+{
+  time: // 本次同步完后的服务器数据时间
+  updatedNotes: [{id,}]
+  deletedNotes: [id]
+}

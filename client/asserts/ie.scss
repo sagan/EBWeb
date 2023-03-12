@@ -1,0 +1,20 @@
+@import "variables";
+
+/*
+
+target ie 10+
+ie11 flex weird height bug fix
+
+*/
+@media all and (min-width: 1024px) and (-ms-high-contrast: none),
+	(-ms-high-contrast: active) {
+	main > div > *:nth-child(1) {
+		display: flex;
+	}
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.dict-content.multi.multi-style-1 {
+		display: block;
+	}
+}

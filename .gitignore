@@ -1,0 +1,6 @@
+config.js
+config.production.js
+node_modules/
+dist/
+/.local
+/service-worker-tmp.js

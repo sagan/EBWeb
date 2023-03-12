@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>__SITENAME__</ShortName>
+  <Description>__DESCRIPTION__</Description>
+  <Url type="text/html"
+    template="__PUBLIC_URL____ROOTPATH__%E5%BA%83%E8%BE%9E%E8%8B%91/prefix/{searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self"
+    template="__PUBLIC_URL____ROOTPATH__opensearch.xml" />
+  <Image height="16" width="16" type="image/x-icon">__PUBLIC_URL____ROOTPATH__favicon.ico</Image>
+  <SyndicationRight>open</SyndicationRight>
+  <AdultContent>false</AdultContent>
+  <Language>ja-JP</Language>
+  <OutputEncoding>UTF-8</OutputEncoding>
+  <InputEncoding>UTF-8</InputEncoding>
+</OpenSearchDescription>
