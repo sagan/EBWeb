@@ -14,10 +14,10 @@ RUN npm i
 
 # Bundle app source
 RUN apt-get update && apt-get install -y ffmpeg
-RUN chmod a+x ./binary/ebclient
 COPY . .
 
 RUN npm run build
+RUN chmod a+x ./binary/ebclient
 
 EXPOSE 3000
 
