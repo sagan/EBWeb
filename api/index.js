@@ -351,34 +351,58 @@ async function query(params) {
   // directly get a word voice
   if (params.q && (params.binary == "wav" || params.binary == "mp3")) {
     let dict = config.DICTINFO.audioDict;
-    if (config.DICTINFO.audioDictEn && REGEX_ENGLISH_FULL.test(params.q)) {
+    let isEn = REGEX_ENGLISH_FULL.test(params.q);
+    if (config.DICTINFO.audioDictEn && isEn) {
       dict = config.DICTINFO.audioDictEn;
     }
     if (!dict) {
       return null;
     }
     let titleInfo = parseEbTitle(normalizeQ(params.q, params.romaji));
-    let titles = [titleInfo.keyword, titleInfo.hiragana];
-    let result = [];
-    for (let i = 0; i < titles.length; i++) {
-      if (!titles[i]) {
-        continue;
-      }
-      result = await _query({
+    let resultWord = null;
+    if (
+      !titleInfo.keyword ||
+      !titleInfo.hiragana ||
+      titleInfo.keyword == titleInfo.hiragana ||
+      isEn
+    ) {
+      let result = await _query({
         dict,
-        q: titles[i],
+        q: titleInfo.keyword || titleInfo.hiragana || titleInfo.text,
         type: 2,
         max: 1,
       });
-      if (!Array.isArray(result)) {
-        result = result.words;
+      resultWord = Array.isArray(result) ? result[0] : result.words[0];
+    } else {
+      let resultKeyword = await _query({
+        dict,
+        q: titleInfo.keyword,
+        type: 2,
+        max: 10,
+      });
+      let resultHiragana = await _query({
+        dict,
+        q: titleInfo.hiragana,
+        type: 2,
+        max: 10,
+      });
+      if (!Array.isArray(resultKeyword)) {
+        resultKeyword = resultKeyword.words;
       }
-      if (result.length > 0) {
-        break;
+      if (!Array.isArray(resultHiragana)) {
+        resultHiragana = resultHiragana.words;
       }
+      resultWord =
+        resultKeyword.find((w) =>
+          resultHiragana.some(
+            (_w) => w.page == _w.page && w.offset == _w.offset
+          )
+        ) ||
+        resultKeyword[0] ||
+        resultHiragana[0];
     }
-    if (result.length > 0) {
-      let match = result[0].text.match(
+    if (resultWord) {
+      let match = resultWord.text.match(
         /\[wav page=(\d+),offset=(\d+),endpage=(\d+),endoffset=(\d+)\]([\s\S]*?)\[\/wav\]/
       );
       if (match) {
