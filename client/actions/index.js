@@ -1967,12 +1967,7 @@ export function googleSync(options = {}) {
     }
     dispatch({ type: "CLOUD_SYNC" });
     try {
-      let result = await dbSync(
-        ROOTPATH + "?api=4&type=3",
-        Object.assign(options, {
-          refresh,
-        })
-      );
+      let result = await dbSync({ ...options, refresh });
       dispatch({ type: "CLOUD_SYNC_FINISH" });
       if (result.changed && options.fromNotebook) {
         dispatch(notebookRefresh());
