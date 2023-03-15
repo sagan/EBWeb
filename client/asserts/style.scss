@@ -795,7 +795,7 @@ a[data-word][data-word-type="副詞"] {
   border: 1px solid transparent;
 }
 
-#cloud-gravatar.synced img {
+body[data-is="1"] #cloud-gravatar img {
   border: 1px solid green;
 }
 

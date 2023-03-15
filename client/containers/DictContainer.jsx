@@ -48,10 +48,6 @@ import {
 const mapStateToProps = (state) => {
   let metaValues = getMetaValues(state);
   return {
-    synced:
-      metaValues.notSyncedNoteCnt == 0 &&
-      metaValues.notSyncedDeletedNoteCnt == 0 &&
-      metaValues.noteCnt > 0,
     googleUserInfo: metaValues.googleUserInfo,
     lastAnkiSyncTime: metaValues.lastAnkiSyncTime || 0,
     info: getPageInfo(state),

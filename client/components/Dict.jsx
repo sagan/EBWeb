@@ -822,7 +822,7 @@ class Dict extends React.Component {
                   <span
                     className={`last emoji icon ${
                       this.props.local == "cloud" ? "active" : ""
-                    } ${this.props.synced ? "synced" : ""}`}
+                    }`}
                     id="cloud-gravatar"
                   >
                     {this.props.googleUserInfo ? (
@@ -831,9 +831,7 @@ class Dict extends React.Component {
                         width="27"
                         height="27"
                         src={this.props.googleUserInfo.picture}
-                        title={`${this.props.googleUserInfo.name} でログイン中${
-                          this.props.synced ? " (✓ 同期済み)" : ""
-                        }`}
+                        title={`${this.props.googleUserInfo.name} でログイン中`}
                       />
                     ) : (
                       <span title="ログイン(クラウド機能)">☁️</span>

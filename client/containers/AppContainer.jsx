@@ -19,12 +19,17 @@ import {
   livepreviewPopoverMouseOut,
   livepreviewClose,
   livepreviewLoad,
-  livepreviewCancel
+  livepreviewCancel,
 } from "../actions";
-import { getPageInfo } from "../selectors";
+import { getMetaValues, getPageInfo } from "../selectors";
 
 const mapStateToProps = (state) => {
+  let metaValues = getMetaValues(state);
   return {
+    synced:
+      metaValues.notSyncedNoteCnt == 0 &&
+      metaValues.notSyncedDeletedNoteCnt == 0 &&
+      metaValues.noteCnt > 0,
     furiganaEnable: state.config.FURIGANA_ENABLE,
     playingSoundWordId: state.playingSoundWordId,
     playing: state.playing,
@@ -42,7 +47,7 @@ const mapStateToProps = (state) => {
     offset: state.offset,
     livepreview: state.livepreview,
     words: state.words,
-    wordNotes: state.notebook.wordNotes
+    wordNotes: state.notebook.wordNotes,
   };
 };
 
@@ -66,15 +71,12 @@ const mapDispatchToProps = (dispatch) => {
       livepreviewTriggerMouseOver,
       livepreviewTriggerMouseOut,
       livepreviewPopoverMouseOver,
-      livepreviewPopoverMouseOut
+      livepreviewPopoverMouseOut,
     },
     dispatch
   );
 };
 
-const AppContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
+const AppContainer = connect(mapStateToProps, mapDispatchToProps)(App);
 
 export default AppContainer;

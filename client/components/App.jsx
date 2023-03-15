@@ -392,6 +392,7 @@ export default class App extends React.Component {
               data-il-ucps={BROWSER ? "0" : "1"}
               data-il={BROWSER ? "0" : "1"}
               data-ih={isHome ? "1" : "0"}
+              data-is={this.props.synced ? "1" : "0"}
               data-idle={`${this.state.idle}`}
             />
           </Helmet>
