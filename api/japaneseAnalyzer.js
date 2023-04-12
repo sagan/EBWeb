@@ -18,7 +18,7 @@ const {
   toRawKatakana,
 } = require("kuroshiro/lib/util");
 
-const YAHOO_JAPANESE_ANALYZE_API = "http://jlp.yahooapis.jp/MAService/V2/parse";
+const YAHOO_JAPANESE_ANALYZE_API = "https://jlp.yahooapis.jp/MAService/V2/parse";
 const YAHOO_JAPANESE_CORRECT_API =
   "https://jlp.yahooapis.jp/KouseiService/V1/kousei";
 // https://developer.yahoo.co.jp/webapi/jlp/jim/v2/conversion.html
