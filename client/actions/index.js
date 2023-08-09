@@ -1213,7 +1213,7 @@ export function historyQuery({
             records = await db.history
               .orderBy(markerField)
               .reverse()
-              .filter((a) => a.keyword.toLowerCase().indexOf(q) != -1)
+              .filter((a) => a.keyword.toLowerCase().indexOf(q.toLowerCase()) != -1)
               .limit(historyPagination + 1)
               .toArray();
           } else {
@@ -1228,7 +1228,7 @@ export function historyQuery({
             records = await db.history
               .where(markerField)
               .belowOrEqual(marker)
-              .filter((a) => a.keyword.toLowerCase().indexOf(q) != -1)
+              .filter((a) => a.keyword.toLowerCase().indexOf(q.toLowerCase()) != -1)
               .reverse()
               .limit(historyPagination + 1)
               .toArray();
@@ -1758,7 +1758,7 @@ export function notebookQuery({
             notes = await db.notebook
               .orderBy(markerField)
               .reverse()
-              .filter((a) => a.title.toLowerCase().indexOf(q) != -1)
+              .filter((a) => a.title.toLowerCase().indexOf(q.toLowerCase()) != -1)
               .limit(notebookPagination + 1)
               .toArray();
           } else {
@@ -1773,7 +1773,7 @@ export function notebookQuery({
             notes = await db.notebook
               .where(markerField)
               .belowOrEqual(marker)
-              .filter((a) => a.title.toLowerCase().indexOf(q) != -1)
+              .filter((a) => a.title.toLowerCase().indexOf(q.toLowerCase()) != -1)
               .reverse()
               .limit(notebookPagination + 1)
               .toArray();
@@ -1796,7 +1796,7 @@ export function notebookQuery({
           notes = await db.notebook
             .where("tag")
             .equalsIgnoreCase(tag)
-            .filter((a) => a.title.toLowerCase().indexOf(q) != -1)
+            .filter((a) => a.title.toLowerCase().indexOf(q.toLowerCase()) != -1)
             .offset(offset)
             .limit(notebookPagination + 1)
             .toArray();

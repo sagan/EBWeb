@@ -28,7 +28,6 @@ export default class Notebook extends PureComponent {
       playSound,
       playing,
       playingSoundWordId,
-      userConfig,
       notebook,
       notebookAnkiConnect,
       notebookAnkiSync,
@@ -82,7 +81,7 @@ export default class Notebook extends PureComponent {
               />
               &nbsp;簡略
             </label>
-            {!!_d("ankiConnectStatus") && !userConfig.googleTokens && (
+            {!!_d("ankiConnectStatus") && !metaValues.googleUserInfo && (
               <span>
                 <a
                   role="button"
@@ -106,7 +105,7 @@ export default class Notebook extends PureComponent {
                 </a>
               </span>
             )}
-            {!!userConfig.googleTokens && (
+            {!!metaValues.googleUserInfo && (
               <span>
                 <a
                   role="button"

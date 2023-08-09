@@ -28,7 +28,6 @@ const mapStateToProps = (state) => {
     playing: state.playing,
     metaValues: getMetaValues(state),
     config: state.config,
-    userConfig: state.userConfig,
     notebook: state.notebook,
   };
 };
