@@ -152,7 +152,7 @@ function cache(state = [], action) {
 function sharing(state = null, action) {
   switch (action.type) {
     case "SET":
-      return action.sharing ?? state;
+      return action.sharing !== undefined ? action.sharing : state;
     case "SEARCH_START":
     case "GO_HOME":
       return null;

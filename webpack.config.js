@@ -10,7 +10,7 @@ const config = require("./config.loader");
 const { version } = require("./package.json");
 
 const __DATA_VERSION__ = 1;
-const __COMMIT_HASH__ = "4865901"; // git rev-parse --short HEAD
+const __COMMIT_HASH__ = "5f921c0"; // git rev-parse --short HEAD
 
 const productionPlugin = new webpack.DefinePlugin({
   __COMMIT_HASH__: JSON.stringify(__COMMIT_HASH__),
