@@ -54,9 +54,12 @@ class Dict extends React.Component {
     this.shouldRenderSuggestions = this.shouldRenderSuggestions.bind(this);
   }
   componentDidMount() {
-    focusIfInVP(QINPUT_SELECTOR);
-    if (this.props.browserSupportsSpeechRecognition)
+    if (_c("fixFocus") != "none") {
+      focusIfInVP(QINPUT_SELECTOR);
+    }
+    if (this.props.browserSupportsSpeechRecognition) {
       this.props.recognition.lang = "ja-JP";
+    }
   }
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (
