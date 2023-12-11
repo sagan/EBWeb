@@ -172,10 +172,12 @@ class Dict extends React.Component {
             <>
               セキュリティ対策のため、検索する前にブラウザの認証が必要があります。認証するには
               <a
-                href={
-                  this.props.rootPath +
-                  "verification.html?__nocache__&__challenge__"
-                }
+                onClick={() => {
+                  window.location.href =
+                    this.props.rootPath +
+                    "verification.html?__nocache__&__challenge__&ts=" +
+                    +new Date();
+                }}
               >
                 こちら
               </a>

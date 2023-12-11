@@ -22,6 +22,7 @@ import { ExpirationPlugin } from "workbox-expiration";
 import localforage from "localforage";
 import { dbSync, dbGetUserConfigInfo } from "../client/db";
 import { REGEX_ENGLISH_FULL } from "../client/language_functions";
+import { REG_FILEURL } from "../client/constants";
 
 skipWaiting();
 clientsClaim();
@@ -34,8 +35,6 @@ const ROOTVERSION = __ROOTVERSION__;
 const COMMIT_HASH = __COMMIT_HASH__;
 
 const REG_DICT_BINARY_FILEURL = /\/binary\/.*\.(jpg|png|bmp|wav|mp3)$/;
-const REG_FILEURL =
-  /\.(js|json|css|jpe?g|png|bmp|gif|ico|html?|xml|txt|eot|ttf|svg|woff2?)$/i;
 const REG_APIURL = /\bapi=[a-zA-Z0-9_]/;
 const REG_API4URL = /\bapi=4\b/;
 const REG_NOCACHE = /\b__nocache__\b/;

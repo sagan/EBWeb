@@ -18,6 +18,7 @@ import AddNotebookIcon from "./AddNotebookIcon.jsx";
 import PlaySoundIcon from "./PlaySoundIcon.jsx";
 import FurigaraIcon from "./FurigaraIcon.jsx";
 import { _c } from "../userConfig.js";
+import { REG_FILEURL } from "../constants";
 
 import {
   cancelEvent,
@@ -232,7 +233,8 @@ export default class App extends React.Component {
       !el ||
       !el.href ||
       !el.getAttribute("href").startsWith(this.props.config.ROOTPATH) ||
-      el.search.match(/\b(api|binary)=[a-zA-Z0-9_]/)
+      el.search.match(/\b(api|binary)=[a-zA-Z0-9_]/) ||
+      REG_FILEURL.test(el.href)
     ) {
       return;
     }
