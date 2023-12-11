@@ -311,7 +311,7 @@ export function searchRequest({
         _c("debug") && console.log("error update history", e);
       }
     } catch (e) {
-      dispatch(search_error(err));
+      dispatch(search_error(e));
     }
     NProgress.done();
   };
@@ -1213,7 +1213,9 @@ export function historyQuery({
             records = await db.history
               .orderBy(markerField)
               .reverse()
-              .filter((a) => a.keyword.toLowerCase().indexOf(q.toLowerCase()) != -1)
+              .filter(
+                (a) => a.keyword.toLowerCase().indexOf(q.toLowerCase()) != -1
+              )
               .limit(historyPagination + 1)
               .toArray();
           } else {
@@ -1228,7 +1230,9 @@ export function historyQuery({
             records = await db.history
               .where(markerField)
               .belowOrEqual(marker)
-              .filter((a) => a.keyword.toLowerCase().indexOf(q.toLowerCase()) != -1)
+              .filter(
+                (a) => a.keyword.toLowerCase().indexOf(q.toLowerCase()) != -1
+              )
               .reverse()
               .limit(historyPagination + 1)
               .toArray();
@@ -1758,7 +1762,9 @@ export function notebookQuery({
             notes = await db.notebook
               .orderBy(markerField)
               .reverse()
-              .filter((a) => a.title.toLowerCase().indexOf(q.toLowerCase()) != -1)
+              .filter(
+                (a) => a.title.toLowerCase().indexOf(q.toLowerCase()) != -1
+              )
               .limit(notebookPagination + 1)
               .toArray();
           } else {
@@ -1773,7 +1779,9 @@ export function notebookQuery({
             notes = await db.notebook
               .where(markerField)
               .belowOrEqual(marker)
-              .filter((a) => a.title.toLowerCase().indexOf(q.toLowerCase()) != -1)
+              .filter(
+                (a) => a.title.toLowerCase().indexOf(q.toLowerCase()) != -1
+              )
               .reverse()
               .limit(notebookPagination + 1)
               .toArray();

@@ -167,7 +167,24 @@ class Dict extends React.Component {
           msg = `${searchDictText}のデータを読み込み中...`;
         }
       } else if (this.props.error) {
-        msg = `エラーが発生しました。しばらくしてからもう一度お試しください。（Error: ${this.props.error.toString()}）`;
+        if (this.props.error.toString().indexOf("status 403") != -1) {
+          msg = (
+            <>
+              セキュリティ対策のため、検索する前にブラウザの認証が必要があります。認証するには
+              <a
+                href={
+                  this.props.rootPath +
+                  "verification.html?__nocache__&__challenge__"
+                }
+              >
+                こちら
+              </a>
+              をクリックしてください。
+            </>
+          );
+        } else {
+          msg = `エラーが発生しました。しばらくしてからもう一度お試しください。（Error: ${this.props.error.toString()}）`;
+        }
       } else if (isEmpty || (isSearchMulti && !q)) {
         if (q) {
           msg = (
