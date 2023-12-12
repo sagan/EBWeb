@@ -9,4 +9,15 @@
     <p>ブラウザの認証が完了しました。</p>
     <p><button onClick="history.back();">前のページに戻る</button></p>
   </body>
+  <script>
+    (() => {
+      let url = new URL(location.href);
+      let isCfIntermittentPage =
+        !!url.searchParams.get("__cf_chl_jschl_tk__") ||
+        !!url.searchParams.get("__cf_chl_tk");
+      if (isCfIntermittentPage) {
+        history.back();
+      }
+    })();
+  </script>
 </html>
