@@ -8,7 +8,6 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 RUN npm i
-# RUN npm i --registry=https://registry.npm.taobao.org
 # If you are building your code for production
 # RUN npm ci --only=production
 
@@ -16,6 +15,7 @@ RUN npm i
 RUN apt-get update && apt-get install -y ffmpeg
 COPY . .
 
+RUN /bin/bash -c "if [ ! -f config.js ]; then cp config.sample.js config.js; fi;"
 RUN npm run build
 RUN chmod a+x ./binary/ebclient
 
