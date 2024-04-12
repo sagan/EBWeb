@@ -4,6 +4,7 @@ import { _c, _d } from "../userConfig";
 import { formatTime } from "../functions";
 
 export default function NotebookActionsDialog({
+  userConfig,
   metaValues,
   close,
   notebookAnkiConnect,

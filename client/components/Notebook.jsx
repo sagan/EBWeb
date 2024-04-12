@@ -20,6 +20,7 @@ export default class Notebook extends PureComponent {
   }
   render() {
     let {
+      userConfig, // need it exists in props so any change will trigger re-render
       config: { ROOTPATH },
       modal,
       metaValues,
@@ -72,7 +73,7 @@ export default class Notebook extends PureComponent {
             <label role="button" title="タイトルのみ表示モード">
               <input
                 type="checkbox"
-                checked={_d("notebookTitleMode")}
+                checked={!!_d("notebookTitleMode")}
                 onClick={(e) =>
                   updateUserConfig({
                     notebookTitleMode: +!_d("notebookTitleMode"),
@@ -292,6 +293,7 @@ export default class Notebook extends PureComponent {
         <Modal isOpen={modal} onRequestClose={notebookModal}>
           {modal == 1 && (
             <NotebookActionsDialog
+              userConfig={userConfig}
               metaValues={metaValues}
               notebook={notebook}
               close={notebookModal}

@@ -29,6 +29,7 @@ const mapStateToProps = (state) => {
     metaValues: getMetaValues(state),
     config: state.config,
     notebook: state.notebook,
+    userConfig: state.userConfig,
   };
 };
 

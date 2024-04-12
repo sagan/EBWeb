@@ -6,6 +6,7 @@ import TestPage from "./TestPage.jsx";
 import { _c } from "../userConfig.js";
 
 export default function Cloud({
+  userConfig,
   syncUserConfigFromPersistence,
   cloud,
   fetchMeta,

@@ -20,6 +20,7 @@ const mapStateToProps = (state) => {
     config: state.config,
     cloud: state.cloud,
     meta: state.history,
+    userConfig: state.userConfig,
   };
 };
 
