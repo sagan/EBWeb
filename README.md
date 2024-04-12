@@ -34,43 +34,10 @@ Some features use third-party (free) APIs and require corresponding API credenti
 ## Build docker image
 
 ```
-cp config.sample.js config.js # Modify your own config.js
 docker build -t ebweb .
 ```
 
-## Run
+## Deployment
 
-```
-docker run -d --name ebweb --restart=unless-stopped \
- -v /root/files/appdata/ebweb/dicts:/usr/src/app/data-dicts \
- -v /root/files/appdata/ebweb/config.js:/usr/src/app/config.js \
- -v /root/files/appdata/ebweb/mod:/usr/src/app/dist/mod \
- -p 127.0.0.1:3000:3000 \
- ebweb
-```
-
-Use nginx as a web server & reverse proxy. Example config:
-
-```
-upstream ebweb {
-  server 127.0.0.1:3000;
-}
-
-server {
-  listen 443 ssl;
-  server_name example.com;
-
-  ssl_certificate     /path/to/example.com.pem;
-  ssl_certificate_key /path/to/example.com.key;
-
-  location / {
-    proxy_pass http://ebweb/;
-    proxy_redirect off;
-    proxy_ssl_server_name on;
-    proxy_set_header Host $host;
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header X-Forwarded-Proto https;
-  }
-}
-```
+For how to deploy EBWeb, see [Deployment](https://github.com/sagan/EBWeb/wiki/Deployment) page
+of project Wiki.
